@@ -6,7 +6,7 @@ import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
-
+import React from 'react';
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Content from 'components/Content';
