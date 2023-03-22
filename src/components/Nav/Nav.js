@@ -10,7 +10,10 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import Head from 'next/head'
+import Image from 'next/image'
+import Link from 'next/link'
+import React from 'react';
+
 const produkcje = [
   { name: 'Film Reklamowy', description: 'Skuteczna reklama wideo dla Twojego biznesu', href: '/film-reklamowy', icon: ChartPieIcon },
   { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: CursorArrowRaysIcon },
@@ -43,9 +46,6 @@ const uslugi = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-<head>
-  <title>{`Test`}</title>
-</head>
 
 
 export default function Header() {
@@ -56,10 +56,17 @@ export default function Header() {
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-14" aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 ">
+          <Link href="/" className="-m-1.5 p-1.5 ">
             <span className="sr-only">Your Company</span>
-            <img className=" w-3/4 " src="../logo.png" alt="" />
-          </a>
+         
+            <Image
+      src="/logo.png"
+      alt="Landscape picture"
+      width={150}
+      height={50}
+      legacyBehavior
+    />
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -207,14 +214,16 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Simple Frame</span>
-              <img
-                className="h-8 w-auto md:hidden"
-                src="../logo.png"
-                alt=""
-              />
-            </a>
+              <Image
+      src="/logo.png"
+      alt="Landscape picture"
+      width={150}
+      height={50}
+      legacyBehavior
+    />
+            </Link>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-white"

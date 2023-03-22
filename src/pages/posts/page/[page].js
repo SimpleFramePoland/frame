@@ -1,6 +1,6 @@
 import { getPaginatedPosts } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
-
+import React from 'react';
 import TemplateArchive from 'templates/archive';
 
 export default function Posts({ posts, pagination }) {
