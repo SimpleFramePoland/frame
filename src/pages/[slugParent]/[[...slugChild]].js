@@ -81,7 +81,7 @@ export default function Page({ page, breadcrumbs }) {
 
             <div
 
-              className='text-base text-grey-darker  '
+              className='text-base text-grey-darker mt-10 mb-10  '
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
             ></div>
 
@@ -90,7 +90,7 @@ export default function Page({ page, breadcrumbs }) {
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
             ></div>
             <div
-              className='text-base text-grey-darker '
+              className='text-base text-grey-darker mt-10 mb-10 '
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
             ></div>
           </Container>
