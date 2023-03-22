@@ -30,8 +30,8 @@ function App({ Component, pageProps = {}, metadata, recentPosts, categories, men
   );
 }
 
-App.getInitialProps = async function (appContext) {
-  const appProps = await NextApp.getInitialProps(appContext);
+App.getStaticProps = async function (appContext) {
+  const appProps = await NextApp.getStaticProps(appContext);
 
   const { posts: recentPosts } = await getRecentPosts({
     count: 5,
