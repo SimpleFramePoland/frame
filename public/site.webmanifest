@@ -1,6 +1,6 @@
 {
-  "name": "Next.js WordPress Starter",
-  "short_name": "Next.js WP Starter",
+  "name": "SimpleFrame",
+  "short_name": "SimpleFrame",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
