@@ -11,7 +11,7 @@ import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination/Pagination';
-
+import Kategorie from 'pages/categories/[slug]'
 import styles from 'styles/templates/Archive.module.scss';
 
 const DEFAULT_POST_OPTIONS = {};
@@ -57,6 +57,7 @@ export default function TemplateArchive({
 
       <Section>
         <Container>
+    
           <SectionTitle>Posts</SectionTitle>
           {Array.isArray(posts) && (
             <>
@@ -78,6 +79,7 @@ export default function TemplateArchive({
               )}
             </>
           )}
+          |
         </Container>
       </Section>
     </Layout>

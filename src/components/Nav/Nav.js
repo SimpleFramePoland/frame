@@ -62,9 +62,9 @@ export default function Header() {
             <Image
       src="/logo.png"
       alt="Landscape picture"
-      width={150}
-      height={50}
-      legacyBehavior
+      width={250}
+      height={100}
+      
     />
           </Link>
         </div>
@@ -216,13 +216,7 @@ export default function Header() {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Simple Frame</span>
-              <Image
-      src="/logo.png"
-      alt="Landscape picture"
-      width={150}
-      height={50}
-      legacyBehavior
-    />
+      
             </Link>
             <button
               type="button"

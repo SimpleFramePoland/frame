@@ -14,10 +14,10 @@ README.md
 # next.js
 /.next/
 /out/
-/src
+
 # production
 /build
-
+/src
 # misc
 .DS_Store
 *.pem

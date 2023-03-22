@@ -11,6 +11,7 @@ export default function Posts({ posts, pagination }) {
     metadata: {
       title,
       description: `Page ${pagination.currentPage}`,
+      
     },
   });
 
