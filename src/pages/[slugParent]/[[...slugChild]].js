@@ -41,6 +41,7 @@ export default function Page({ page, breadcrumbs }) {
   const helmetSettings = helmetSettingsFromMetadata(metadata);
 
   return (
+    
     <Layout>
       
       <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -53,6 +54,9 @@ export default function Page({ page, breadcrumbs }) {
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/modula-wf.js?ver=2.7.3' id='modula-wf-js'></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula/assets/js/modula-pro.js?ver=2.6.1' id='modula-pro-js'></script>
+
+    
+
       <Helmet {...helmetSettings} />
       <WebpageJsonLd
         title={metadata.title}
@@ -63,10 +67,7 @@ export default function Page({ page, breadcrumbs }) {
 
       <Header>
 
-        {hasBreadcrumbs && <Breadcrumbs breadcrumbs={breadcrumbs} />}
-
-
-        <h1 className={styles.title}>{title}</h1>
+       
       </Header>
 
       <Content>
