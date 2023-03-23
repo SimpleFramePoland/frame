@@ -12,7 +12,8 @@ import Header from 'components/Header';
 import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import Breadcrumbs from 'components/Breadcrumbs';
+import Carousel from 'components/komponenty/Carousel';
+
 
 import styles from 'styles/pages/Page.module.scss';
 
@@ -67,19 +68,19 @@ export default function Page({ page, breadcrumbs }) {
 
       <Header>
 
-       
+      <Carousel/>
       </Header>
 
       <Content>
         <Section>
           <Container>
-
+       
             <div
 
-              className='size-3xl text-grey-darker  '
+              className={styles.tekstiusz}
               dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
             ></div>
-
+ 
 
             <div
 
@@ -88,7 +89,7 @@ export default function Page({ page, breadcrumbs }) {
             ></div>
 
             <div
-              className='size-3xl  text-grey-darker'
+               className={styles.tekstiusz}
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
             ></div>
             <div

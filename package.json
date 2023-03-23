@@ -1,5 +1,5 @@
 {
-  "name": "next-wordpress-starter",
+  "name": "simpleframe",
   "homepage": "https://simpleframe.pl",
   "version": "0.1.0",
   "license": "MIT",
@@ -27,6 +27,8 @@
     "autoprefixer": "^10.4.14",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
+    "flowbite": "^1.6.4",
+    "flowbite-react": "^0.4.2",
     "fuse.js": "^6.6.2",
     "graphql": "^16.6.0",
     "he": "^1.2.0",
