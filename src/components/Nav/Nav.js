@@ -1,10 +1,24 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Disclosure, Popover, Transition, } from '@headlessui/react'
 import {
+
+  CameraIcon,
+  MusicalNoteIcon,
+  ArrowsPointingOutIcon ,
+  CakeIcon,
+  WrenchScrewdriverIcon,
+  CubeIcon,
+  AdjustmentsHorizontalIcon,
+  ComputerDesktopIcon,
+  PaperAirplaneIcon,
+  VideoCameraIcon,
+  EyeIcon,
+  BuildingOffice2Icon,
   ArrowPathIcon,
   Bars3Icon,
   ChartPieIcon,
   CursorArrowRaysIcon,
+  FilmIcon,
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
@@ -15,31 +29,30 @@ import Link from 'next/link'
 import React from 'react';
 
 const produkcje = [
-  { name: 'Film Reklamowy', description: 'Skuteczna reklama wideo dla Twojego biznesu', href: '/film-reklamowy', icon: ChartPieIcon },
-  { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: CursorArrowRaysIcon },
-  { name: 'Film Promocyjny', description: 'Zachęć swoich klientów do zakupów ', href: '/film-promocyjny', icon: FingerPrintIcon },
-  { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: SquaresPlusIcon },
-  { name: 'Film Wizerunkowy', description: 'Zwiększ rozpoznawalność swojej marki', href: '/film-wizerunkowy', icon: ArrowPathIcon },
-  { name: 'Film Szkoleniowy', description: 'Wspomóż rozwój swojego biznesu', href: '/film-szkoleniowy', icon: SquaresPlusIcon },
-  { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: ArrowPathIcon },
-  { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: ArrowPathIcon },
+  { name: 'Film Reklamowy', description: 'Skuteczna reklama wideo dla Twojego biznesu', href: '/film-reklamowy', icon: FilmIcon },
+  { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: BuildingOffice2Icon },
+  { name: 'Film Promocyjny', description: 'Zachęć swoich klientów do zakupów ', href: '/film-promocyjny', icon: EyeIcon },
+  { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: VideoCameraIcon},
+  { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
 ];
-
-const animacje = [
-  { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-trojwymiarowa/', icon: ChartPieIcon },
-  { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: CursorArrowRaysIcon },
-  { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: FingerPrintIcon },
+const Postprodukcja = [
+  { name: 'Postproduckja', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: ComputerDesktopIcon },
+  { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
   { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
-  { name: 'Animacja Produktowa', description: 'Przedstaw swoje produkty w nowoczesny i innowacyjny sposób', href: '/animacja-produktowa', icon: ArrowPathIcon },
-  { name: 'Motion Design', description: 'Nadaj dynamiki Twoim projektom z pomocą animacji motion design', href: '/motion-design', icon: SquaresPlusIcon },
-  { name: 'Video Explainer', description: 'Przedstaw swoją ofertę w sposób prosty i przystępny', href: '/video-explainer', icon: ArrowPathIcon },
+];
+const animacje = [
+  { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-trojwymiarowa/', icon: CubeIcon },
+  { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: ArrowPathIcon },
+  { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: WrenchScrewdriverIcon },
+  { name: 'Animacja Produktowa', description: 'Przedstaw swoje produkty w nowoczesny i innowacyjny sposób', href: '/animacja-produktowa', icon: CakeIcon },
+
 ];
 const uslugi = [
-  { name: 'Billboard Sponsorski', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-  { name: 'Teledyski', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Fotografia', description: 'Your customers data will be safe and secure', href: '#', icon: FingerPrintIcon },
-  { name: 'Streaming', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-  { name: 'PPT', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
+  { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon  },
+  { name: 'Teledyski', description: 'Prezentuj swoje produkty lub usługi za pomocą interesującej treści wideo', href: '/teledyski', icon: MusicalNoteIcon },
+  { name: 'Fotografia', description: 'Uchwyć wspaniałe obrazy, które reprezentują Twoją markę i przyciągają klientów', href: '/fotografia', icon: CameraIcon },
+  { name: 'Streaming', description: 'Dostarczaj wysokiej jakości treści swojej publiczności za pomocą transmisji na żywo', href: '/streaming-video', icon: ComputerDesktopIcon },
+  { name: 'PPT', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
 
 ];
 
@@ -117,10 +130,46 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
+          
 
-          <a href="/postprodukcja" className="text-sm font-semibold leading-6 text-white">
-            Postprodukcja
-          </a>
+           <Popover className="relative">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
+              Postprodukcja
+              <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+            </Popover.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-black shadow-lg ring-1 ring-white/5">
+                <div className="p-4">
+                  {Postprodukcja.map((item) => (
+                    <div
+                      key={item.name}
+                      className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-black-50"
+                    >
+                      <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-black-50 group-hover:bg-grey">
+                        <item.icon className="h-6 w-6 text-white group-hover:text-babyblue" aria-hidden="true" />
+                      </div>
+                      <div className="flex-auto">
+                        <a href={item.href} className="block font-semibold text-white group-hover:text-babyblue">
+                          {item.name}
+                          <span className="absolute inset-0" />
+                        </a>
+                        <p className="mt-1 text-white">{item.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
               Animacja
@@ -312,7 +361,7 @@ export default function Header() {
                   )}
                 </Disclosure>
                 <a
-                  href="/blog"
+                  href="/posts"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-black-50"
                 >
                   Blog
