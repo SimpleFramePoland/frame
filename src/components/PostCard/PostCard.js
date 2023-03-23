@@ -1,20 +1,21 @@
 import Link from 'next/link';
 
 import { postPathBySlug, sanitizeExcerpt } from 'lib/posts';
-
+import React from 'react';
 import Metadata from 'components/Metadata';
-
+import FeaturedImage from 'components/FeaturedImage';
 import { FaMapPin } from 'react-icons/fa';
 import styles from './PostCard.module.scss';
 
+
 const PostCard = ({ post, options = {} }) => {
-  const { title, excerpt, slug, date, author, categories, isSticky = false } = post;
+  const { title, excerpt, slug, date, featuredImage, categories, isSticky = false } = post;
   const { excludeMetadata = [] } = options;
 
   const metadata = {};
 
-  if (!excludeMetadata.includes('author')) {
-    metadata.author = author;
+  if (!excludeMetadata.includes('image')) {
+    metadata.featuredImage = featuredImage;
   }
 
   if (!excludeMetadata.includes('date')) {
@@ -33,9 +34,22 @@ const PostCard = ({ post, options = {} }) => {
 
   return (
     <div className={postCardStyle}>
+  
       {isSticky && <FaMapPin aria-label="Sticky Post" />}
+      <div className='flex flex-row'>
+        <div className='basis-2/4 '>
+      <FeaturedImage
+            {...featuredImage}
+            src={featuredImage.sourceUrl}
+            dangerouslySetInnerHTML={featuredImage.caption}
+            className="rounded-lg"
+          />
+          </div>
+          <div>     
       <Link href={postPathBySlug(slug) } >
-
+   
+      
+         
         <h3
           className={styles.postCardTitle}
           dangerouslySetInnerHTML={{
@@ -44,6 +58,7 @@ const PostCard = ({ post, options = {} }) => {
         />
 
       </Link>
+      
       <Metadata className={styles.postCardMetadata} {...metadata} />
       {excerpt && (
         <div
@@ -53,6 +68,8 @@ const PostCard = ({ post, options = {} }) => {
           }}
         />
       )}
+      </div>
+    </div>
     </div>
   );
 };

@@ -53,7 +53,7 @@ const Metadata = ({ className, author, date, categories, options = DEFAULT_METAD
               <Link href={categoryPathBySlug(categories[0].slug)}>
                 {categories[0].name}
               </Link>
-              {categories.length > 1 && ' and more'}
+              {categories.length > 1 && ' i więcej'}
             </p>
           )}
           {!compactCategories && (

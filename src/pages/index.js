@@ -5,6 +5,7 @@ import Hero from 'components/komponenty/hero';
 import Faq from 'components/komponenty/Faq'
 import { Testimonials } from 'components/komponenty/testimonials';
 import Feature1 from 'components/komponenty/feature1';
+import Cta1 from 'components/komponenty/cta1'
 
 export default function Home() {
   const { metadata = {} } = useSite();
@@ -16,6 +17,7 @@ export default function Home() {
      <Feature1/>
       <Testimonials/>
       <Faq/>
+      <Cta1/>
     </Layout>
   );
 }

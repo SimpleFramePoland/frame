@@ -9,7 +9,7 @@ import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
@@ -42,53 +42,9 @@ export default function Post({ post, socialImage, related }) {
 
   post.og.imageUrl = `${homepage}${socialImage}`;
   post.og.imageSecureUrl = post.og.imageUrl;
-  post.og.imageWidth = 2000;
+  post.og.imageWidth = 1000;
   post.og.imageHeight = 1000;
-  Post.propTypes = {
-    post: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      metaTitle: PropTypes.string,
-      description: PropTypes.string,
-      content: PropTypes.string.isRequired,
-      date: PropTypes.string.isRequired,
-      author: PropTypes.object.isRequired,
-      categories: PropTypes.arrayOf(
-        PropTypes.shape({
-          name: PropTypes.string.isRequired,
-          slug: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-      modified: PropTypes.string.isRequired,
-      featuredImage: PropTypes.shape({
-        sourceUrl: PropTypes.string.isRequired,
-        caption: PropTypes.shape({
-          __html: PropTypes.string.isRequired,
-        }),
-      }),
-      isSticky: PropTypes.bool,
-      og: PropTypes.shape({
-        imageUrl: PropTypes.string,
-        imageSecureUrl: PropTypes.string,
-        imageWidth: PropTypes.number,
-        imageHeight: PropTypes.number,
-        description: PropTypes.string,
-      }),
-      slug: PropTypes.string.isRequired, // Add this line
-    }).isRequired,
-    socialImage: PropTypes.string.isRequired,
-    related: PropTypes.shape({
-      posts: PropTypes.arrayOf(
-        PropTypes.shape({
-          title: PropTypes.string.isRequired,
-          slug: PropTypes.string.isRequired,
-        })
-      ).isRequired,
-      title: PropTypes.shape({
-        name: PropTypes.string,
-        link: PropTypes.string,
-      }),
-    }),
-  };
+ 
 
   const { metadata } = usePageMetadata({
     metadata: {
@@ -146,9 +102,11 @@ export default function Post({ post, socialImage, related }) {
         <Section>
           <Container>
             <div
-              className={styles.content}
+              id="kontener"
+              className={styles.content} 
               dangerouslySetInnerHTML={{
                 __html: content,
+              
               }}
             />
           </Container>
@@ -162,7 +120,7 @@ export default function Post({ post, socialImage, related }) {
             <div className={styles.relatedPosts}>
               {relatedPostsTitle.name ? (
                 <span>
-                  More from{' '}
+                  Więcej z kategorii {' '}
                   <Link href={relatedPostsTitle.link}>
                     {relatedPostsTitle.name}
                   </Link>
@@ -194,6 +152,7 @@ export async function getStaticProps({ params = {} } = {}) {
     return {
       props: {},
       notFound: true,
+      queryIncludes: 'all',
     };
   }
 

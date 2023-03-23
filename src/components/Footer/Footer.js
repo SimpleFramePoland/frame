@@ -40,7 +40,7 @@ Regon	367060762
     </div>
     <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
         <nav className="list-none mb-10">
           <li>
             <a className="text-white hover:text-babyblue">First Link</a>
@@ -57,7 +57,7 @@ Regon	367060762
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
         <nav className="list-none mb-10">
           <li>
             <a className="text-white hover:text-babyblue">First Link</a>
@@ -74,7 +74,7 @@ Regon	367060762
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
         <nav className="list-none mb-10">
           <li>
             <a className="text-white hover:text-babyblue">First Link</a>
@@ -91,7 +91,7 @@ Regon	367060762
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
         <nav className="list-none mb-10">
           <li>
             <a className="text-white hover:text-babyblue">First Link</a>
@@ -133,7 +133,7 @@ Regon	367060762
         </a>
         <a className="ml-3 text-babyblue">
           <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
-            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12h3z"></path>
             <circle cx="4" cy="4" r="2" stroke="none"></circle>
           </svg>
         </a>

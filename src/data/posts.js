@@ -41,6 +41,10 @@ export const QUERY_ALL_POSTS_ARCHIVE = gql`
     posts(first: 10000, where: { hasPassword: false }) {
       edges {
         node {
+          featuredImage {
+            node {
+              sourceUrl
+            }}
           ...PostFields
           author {
             node {

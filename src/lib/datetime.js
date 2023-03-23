@@ -1,11 +1,11 @@
 import { format } from 'date-fns';
-
+import plLocale from 'date-fns/locale/pl';
 /**
  * formatDate
  */
 
 export function formatDate(date, pattern = 'PPP') {
-  return format(new Date(date), pattern);
+  return format(new Date(date), pattern, { locale: plLocale });
 }
 
 /**

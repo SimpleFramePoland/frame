@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import React from 'react';
 import config from '../../../package.json';
 import { Helmet } from 'react-helmet';
 
@@ -59,7 +59,7 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
           className={styles.prev}
           aria-label="Goto Previous Page">
 
-          <PreviousIcon />Previous
+          <PreviousIcon />Poprzednia
         </Link>)
       )}
 
@@ -99,7 +99,7 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
           href={`${path}${currentPage + 1}`}
           className={styles.next}
           aria-label="Goto Next Page">
-          Next<NextIcon />
+          Następna<NextIcon />
 
         </Link>)
       )}

@@ -68,9 +68,9 @@ export default function Page({ page, breadcrumbs }) {
 
       <Header>
 
-      <Carousel/>
+    
       </Header>
-
+      <Carousel/>
       <Content>
         <Section>
           <Container>
