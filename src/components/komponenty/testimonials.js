@@ -76,7 +76,7 @@ export function Testimonials() {
     <section
       id="testimonials"
       aria-labelledby="testimonials-title"
-      className="bg-black py-20 sm:py-32 mt-20"
+      className="bg-black py-20 sm:py-32 pt-20"
     >
       <Container>
         <div className="mx-auto max-w-2xl md:text-center">

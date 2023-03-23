@@ -1,6 +1,6 @@
 import Link from 'next/link';
-
-
+import React from 'react';
+import Image from 'next/image';
 import Section from 'components/Section';
 import Container from 'components/Container';
 
@@ -20,7 +20,13 @@ const Footer = () => {
     <div className="flex lg:flex-1">
         <a href="/" className=" ">
           <span className="sr-only">Your Company</span>
-          <img className="h-auto w-auto  " src="../logo.png" alt="" />
+          <Image
+      src="/logo.png"
+      alt="Landscape picture"
+      width={250}
+      height={100}
+      
+    />
         </a>
        
       </div>
