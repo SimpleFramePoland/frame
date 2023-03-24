@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
         <Section >
-            <footer className="text-white font-semibold absolute w-full bg-black">
+            <footer className="text-white absolute w-full bg-black">
           <Container>
             
   
@@ -30,7 +30,7 @@ const Footer = () => {
         </a>
        
       </div>
-      <p className="mt-4 ml-6 font-semibold">
+      <p className="mt-4 ml-6 ">
         ul. Wiertnicza 135A<br/>
 02-952 Warszawa<br/>
 KRS	0000673577<br/>
@@ -40,70 +40,68 @@ Regon	367060762
     </div>
     <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Produkcja filmowa </h3>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-white hover:text-babyblue">First Link</a>
+            <a href="/film-reklamowy" className="text-white hover:text-babyblue">Film Reklamowy</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Second Link</a>
+            <a href='/film-korporacyjny' className="text-white hover:text-babyblue">Film Korporacyjny</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Third Link</a>
+            <a href='/film-promocyjny' className="text-white hover:text-babyblue">Film Promocyjny</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Fourth Link</a>
+            <a href='/film-produktowy' className="text-white hover:text-babyblue">Film Produktowy</a>
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Animacje</h3>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-white hover:text-babyblue">First Link</a>
+            <a href= '/animacja-3d/' className="text-white hover:text-babyblue">Animacja 3D</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Second Link</a>
+            <a href= '/animacja-2d' className="text-white hover:text-babyblue">Animacja 2D</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Third Link</a>
+            <a href= '/animacja-techniczna' className="text-white hover:text-babyblue">Animacja Techniczna</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Fourth Link</a>
+            <a  href= '/animacja-produktowa' className="text-white hover:text-babyblue">Animacja Produktowa</a>
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Postprodukcja</h3>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-white hover:text-babyblue">First Link</a>
+            <a className="text-white hover:text-babyblue">Postproduckja</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Second Link</a>
+            <a href="/montaz-filmow" className="text-white hover:text-babyblue">Montaż filmów</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Third Link</a>
+            <a href='/produkcja-animacji' className="text-white hover:text-babyblue">Produkcja Animacji</a>
           </li>
-          <li>
-            <a className="text-white hover:text-babyblue">Fourth Link</a>
-          </li>
+        
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">CATEGORIES</h3>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Uslugi</h3>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-white hover:text-babyblue">First Link</a>
+            <a href= '/billboard-sponsorski' className="text-white hover:text-babyblue">Billboard Sponsorski</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Second Link</a>
+            <a href= '/teledyski' className="text-white hover:text-babyblue">Teledyski</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Third Link</a>
+            <a  href= '/fotografia' className="text-white hover:text-babyblue">Fotografia</a>
           </li>
           <li>
-            <a className="text-white hover:text-babyblue">Fourth Link</a>
+            <a href='/streaming-video' className="text-white hover:text-babyblue">Streaming</a>
           </li>
         </nav>
       </div>

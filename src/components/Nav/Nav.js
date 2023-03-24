@@ -41,7 +41,7 @@ const Postprodukcja = [
   { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
 ];
 const animacje = [
-  { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-trojwymiarowa/', icon: CubeIcon },
+  { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-3d/', icon: CubeIcon },
   { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: ArrowPathIcon },
   { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: WrenchScrewdriverIcon },
   { name: 'Animacja Produktowa', description: 'Przedstaw swoje produkty w nowoczesny i innowacyjny sposób', href: '/animacja-produktowa', icon: CakeIcon },
@@ -254,8 +254,8 @@ export default function Header() {
 
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white pr-10">
-            Kontakt <span aria-hidden="true">&rarr;</span>
+          <a href="/porozmawiajmy" className="text-sm font-bold leading-6 text-white pr-10 bg-babyblue rounded-lg">
+            <span className='ml-10'>Kontakt <span aria-hidden="true">&rarr;</span></span>
           </a>
         </div>
       </nav>
@@ -367,14 +367,14 @@ export default function Header() {
                   Blog
                 </a>
               </div>
-              <div className="py-6">
+              <button className="bg-babyblue w-1/4 rounded ">
                 <a
-                  href="#"
-                  className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-white hover:bg-black-50"
+                  href="/porozmawiajmy"
+                  className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-bold leading-7 text-white hover:bg-black-50"
                 >
-                  Kontakt
+                 Kontakt
                 </a>
-              </div>
+              </button>
             </div>
           </div>
         </Dialog.Panel>
