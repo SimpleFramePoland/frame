@@ -12,7 +12,7 @@ const Footer = () => {
   return (
         <Section >
             <footer className="text-white absolute w-full bg-black">
-          <Container>
+        
             
   
           <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
@@ -139,7 +139,6 @@ Regon	367060762
     </div>
   </div>
   
-        </Container>
         </footer>
       </Section>
 

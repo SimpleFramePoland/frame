@@ -73,7 +73,7 @@ export default function Page({ page, breadcrumbs }) {
       <Content>
         <Section>
           <Container>
-       <div className="text-lg font-normal font-mono" id='podbert'>
+       <div className="text-lg font-normal font-mono ">
             <div
 
               className={styles.tekstiusz} 
