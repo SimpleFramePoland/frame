@@ -65,7 +65,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
 
-    <header className="bg-black w-full left-0 z-10 fixed ">
+    <header className="bg-black w-full left-0 z-10 fixed">
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-14" aria-label="Global">
         <div className="flex lg:flex-1">

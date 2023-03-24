@@ -9,7 +9,19 @@ export default function Slider() {
           alt="..."
         />
         <img
-          src="/feature1.jpg"
+          src="/film1.jpg"
+          alt="..."
+        />
+        <img
+          src="/film2.jpg"
+          alt="..."
+        />
+        <img
+          src="/film3.jpg"
+          alt="..."
+        />
+        <img
+          src="/film4.jpg"
           alt="..."
         />
       </Carousel>

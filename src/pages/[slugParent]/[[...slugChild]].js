@@ -55,7 +55,6 @@ export default function Page({ page, breadcrumbs }) {
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/modula-wf.js?ver=2.7.3' id='modula-wf-js'></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula/assets/js/modula-pro.js?ver=2.6.1' id='modula-pro-js'></script>
-
     
 
       <Helmet {...helmetSettings} />
@@ -74,17 +73,17 @@ export default function Page({ page, breadcrumbs }) {
       <Content>
         <Section>
           <Container>
-       
+       <div className="text-lg font-normal font-mono" id='podbert'>
             <div
 
-              className={styles.tekstiusz}
+              className={styles.tekstiusz} 
               dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
             ></div>
  
 
             <div
 
-              className='text-base text-grey-darker mt-10 mb-10  '
+            className='mt-10 mb-10'
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
             ></div>
 
@@ -93,9 +92,11 @@ export default function Page({ page, breadcrumbs }) {
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
             ></div>
             <div
-              className='text-base text-grey-darker mt-10 mb-10 '
+             
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
             ></div>
+
+</div>
           </Container>
         </Section>
 
