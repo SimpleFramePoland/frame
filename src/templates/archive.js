@@ -13,7 +13,7 @@ import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination/Pagination';
 import styles from 'styles/templates/Archive.module.scss';
 import React from 'react';
-import FeaturedImage from 'components/FeaturedImage';
+
 
 const DEFAULT_POST_OPTIONS = {};
 
@@ -25,6 +25,8 @@ export default function TemplateArchive({
   slug,
   metadata,
   pagination,
+  categories,
+  
 }) {
   const { metadata: siteMetadata = {} } = useSite();
 
@@ -44,7 +46,7 @@ export default function TemplateArchive({
 
       <Header>
         <Container>
-          <div></div>
+         
           <h1 className='pt-10'>Witaj na naszym blogu</h1>
           {metadata.description && (
             <p
@@ -54,6 +56,9 @@ export default function TemplateArchive({
               }}
             />
           )}
+          <div>
+           
+          </div>
         </Container>
       </Header>
 

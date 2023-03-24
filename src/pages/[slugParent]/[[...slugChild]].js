@@ -73,7 +73,7 @@ export default function Page({ page, breadcrumbs }) {
       <Content>
         <Section>
           <Container>
-       <div className="text-lg font-normal font-mono ">
+       <div className="text-lg font-normal font-sans ">
             <div
 
               className={styles.tekstiusz} 
