@@ -93,7 +93,7 @@ export default function Post({ post, socialImage, related }) {
           </svg>
           <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-12 lg:text-left align-middle mt-10">
           <h1
-          className='text-white banerek'
+          className='text-white banerek '
           
           dangerouslySetInnerHTML={{
             __html: title,
@@ -108,13 +108,13 @@ export default function Post({ post, socialImage, related }) {
           isSticky={isSticky}
         />
           </div>
-          <div className=' max-w-md mx-auto text-center mlg:flex-auto justify-center lg:py-12 justify-self-center align-center flex items-center ' > 
+          <div className=' max-w-md mx-auto text-center mlg:flex-auto justify-center lg:py-12 justify-self-center align-center flex items-center  ' > 
             {featuredImage && (
           <FeaturedImage
             {...featuredImage}
             src={featuredImage.sourceUrl}
             dangerouslySetInnerHTML={featuredImage.caption}
-            className="  flex items-center justify-center w-[49rem]   "
+            className="  flex items-center justify-center  w-[56rem] "
           />
         )}
           </div>

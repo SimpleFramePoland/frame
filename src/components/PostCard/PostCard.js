@@ -8,6 +8,7 @@ import { FaMapPin } from 'react-icons/fa';
 import styles from './PostCard.module.scss';
 
 
+
 const PostCard = ({ post, options = {} }) => {
   const { title, excerpt, slug, date, featuredImage, categories, isSticky = false } = post;
   const { excludeMetadata = [] } = options;
@@ -33,43 +34,47 @@ const PostCard = ({ post, options = {} }) => {
   }
 
   return (
-    <div className={postCardStyle}>
-  
-      {isSticky && <FaMapPin aria-label="Sticky Post" />}
-      <div className='flex flex-row'>
-        <div className='basis-2/4 '>
-      <FeaturedImage
-            {...featuredImage}
-            src={featuredImage.sourceUrl}
-            dangerouslySetInnerHTML={featuredImage.caption}
-            className="rounded-lg"
-          />
-          </div>
-          <div>     
-      <Link href={postPathBySlug(slug) } >
-   
-      
-         
-        <h3
-          className={styles.postCardTitle}
+    <div >
+       <div className=" mt-11">
+      <div className="bg-white mx-auto shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+        
+        <FeaturedImage
+        {...featuredImage}
+        src={featuredImage.sourceUrl}
+        dangerouslySetInnerHTML={featuredImage.caption}
+        className="rounded-lg"
+      />
+        
+        <div className="p-5">
+          
+            <div className=" font-semibold text-2xl  mb-2"> <Link href={postPathBySlug(slug)} >
+        <div
+          className=""
           dangerouslySetInnerHTML={{
             __html: title,
           }}
         />
 
-      </Link>
-      
-      <Metadata className={styles.postCardMetadata} {...metadata} />
+      </Link></div>
+          
+          <p className="font-normal text-gray-700 mb-3"><Metadata className={styles.postCardMetadata} {...metadata} />
       {excerpt && (
         <div
-          className={styles.postCardContent}
+          
           dangerouslySetInnerHTML={{
             __html: sanitizeExcerpt(excerpt),
           }}
         />
       )}
+</p>
+          
+        </div>
       </div>
+      
     </div>
+      
+     
+      
     </div>
   );
 };

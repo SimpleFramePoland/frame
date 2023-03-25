@@ -2,23 +2,10 @@
 @import "styles/settings/__settings";
 
 .featuredImage {
-  margin: 0 0 2em;
-
-  div {
-    position: relative;
-    width: 50%;
-    margin: auto;
-    height: 0;
-    padding-top: percentage(math.div(400, 960));
-    float: left;
-  }
-
   img {
-    position: absolute;
-    top: 0;
+    height: 20rem;
     background-color: rgba(0, 0, 0, 0);
-    left: 0;
-    border: 0;
+    border: 0px;
     @apply rounded-2xl;
   }
 }

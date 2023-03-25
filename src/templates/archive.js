@@ -44,31 +44,15 @@ export default function TemplateArchive({
 
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 
-      <Header>
-        <Container>
-         
-          <h1 className='pt-10'>Witaj na naszym blogu</h1>
-          {metadata.description && (
-            <p
-              className={styles.archiveDescription}
-              dangerouslySetInnerHTML={{
-                __html: metadata.description,
-              }}
-            />
-          )}
-          <div>
-           
-          </div>
-        </Container>
-      </Header>
+    
 
       <Section>
         <Container>
     
-          <SectionTitle>Wpisy</SectionTitle>
+         
           {Array.isArray(posts) && (
             <>
-              <ul className={styles.posts}>
+              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
                 {posts.map((post) => {
                   return (
                     <li key={post.slug}>
