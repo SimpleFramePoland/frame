@@ -1,7 +1,7 @@
 import ClassName from 'models/classname';
 
 import Image from 'components/Image';
-
+import React from 'react';
 import styles from './FeaturedImage.module.scss';
 
 const FeaturedImage = ({ className, alt, ...rest }) => {

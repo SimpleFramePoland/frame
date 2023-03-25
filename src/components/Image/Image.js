@@ -1,5 +1,5 @@
 import ClassName from 'models/classname';
-
+import React from 'react';
 import styles from './Image.module.scss';
 
 const Image = ({
