@@ -253,10 +253,12 @@ export default function Header() {
           </a>
 
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="/porozmawiajmy" className="text-sm font-bold leading-6 text-white pr-10 bg-babyblue rounded-lg">
-            <span className='ml-10'>Kontakt <span aria-hidden="true">&rarr;</span></span>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
+          <button className='btn btn-sm btn-primary align-middle  '>
+          <a href="/porozmawiajmy"className="text-white capitalize" >
+          Kontakt 
           </a>
+          </button>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>

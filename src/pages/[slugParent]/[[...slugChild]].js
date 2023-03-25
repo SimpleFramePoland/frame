@@ -73,26 +73,26 @@ export default function Page({ page, breadcrumbs }) {
       <Content>
         <Section>
           <Container>
-       <div className="text-lg font-normal font-sans ">
+       <div className="text-lg   ">
             <div
 
-              className={styles.tekstiusz} 
+              className=" prose max-w-screen-lg w-full  mx-auto" 
               dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
             ></div>
  
 
             <div
 
-            className='mt-10 mb-10'
+            className='mt-10 mb-10 '
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
             ></div>
 
             <div
-               className={styles.tekstiusz}
+               className="prose  max-w-screen-lg w-full  mx-auto "
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
             ></div>
             <div
-             
+              className='mt-10'
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
             ></div>
 

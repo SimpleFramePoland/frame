@@ -1,16 +1,38 @@
 module.exports = {
-    content: ["./src/**/*.{html,js}",
+  content: ["./src/**/*.{html,js}",
     "./node_modules/flowbite-react/**/*.js",
   ],
-    
-    theme: {
-      extend: {
-        colors:{
-          babyblue: '#19b5fe',
+
+  theme: {
+    extend: {
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': theme('colors.black'),
+        
+          },
         },
+      }),
+      colors: {
+        babyblue: '#19b5fe',
       },
+      
     },
-    plugins: [
-      require("flowbite/plugin")
-    ],
+  },
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("flowbite/plugin"),
+   
+  ],
+  daisyui: {
+
+
+  
+    logs: true,
+    themes: [{
+      motywik: {
+        "primary": "#19b5fe",
+      },
+    }]
   }
+}
