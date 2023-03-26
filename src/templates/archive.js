@@ -1,23 +1,24 @@
 import { Helmet } from 'react-helmet';
-
+import Kategorie from 'components/komponenty/Kategorie';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 
 import Layout from 'components/Layout';
-import Header from 'components/Header';
+import Link from 'next/link';
+import { getAllCategories, categoryPathBySlug } from 'lib/categories';
 import Section from 'components/Section';
-import Container from 'components/Container';
-import SectionTitle from 'components/SectionTitle';
+
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination/Pagination';
-import styles from 'styles/templates/Archive.module.scss';
+
 import React from 'react';
 
 
 const DEFAULT_POST_OPTIONS = {};
 
 export default function TemplateArchive({
+  categories,
   title = 'Archive',
   Title,
   posts,
@@ -25,7 +26,7 @@ export default function TemplateArchive({
   slug,
   metadata,
   pagination,
-  categories,
+
   
 }) {
   const { metadata: siteMetadata = {} } = useSite();
@@ -46,10 +47,21 @@ export default function TemplateArchive({
 
     
 
-      <Section>
-        <Container>
-    
-         
+      
+    <div className='flex flex-row px-2 mt-[8rem] '>
+      <div > <ul >
+            {categories.map((category) => {
+              return (
+                <li key={category.slug}>
+                  <Link href={categoryPathBySlug(category.slug)}>
+                    {category.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul></div>
+  
+         <div >
           {Array.isArray(posts) && (
             <>
               <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
@@ -70,10 +82,9 @@ export default function TemplateArchive({
               )}
             </>
           )}
-          |
-          
-        </Container>
-      </Section>
+          |</div>
+          </div>
+     
     </Layout>
   );
 }

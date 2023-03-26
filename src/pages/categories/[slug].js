@@ -1,11 +1,11 @@
 import { getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
-
+import { getAllCategories} from 'lib/categories';
 import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
-
-export default function Category({ category, posts }) {
+import { getPaginatedPosts } from 'lib/posts';
+export default function Category({ category, posts,categories }) {
   const { name, description, slug } = category;
 
   const { metadata } = usePageMetadata({
@@ -15,7 +15,7 @@ export default function Category({ category, posts }) {
     },
   });
 
-  return <TemplateArchive title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />;
+  return <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} description={description} />;
 }
 
 export async function getStaticProps({ params = {} } = {}) {
@@ -28,14 +28,18 @@ export async function getStaticProps({ params = {} } = {}) {
     };
   }
 
-  const { posts } = await getPostsByCategoryId({
+  const { categories } = await getAllCategories();
+
+  const { posts } = await getPaginatedPosts({
     categoryId: category.databaseId,
     queryIncludes: 'archive',
   });
+  
 
   return {
     props: {
       category,
+      categories,
       posts,
     },
   };

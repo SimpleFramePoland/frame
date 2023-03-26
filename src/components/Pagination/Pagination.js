@@ -8,7 +8,22 @@ import { HiOutlineDotsHorizontal as Dots } from 'react-icons/hi';
 import styles from './Pagination.module.scss';
 
 const MAX_NUM_PAGES = 9;
-
+export async function getStaticProps() {
+  const { posts, pagination } = await getPaginatedPosts({
+    queryIncludes: 'archive',
+  });
+  const { categories } = await getAllCategories();
+  return {
+    props: {
+      posts,
+      pagination: {
+        ...pagination,
+        basePath: '/posts',
+      },
+      categories,
+    },
+  };
+}
 const { homepage = '' } = config;
 
 const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) => {

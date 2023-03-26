@@ -37,13 +37,13 @@ const PostCard = ({ post, options = {} }) => {
     <div >
        <div className=" mt-11">
       <div className="bg-white mx-auto shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-        
-        <FeaturedImage
+      <FeaturedImage
         {...featuredImage}
         src={featuredImage.sourceUrl}
         dangerouslySetInnerHTML={featuredImage.caption}
         className="rounded-lg"
-      />
+      /> 
+     
         
         <div className="p-5">
           
@@ -57,7 +57,7 @@ const PostCard = ({ post, options = {} }) => {
 
       </Link></div>
           
-          <p className="font-normal text-gray-700 mb-3"><Metadata className={styles.postCardMetadata} {...metadata} />
+       <Metadata className={styles.postCardMetadata} {...metadata} />
       {excerpt && (
         <div
           
@@ -66,7 +66,7 @@ const PostCard = ({ post, options = {} }) => {
           }}
         />
       )}
-</p>
+
           
         </div>
       </div>

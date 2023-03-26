@@ -1,18 +1,15 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-
+import Kategorie from 'components/komponenty/Kategorie';
 import useSite from 'hooks/use-site';
-import { getAllCategories, categoryPathBySlug } from 'lib/categories';
+
 import { WebpageJsonLd } from 'lib/json-ld';
 import React from 'react';
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import SectionTitle from 'components/SectionTitle';
-
-import styles from 'styles/pages/Categories.module.scss';
-
+import { getAllCategories, categoryPathBySlug } from 'lib/categories';
 export default function Categories({ categories }) {
   const { metadata = {} } = useSite();
   const { title: siteTitle } = metadata;
@@ -39,8 +36,8 @@ export default function Categories({ categories }) {
 
       <Section>
         <Container>
-          <SectionTitle>All Categories</SectionTitle>
-          <ul className={styles.categories}>
+         
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
             {categories.map((category) => {
               return (
                 <li key={category.slug}>
