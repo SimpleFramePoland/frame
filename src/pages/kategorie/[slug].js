@@ -1,15 +1,13 @@
-import { getCategoryBySlug } from 'lib/categories';
+import { getAllCategories, getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
-import { getAllCategories } from 'lib/categories';
+
 import Container from 'components/Container';
 
-import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
-import { arEG } from 'date-fns/locale';
-import Layout from 'components/Layout';
+
 export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
 
@@ -74,7 +72,7 @@ export async function getStaticPaths() {
   });
 
   return {
-    paths,
+    paths:[slug],
     fallback: 'blocking',
   };
 }
