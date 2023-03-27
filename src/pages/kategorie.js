@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-import Kategorie from 'components/komponenty/Kategorie';
+
 import useSite from 'hooks/use-site';
 
 import { WebpageJsonLd } from 'lib/json-ld';
@@ -13,8 +13,8 @@ import { getAllCategories, categoryPathBySlug } from 'lib/categories';
 export default function Categories({ categories }) {
   const { metadata = {} } = useSite();
   const { title: siteTitle } = metadata;
-  const title = 'Categories';
-  const slug = 'categories';
+  const title = 'Kategorie';
+  const slug = 'kategorie';
   let metaDescription = `Read ${categories.length} categories at ${siteTitle}.`;
 
   return (

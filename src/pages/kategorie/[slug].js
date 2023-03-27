@@ -5,8 +5,9 @@ import React from 'react';
 import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
 import { getAllCategories } from 'lib/categories';
+import Container from 'components/Container';
 
-export default function Category({ categories, category, posts }) {
+export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
 
   const { metadata } = usePageMetadata({
@@ -16,7 +17,12 @@ export default function Category({ categories, category, posts }) {
     },
   });
 
-  return <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />;
+  return (
+  <>
+
+  <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />;
+  
+  </>)
 }
 
 export async function getStaticProps({ params = {} } = {}) {

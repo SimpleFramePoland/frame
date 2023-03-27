@@ -74,6 +74,12 @@ export default function Page({ page, breadcrumbs }) {
         <Section>
           <Container>
        <div className="text-lg   ">
+       <div
+              className={styles.content}
+              dangerouslySetInnerHTML={{
+                __html: content,
+              }}
+            />
             <div
 
               className=" prose max-w-screen-lg w-full  mx-auto" 

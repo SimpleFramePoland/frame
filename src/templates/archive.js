@@ -50,7 +50,7 @@ export default function TemplateArchive({
     <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
     <div className='flex-1 flex-none'>
   {categories && categories.length > 0 ? (
-    <ul className='border-4 border-babyblue'>
+    <ul className='border-4 border-babyblue max-w-[13rem] lg:max-w-full rounded-xl'>
       {categories.map((category) => (
         <li key={category.slug}>
           <Link href={categoryPathBySlug(category.slug)}>
@@ -64,7 +64,7 @@ export default function TemplateArchive({
   )}
 </div>
          <div className='flex-2'>
-         
+        
               <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto">
                 {posts.map((post) => {
                   return (
