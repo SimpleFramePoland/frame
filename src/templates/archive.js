@@ -10,7 +10,7 @@ import { categoryPathBySlug } from 'lib/categories';
 
 
 import PostCard from 'components/PostCard';
-import Pagination from 'components/Pagination/Pagination';
+
 
 import React from 'react';
 
@@ -24,7 +24,7 @@ export default function TemplateArchive({
   postOptions = DEFAULT_POST_OPTIONS,
   slug,
   metadata,
-  pagination,
+
 
   
 }) {
@@ -64,8 +64,7 @@ export default function TemplateArchive({
   )}
 </div>
          <div className='flex-2'>
-          {Array.isArray(posts) && (
-            <>
+         
               <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto">
                 {posts.map((post) => {
                   return (
@@ -75,15 +74,7 @@ export default function TemplateArchive({
                   );
                 })}
               </ul>
-              {pagination && (
-                <Pagination
-                  currentPage={pagination?.currentPage}
-                  pagesCount={pagination?.pagesCount}
-                  basePath={pagination?.basePath}
-                />
-              )}
-            </>
-          )}
+             
           </div>
           </div>
      
@@ -91,18 +82,13 @@ export default function TemplateArchive({
   );
 }
 export async function getStaticProps() {
-  const { posts, pagination } = await getPaginatedPosts({
+  const { posts } = await getPaginatedPosts({
     queryIncludes: 'all',
   });
   const { categories } = await getAllCategories();
   return {
     props: {
       posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
-        categories,
-      },
       categories,
     },
   };
