@@ -3,16 +3,6 @@ import { gql } from '@apollo/client';
 export const POST_FIELDS = gql`
   fragment PostFields on Post {
     id
-    categories {
-      edges {
-        node {
-          databaseId
-          id
-          name
-          slug
-        }
-      }
-    }
     databaseId
     date
     isSticky
@@ -41,6 +31,14 @@ export const QUERY_ALL_POSTS_ARCHIVE = gql`
     posts(first: 10000, where: { hasPassword: false }) {
       edges {
         node {
+          categories {
+            edges {
+              node {
+                name
+                slug
+              }
+            }
+          }
           featuredImage {
             node {
               sourceUrl
@@ -71,6 +69,16 @@ export const QUERY_ALL_POSTS = gql`
     posts(first: 10000, where: { hasPassword: false }) {
       edges {
         node {
+          categories {
+            edges {
+              node {
+                databaseId
+                id
+                name
+                slug
+              }
+            }
+          }
           ...PostFields
           author {
             node {

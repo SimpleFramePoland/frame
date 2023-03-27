@@ -1,21 +1,21 @@
 import { Helmet } from 'react-helmet';
-import Kategorie from 'components/komponenty/Kategorie';
+
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 
 import Layout from 'components/Layout';
 import Link from 'next/link';
-import { getAllCategories, categoryPathBySlug } from 'lib/categories';
-import Section from 'components/Section';
+import { categoryPathBySlug } from 'lib/categories';
+
 
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination/Pagination';
 
 import React from 'react';
 
-
 const DEFAULT_POST_OPTIONS = {};
+
 
 export default function TemplateArchive({
   categories,
@@ -49,17 +49,7 @@ export default function TemplateArchive({
 
       
     <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
-      <div className='flex-1 flex-none'> <ul >
-            {categories.map((category) => {
-              return (
-                <li key={category.slug}>
-                  <Link href={categoryPathBySlug(category.slug)}>
-                    {category.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul></div>
+  
   
          <div className='flex-2'>
           {Array.isArray(posts) && (
@@ -82,7 +72,7 @@ export default function TemplateArchive({
               )}
             </>
           )}
-          |</div>
+          </div>
           </div>
      
     </Layout>

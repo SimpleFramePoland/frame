@@ -25,6 +25,7 @@ export const QUERY_CATEGORY_BY_SLUG = gql`
       name
       slug
     }
+    
   }
 `;
 

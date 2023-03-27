@@ -8,27 +8,17 @@ import { HiOutlineDotsHorizontal as Dots } from 'react-icons/hi';
 import styles from './Pagination.module.scss';
 
 const MAX_NUM_PAGES = 9;
-export async function getStaticProps() {
-  const { posts, pagination } = await getPaginatedPosts({
-    queryIncludes: 'archive',
-  });
-  const { categories } = await getAllCategories();
-  return {
-    props: {
-      posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
-      },
-      categories,
-    },
-  };
-}
+
+
+
+
+
+
 const { homepage = '' } = config;
 
 const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) => {
   const path = `${basePath}/page/`;
-
+ const categories = {}
   const hasPreviousPage = pagesCount > 1 && currentPage > 1;
   const hasNextPage = pagesCount > 1 && currentPage < pagesCount;
 
@@ -36,6 +26,7 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
   let hasNextDots = false;
 
   function getPages() {
+   
     let pages = pagesCount;
     let start = 0;
     // If the number of pages exceeds the max
@@ -59,14 +50,15 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
   }
 
   const pages = getPages();
-
+ 
   return <>
     <Helmet>
       {addCanonical && !hasPreviousPage && <link rel="canonical" href={`${homepage}${basePath}`} />}
       {hasPreviousPage && <link rel="prev" href={`${homepage}${path}${currentPage - 1}`} />}
       {hasNextPage && <link rel="next" href={`${homepage}${path}${currentPage + 1}`} />}
+  
     </Helmet>
-
+   
     <nav className={styles.nav} role="navigation" aria-label="Pagination Navigation">
       {hasPreviousPage && (
         (<Link

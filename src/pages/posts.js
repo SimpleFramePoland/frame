@@ -1,9 +1,9 @@
 import usePageMetadata from 'hooks/use-page-metadata';
 
 import { getAllCategories } from 'lib/categories';
-
+import { gql } from '@apollo/client';
 import { getPaginatedPosts } from 'lib/posts';
-
+import React from 'react';
 import TemplateArchive from 'templates/archive';
 
 export default function Posts({ posts, pagination, categories }) {
