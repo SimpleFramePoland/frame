@@ -72,7 +72,7 @@ export async function getStaticPaths() {
   });
 
   return {
-    paths:[slug],
-    fallback: 'blocking',
+    paths,
+    fallback: 'true',
   };
 }
