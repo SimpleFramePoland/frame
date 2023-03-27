@@ -60,6 +60,8 @@ export async function getStaticPaths() {
  return {
     params: {
       slug,
+      paths,
+    fallback: 'blocking',
     },
  };
  });
@@ -67,7 +69,6 @@ export async function getStaticPaths() {
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths,
-    fallback: 'blocking',
+    
   };
 }
