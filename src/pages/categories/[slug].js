@@ -1,12 +1,11 @@
-import { getCategoryBySlug } from 'lib/categories';
+import { getAllCategories, getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
-import { getAllCategories} from 'lib/categories';
+import React from 'react';
 import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
-import { getPaginatedPosts } from 'lib/posts';
-import React from 'react';
-export default function Category({ category, posts,categories }) {
+
+export default function Category({ category, posts }) {
   const { name, description, slug } = category;
 
   const { metadata } = usePageMetadata({
@@ -16,7 +15,7 @@ export default function Category({ category, posts,categories }) {
     },
   });
 
-  return <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} description={description} />;
+  return <TemplateArchive title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />;
 }
 
 export async function getStaticProps({ params = {} } = {}) {
@@ -29,18 +28,14 @@ export async function getStaticProps({ params = {} } = {}) {
     };
   }
 
-  const { categories } = await getAllCategories();
-
-    const { posts } = await getPostsByCategoryId({
+  const { posts } = await getPostsByCategoryId({
     categoryId: category.databaseId,
     queryIncludes: 'archive',
   });
-  
 
   return {
     props: {
       category,
-      categories,
       posts,
     },
   };
@@ -58,21 +53,21 @@ export async function getStaticPaths() {
 
   // 2. Uncomment the below
   //
-  // const { categories } = await getAllCategories();
+  const { categories } = await getAllCategories();
 
-  // const paths = categories.map((category) => {
-  //   const { slug } = category;
-  //   return {
-  //     params: {
-  //       slug,
-  //     },
-  //   };
-  // });
+ const paths = categories.map((category) => {
+   const { slug } = category;
+ return {
+    params: {
+      slug,
+    },
+ };
+ });
 
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths: [],
+    paths,
     fallback: 'blocking',
   };
 }
