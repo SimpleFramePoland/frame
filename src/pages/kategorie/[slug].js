@@ -7,6 +7,9 @@ import Title from 'components/Title';
 import { getAllCategories } from 'lib/categories';
 import Container from 'components/Container';
 
+import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
+import { arEG } from 'date-fns/locale';
+import Layout from 'components/Layout';
 export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
 
@@ -19,14 +22,22 @@ export default function Category({ categories, category, posts,page }) {
 
   return (
   <>
-
-  <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />;
+ 
+   <Container>
+ 
+       <h1 className="text-3xl font-bold mb-6 ">{name}</h1>
+             {description && <p className="text-xl mb-6">{description}</p>}
+         
+             </Container>     
+             
+  <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />; 
   
   </>)
 }
 
 export async function getStaticProps({ params = {} } = {}) {
   const { category } = await getCategoryBySlug(params?.slug);
+
 
   if (!category) {
     return {
@@ -42,6 +53,7 @@ export async function getStaticProps({ params = {} } = {}) {
 
   return {
     props: {
+   
       categories,
       category,
       posts,
@@ -50,32 +62,19 @@ export async function getStaticProps({ params = {} } = {}) {
 }
 
 export async function getStaticPaths() {
+  const { categories } = await getAllCategories();
 
-  // we're considering them non-critical pages
-
-  // To enable pre-rendering of Category pages:
-
-  // 1. Add import to the top of the file
-  //
-  // import { getAllCategories, getCategoryBySlug } from 'lib/categories';
-
-  // 2. Uncomment the below
-  //
-  // const { categories } = await getAllCategories();
-
-  // const paths = categories.map((category) => {
-  //   const { slug } = category;
-  //   return {
-  //     params: {
-  //       slug,
-  //     },
-  //   };
-  // });
-
-  // 3. Update `paths` in the return statement below to reference the `paths` constant above
+  const paths = categories.map((category) => {
+    const { slug } = category;
+    return {
+      params: {
+        slug,
+      },
+    };
+  });
 
   return {
-    paths: [],
+    paths,
     fallback: 'blocking',
   };
 }
