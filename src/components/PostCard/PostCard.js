@@ -41,7 +41,7 @@ const PostCard = ({ post, options = {} }) => {
         {...featuredImage}
         src={featuredImage.sourceUrl}
         dangerouslySetInnerHTML={featuredImage.caption}
-        className="rounded-lg shrink"
+    
       /> 
      
         

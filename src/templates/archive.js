@@ -48,8 +48,8 @@ export default function TemplateArchive({
     
 
       
-    <div className='flex  px-2 mt-[8rem] px-12  '>
-      <div className='flex-1 '> <ul >
+    <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
+      <div className='flex-1 flex-none'> <ul >
             {categories.map((category) => {
               return (
                 <li key={category.slug}>

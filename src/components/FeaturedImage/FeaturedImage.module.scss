@@ -7,5 +7,7 @@
     background-color: rgba(0, 0, 0, 0);
     border: 0px;
     @apply rounded-2xl;
+    @apply max-w-full;
+    @apply h-auto;
   }
 }
