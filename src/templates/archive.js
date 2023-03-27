@@ -20,7 +20,6 @@ const DEFAULT_POST_OPTIONS = {};
 export default function TemplateArchive({
   categories,
   title = 'Archive',
-  Title,
   posts,
   postOptions = DEFAULT_POST_OPTIONS,
   slug,
@@ -49,8 +48,21 @@ export default function TemplateArchive({
 
       
     <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
-  
-  
+    <div className='flex-1 flex-none'>
+  {categories && categories.length > 0 ? (
+    <ul className='border-4 border-babyblue'>
+      {categories.map((category) => (
+        <li key={category.slug}>
+          <Link href={categoryPathBySlug(category.slug)}>
+           {category.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p></p>
+  )}
+</div>
          <div className='flex-2'>
           {Array.isArray(posts) && (
             <>
@@ -77,4 +89,21 @@ export default function TemplateArchive({
      
     </Layout>
   );
+}
+export async function getStaticProps() {
+  const { posts, pagination } = await getPaginatedPosts({
+    queryIncludes: 'all',
+  });
+  const { categories } = await getAllCategories();
+  return {
+    props: {
+      posts,
+      pagination: {
+        ...pagination,
+        basePath: '/posts',
+        categories,
+      },
+      categories,
+    },
+  };
 }

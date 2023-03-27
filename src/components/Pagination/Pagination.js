@@ -2,11 +2,12 @@ import Link from 'next/link';
 import React from 'react';
 import config from '../../../package.json';
 import { Helmet } from 'react-helmet';
-
 import { GrPrevious as PreviousIcon, GrNext as NextIcon } from 'react-icons/gr';
 import { HiOutlineDotsHorizontal as Dots } from 'react-icons/hi';
 import styles from './Pagination.module.scss';
 
+import { getPaginatedPosts } from 'lib/posts';
+import { getAllCategories } from 'lib/categories';
 const MAX_NUM_PAGES = 9;
 
 
@@ -16,15 +17,15 @@ const MAX_NUM_PAGES = 9;
 
 const { homepage = '' } = config;
 
-const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) => {
+const Pagination = ({categories, pagesCount, currentPage, basePath, addCanonical = true }) => {
   const path = `${basePath}/page/`;
- const categories = {}
+  
   const hasPreviousPage = pagesCount > 1 && currentPage > 1;
   const hasNextPage = pagesCount > 1 && currentPage < pagesCount;
-
+ 
   let hasPrevDots = false;
   let hasNextDots = false;
-
+  
   function getPages() {
    
     let pages = pagesCount;
@@ -56,9 +57,9 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
       {addCanonical && !hasPreviousPage && <link rel="canonical" href={`${homepage}${basePath}`} />}
       {hasPreviousPage && <link rel="prev" href={`${homepage}${path}${currentPage - 1}`} />}
       {hasNextPage && <link rel="next" href={`${homepage}${path}${currentPage + 1}`} />}
-  
+  {}
     </Helmet>
-   
+    
     <nav className={styles.nav} role="navigation" aria-label="Pagination Navigation">
       {hasPreviousPage && (
         (<Link
@@ -113,5 +114,21 @@ const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) 
     </nav>
   </>;
 };
+export async function getStaticPaths() {
+  const { categories } = await getPaginatedPosts();
 
+  const paths = categories.map((category) => {
+    const { slug } = category;
+    return {
+      params: {
+        slug,
+      },
+    };
+  });
+
+  return {
+    paths: paths,
+    fallback: 'blocking',
+  };
+}
 export default Pagination;

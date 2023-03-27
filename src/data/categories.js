@@ -2,6 +2,7 @@ import { gql } from '@apollo/client';
 
 export const QUERY_ALL_CATEGORIES = gql`
   query AllCategories {
+    
     categories(first: 10000) {
       edges {
         node {
@@ -24,6 +25,17 @@ export const QUERY_CATEGORY_BY_SLUG = gql`
       id
       name
       slug
+    }
+    categories {
+      edges {
+        node {
+          databaseId
+          description
+          id
+          name
+          slug
+        }
+      }
     }
     
   }

@@ -1,13 +1,13 @@
 import usePageMetadata from 'hooks/use-page-metadata';
 
 import { getAllCategories } from 'lib/categories';
-import { gql } from '@apollo/client';
+
 import { getPaginatedPosts } from 'lib/posts';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
 
 export default function Posts({ posts, pagination, categories }) {
-  const title = 'All Posts';
+  const title = 'Blog';
   const slug = 'posts';
 
   const { metadata } = usePageMetadata({
@@ -22,7 +22,7 @@ export default function Posts({ posts, pagination, categories }) {
 
 export async function getStaticProps() {
   const { posts, pagination } = await getPaginatedPosts({
-    queryIncludes: 'archive',
+    queryIncludes: 'all',
   });
   const { categories } = await getAllCategories();
   return {
@@ -31,6 +31,7 @@ export async function getStaticProps() {
       pagination: {
         ...pagination,
         basePath: '/posts',
+        categories,
       },
       categories,
     },
