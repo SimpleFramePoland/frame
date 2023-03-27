@@ -5,6 +5,7 @@ import { getAllCategories} from 'lib/categories';
 import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
 import { getPaginatedPosts } from 'lib/posts';
+import React from 'react';
 export default function Category({ category, posts,categories }) {
   const { name, description, slug } = category;
 
@@ -30,7 +31,7 @@ export async function getStaticProps({ params = {} } = {}) {
 
   const { categories } = await getAllCategories();
 
-  const { posts } = await getPaginatedPosts({
+    const { posts } = await getPostsByCategoryId({
     categoryId: category.databaseId,
     queryIncludes: 'archive',
   });

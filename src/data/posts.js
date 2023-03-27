@@ -170,6 +170,10 @@ export const QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE = gql`
     posts(where: { categoryId: $categoryId, hasPassword: false }) {
       edges {
         node {
+          featuredImage {
+            node {
+              sourceUrl
+            }}
           ...PostFields
           author {
             node {

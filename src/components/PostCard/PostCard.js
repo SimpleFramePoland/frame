@@ -35,13 +35,13 @@ const PostCard = ({ post, options = {} }) => {
 
   return (
     <div >
-       <div className=" mt-11">
+       <div className="">
       <div className="bg-white mx-auto shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
       <FeaturedImage
         {...featuredImage}
         src={featuredImage.sourceUrl}
         dangerouslySetInnerHTML={featuredImage.caption}
-        className="rounded-lg"
+        className="rounded-lg shrink"
       /> 
      
         

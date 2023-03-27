@@ -48,8 +48,8 @@ export default function TemplateArchive({
     
 
       
-    <div className='flex flex-row px-2 mt-[8rem] '>
-      <div > <ul >
+    <div className='flex  px-2 mt-[8rem] px-12  '>
+      <div className='flex-1 '> <ul >
             {categories.map((category) => {
               return (
                 <li key={category.slug}>
@@ -61,10 +61,10 @@ export default function TemplateArchive({
             })}
           </ul></div>
   
-         <div >
+         <div className='flex-2'>
           {Array.isArray(posts) && (
             <>
-              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
+              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto">
                 {posts.map((post) => {
                   return (
                     <li key={post.slug}>
