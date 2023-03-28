@@ -36,6 +36,9 @@ const nextConfig = {
 };
 
 module.exports = () => {
+  images: {
+    unoptimized: true
+}
   const plugins = [indexSearch, feed, sitemap];
   return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
 };
