@@ -1,17 +1,5 @@
 {
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.html",
-  "/porozmawiajmy": "pages/porozmawiajmy.html",
-  "/500": "pages/500.js",
   "/_app": "pages/_app.js",
-  "/404": "pages/404.js",
-  "/authors/[slug]": "pages/authors/[slug].js",
-  "/categories": "pages/categories.js",
-  "/posts": "pages/posts.js",
-  "/posts/[slug]": "pages/posts/[slug].js",
-  "/search": "pages/search.js",
-  "/posts/page/[page]": "pages/posts/page/[page].js",
-  "/kategoria/[slug]": "pages/kategoria/[slug].js",
-  "/[slugParent]/[[...slugChild]]": "pages/[slugParent]/[[...slugChild]].js"
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
 }
