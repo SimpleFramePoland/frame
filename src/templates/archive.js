@@ -1,32 +1,29 @@
 import { Helmet } from 'react-helmet';
-
+import React from 'react';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 
 import Layout from 'components/Layout';
-import Link from 'next/link';
-import { categoryPathBySlug } from 'lib/categories';
-
-
+import Header from 'components/Header';
+import Section from 'components/Section';
+import Container from 'components/Container';
+import SectionTitle from 'components/SectionTitle';
 import PostCard from 'components/PostCard';
+import Pagination from 'components/Pagination/Pagination';
 
-
-import React from 'react';
+import styles from 'styles/templates/Archive.module.scss';
 
 const DEFAULT_POST_OPTIONS = {};
 
-
 export default function TemplateArchive({
-  categories,
   title = 'Archive',
+  Title,
   posts,
   postOptions = DEFAULT_POST_OPTIONS,
   slug,
   metadata,
-
-
-  
+  pagination,
 }) {
   const { metadata: siteMetadata = {} } = useSite();
 
@@ -44,28 +41,26 @@ export default function TemplateArchive({
 
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 
-    
+      <Header>
+        <Container>
+          <h1>{Title || title}</h1>
+          {metadata.description && (
+            <p
+              className={styles.archiveDescription}
+              dangerouslySetInnerHTML={{
+                __html: metadata.description,
+              }}
+            />
+          )}
+        </Container>
+      </Header>
 
-      
-    <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
-    <div className='flex-1 flex-none'>
-  {categories && categories.length > 0 ? (
-    <ul className='border-4 border-babyblue max-w-[13rem] lg:max-w-full rounded-xl'>
-      {categories.map((category) => (
-        <li key={category.slug}>
-          <Link href={categoryPathBySlug(category.slug)}>
-           {category.name}
-          </Link>
-        </li>
-      ))}
-    </ul>
-  ) : (
-    <p></p>
-  )}
-</div>
-         <div className='flex-2'>
-        
-              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto">
+      <Section>
+        <Container>
+          <SectionTitle>Posts</SectionTitle>
+          {Array.isArray(posts) && (
+            <>
+              <ul className={styles.posts}>
                 {posts.map((post) => {
                   return (
                     <li key={post.slug}>
@@ -74,22 +69,17 @@ export default function TemplateArchive({
                   );
                 })}
               </ul>
-             
-          </div>
-          </div>
-     
+              {pagination && (
+                <Pagination
+                  currentPage={pagination?.currentPage}
+                  pagesCount={pagination?.pagesCount}
+                  basePath={pagination?.basePath}
+                />
+              )}
+            </>
+          )}
+        </Container>
+      </Section>
     </Layout>
   );
-}
-export async function getStaticProps() {
-  const { posts } = await getPaginatedPosts({
-    queryIncludes: 'all',
-  });
-  const { categories } = await getAllCategories();
-  return {
-    props: {
-      posts,
-      categories,
-    },
-  };
 }
