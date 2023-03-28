@@ -6,7 +6,7 @@ import { getPaginatedPosts } from 'lib/posts';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
 
-export default function Posts({ posts, pagination, categories }) {
+export default function Posts({ posts,  categories }) {
   const title = 'Blog';
   const slug = 'posts';
 
@@ -17,7 +17,7 @@ export default function Posts({ posts, pagination, categories }) {
     },
   });
 
-  return <TemplateArchive categories={categories} title={title} posts={posts} slug={slug} pagination={pagination} metadata={metadata} />;
+  return <TemplateArchive categories={categories} title={title} posts={posts} slug={slug}  metadata={metadata} />;
 }
 
 export async function getStaticProps() {
@@ -28,11 +28,7 @@ export async function getStaticProps() {
   return {
     props: {
       posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
-       
-      },
+   
       categories,
     },
   };

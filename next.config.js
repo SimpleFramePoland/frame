@@ -1,53 +1,85 @@
-const indexSearch = require('./plugins/search-index');
-const feed = require('./plugins/feed');
-const sitemap = require('./plugins/sitemap');
-// const socialImages = require('./plugins/socialImages'); TODO: failing to run on Netlify
+import { Helmet } from 'react-helmet';
+import React from 'react';
+import { WebpageJsonLd } from 'lib/json-ld';
+import { helmetSettingsFromMetadata } from 'lib/site';
+import useSite from 'hooks/use-site';
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
+import Layout from 'components/Layout';
+import Header from 'components/Header';
+import Section from 'components/Section';
+import Container from 'components/Container';
+import SectionTitle from 'components/SectionTitle';
+import PostCard from 'components/PostCard';
+import Pagination from 'components/Pagination/Pagination';
 
-  // By default, Next.js removes the trailing slash. One reason this would be good
-  // to include is by default, the `path` property of the router for the homepage
-  // is `/` and by using that, would instantly create a redirect
+import styles from 'styles/templates/Archive.module.scss';
 
-  trailingSlash: true,
+const DEFAULT_POST_OPTIONS = {};
 
-  // By enabling verbose logging, it will provide additional output details for
-  // diagnostic purposes. By default is set to false.
-  // verbose: true,
+export default function TemplateArchive({
+  title = 'Archive',
+  Title,
+  posts,
+  postOptions = DEFAULT_POST_OPTIONS,
+  slug,
+  metadata,
+  pagination,
+}) {
+  const { metadata: siteMetadata = {} } = useSite();
 
-  env: {
-    // The image directory for open graph images will be saved at the location above
-    // with `public` prepended. By default, images will be saved at /public/images/og
-    // and available at /images/og. If changing, make sure to update the .gitignore
+  if (process.env.WORDPRESS_PLUGIN_SEO !== true) {
+    metadata.title = `${title} - ${siteMetadata.title}`;
+    metadata.og.title = metadata.title;
+    metadata.twitter.title = metadata.title;
+  }
 
-    OG_IMAGE_DIRECTORY: '/images/og',
+  const helmetSettings = helmetSettingsFromMetadata(metadata);
 
-    // By default, only render this number of post pages ahead of time, otherwise
-    // the rest will be rendered on-demand
-    POSTS_PRERENDER_COUNT: 200,
+  return (
+    <Layout>
+      <Helmet {...helmetSettings} />
 
-    WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
-    WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
-    WORDPRESS_PLUGIN_SEO: parseEnvValue(process.env.WORDPRESS_PLUGIN_SEO, false),
-  },
-};
+      <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 
-module.exports = () => {
-  const plugins = [indexSearch, feed, sitemap];
-  return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
-};
+      <Header>
+        <Container>
+          <h1>{Title || title}</h1>
+          {metadata.description && (
+            <p
+              className={styles.archiveDescription}
+              dangerouslySetInnerHTML={{
+                __html: metadata.description,
+              }}
+            />
+          )}
+        </Container>
+      </Header>
 
-/**
- * parseEnv
- * @description Helper function to check if a variable is defined and parse booelans
- */
-
-function parseEnvValue(value, defaultValue) {
-  if (typeof value === 'undefined') return defaultValue;
-  if (value === true || value === 'true') return true;
-  if (value === false || value === 'false') return false;
-  return value;
+      <Section>
+        <Container>
+          <SectionTitle>Posts</SectionTitle>
+          {Array.isArray(posts) && (
+            <>
+              <ul className={styles.posts}>
+                {posts.map((post) => {
+                  return (
+                    <li key={post.slug}>
+                      <PostCard post={post} options={postOptions} />
+                    </li>
+                  );
+                })}
+              </ul>
+              {pagination && (
+                <Pagination
+                  currentPage={pagination?.currentPage}
+                  pagesCount={pagination?.pagesCount}
+                  basePath={pagination?.basePath}
+                />
+              )}
+            </>
+          )}
+        </Container>
+      </Section>
+    </Layout>
+  );
 }
