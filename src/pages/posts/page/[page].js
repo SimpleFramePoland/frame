@@ -3,6 +3,7 @@ import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
 import { getAllPosts, getPagesCount } from 'lib/posts';
+
 export default function Posts({ posts, pagination }) {
   const title = `All Posts`;
   const slug = 'posts';
@@ -66,7 +67,7 @@ export async function getStaticPaths() {
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths: [],
+    paths: paths,
     fallback: 'blocking',
   };
 }
