@@ -8,7 +8,7 @@ import Title from 'components/Title';
 import Container from 'components/Container';
 
 
-export default function Category({ categories, category, posts,page }) {
+export default function Category({  category, posts }) {
   const { name, description, slug } = category;
 
   const { metadata } = usePageMetadata({
@@ -28,7 +28,7 @@ export default function Category({ categories, category, posts,page }) {
          
              </Container>     
              
-  <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />; 
+  <TemplateArchive title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />; 
   
   </>)
 }
@@ -51,7 +51,7 @@ export async function getStaticProps({ params = {} } = {}) {
 
   return {
     props: {
-      categories,
+   
       category,
       posts,
     },
