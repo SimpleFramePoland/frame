@@ -13,8 +13,8 @@ import { getAllCategories, categoryPathBySlug } from 'lib/categories';
 export default function Categories({ categories }) {
   const { metadata = {} } = useSite();
   const { title: siteTitle } = metadata;
-  const title = 'Kategorie';
-  const slug = 'kategorie';
+  const title = 'Kategoria';
+  const slug = 'kategoria';
   let metaDescription = `Read ${categories.length} categories at ${siteTitle}.`;
 
   return (
