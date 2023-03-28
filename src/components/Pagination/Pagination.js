@@ -1,33 +1,26 @@
 import Link from 'next/link';
-import React from 'react';
+
 import config from '../../../package.json';
 import { Helmet } from 'react-helmet';
+
 import { GrPrevious as PreviousIcon, GrNext as NextIcon } from 'react-icons/gr';
 import { HiOutlineDotsHorizontal as Dots } from 'react-icons/hi';
 import styles from './Pagination.module.scss';
 
-import { getPaginatedPosts } from 'lib/posts';
-import { getAllCategories } from 'lib/categories';
 const MAX_NUM_PAGES = 9;
-
-
-
-
-
 
 const { homepage = '' } = config;
 
-const Pagination = ({categories, pagesCount, currentPage, basePath, addCanonical = true }) => {
+const Pagination = ({ pagesCount, currentPage, basePath, addCanonical = true }) => {
   const path = `${basePath}/page/`;
-  
+
   const hasPreviousPage = pagesCount > 1 && currentPage > 1;
   const hasNextPage = pagesCount > 1 && currentPage < pagesCount;
- 
+
   let hasPrevDots = false;
   let hasNextDots = false;
-  
+
   function getPages() {
-   
     let pages = pagesCount;
     let start = 0;
     // If the number of pages exceeds the max
@@ -51,84 +44,65 @@ const Pagination = ({categories, pagesCount, currentPage, basePath, addCanonical
   }
 
   const pages = getPages();
- 
-  return <>
-    <Helmet>
-      {addCanonical && !hasPreviousPage && <link rel="canonical" href={`${homepage}${basePath}`} />}
-      {hasPreviousPage && <link rel="prev" href={`${homepage}${path}${currentPage - 1}`} />}
-      {hasNextPage && <link rel="next" href={`${homepage}${path}${currentPage + 1}`} />}
-  {}
-    </Helmet>
-    
-    <nav className={styles.nav} role="navigation" aria-label="Pagination Navigation">
-      {hasPreviousPage && (
-        (<Link
-          href={`${path}${currentPage - 1}`}
-          className={styles.prev}
-          aria-label="Goto Previous Page">
 
-          <PreviousIcon />Poprzednia
-        </Link>)
-      )}
+  return (
+    <>
+      <Helmet>
+        {addCanonical && !hasPreviousPage && <link rel="canonical" href={`${homepage}${basePath}`} />}
+        {hasPreviousPage && <link rel="prev" href={`${homepage}${path}${currentPage - 1}`} />}
+        {hasNextPage && <link rel="next" href={`${homepage}${path}${currentPage + 1}`} />}
+      </Helmet>
 
-      <ul className={styles.pages}>
-        {hasPrevDots && (
-          <li className={styles.dots}>
-            <Dots aria-label={`Navigation to pages 1-${pages[0] - 1} hidden`} />
-          </li>
+      <nav className={styles.nav} role="navigation" aria-label="Pagination Navigation">
+        {hasPreviousPage && (
+          <Link href={`${path}${currentPage - 1}`}>
+            <a className={styles.prev} aria-label="Goto Previous Page">
+              <PreviousIcon /> Previous
+            </a>
+          </Link>
         )}
-        {pages.map((page) => {
-          const active = page === currentPage;
-          return active ? (
-            <li key={page}>
-              <span className={styles.active} aria-label={`Current Page, Page ${page}`} aria-current="true">
-                {page}
-              </span>
-            </li>
-          ) : (
-            <li key={page}>
-              <Link href={`${path}${page}`} aria-label={`Goto Page ${page}`}>
 
-                <span>{page}</span>
-
-              </Link>
+        <ul className={styles.pages}>
+          {hasPrevDots && (
+            <li className={styles.dots}>
+              <Dots aria-label={`Navigation to pages 1-${pages[0] - 1} hidden`} />
             </li>
-          );
-        })}
-        {hasNextDots && (
-          <li className={styles.dots}>
-            <Dots aria-label={`Navigation to pages ${pages[pages.length - 1] + 1}-${pagesCount} hidden`} />
-          </li>
+          )}
+          {pages.map((page) => {
+            const active = page === currentPage;
+            return active ? (
+              <li key={page}>
+                <span className={styles.active} aria-label={`Current Page, Page ${page}`} aria-current="true">
+                  {page}
+                </span>
+              </li>
+            ) : (
+              <li key={page}>
+                <Link href={`${path}${page}`}>
+                  <a aria-label={`Goto Page ${page}`}>
+                    <span>{page}</span>
+                  </a>
+                </Link>
+              </li>
+            );
+          })}
+          {hasNextDots && (
+            <li className={styles.dots}>
+              <Dots aria-label={`Navigation to pages ${pages[pages.length - 1] + 1}-${pagesCount} hidden`} />
+            </li>
+          )}
+        </ul>
+
+        {hasNextPage && (
+          <Link href={`${path}${currentPage + 1}`}>
+            <a className={styles.next} aria-label="Goto Next Page">
+              Next <NextIcon />
+            </a>
+          </Link>
         )}
-      </ul>
-
-      {hasNextPage && (
-        (<Link
-          href={`${path}${currentPage + 1}`}
-          className={styles.next}
-          aria-label="Goto Next Page">
-          Następna<NextIcon />
-
-        </Link>)
-      )}
-    </nav>
-  </>;
+      </nav>
+    </>
+  );
 };
-export async function getStaticPaths() {
-  const { categories } = await getPaginatedPosts();
 
-  const paths = categories.map((category) => {
-    const { slug } = category;
-    return {
-      params: {
-        slug,
-      },
-    };
-  });
-
-  return {
-    paths: paths,
-    fallback: 'blocking',
-  };
-}
 export default Pagination;
