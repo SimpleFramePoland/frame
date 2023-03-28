@@ -1,5 +1,5 @@
 import { getApolloClient } from 'lib/apollo-client';
-import { getAllCategories} from 'lib/categories';
+
 import { updateUserAvatar } from 'lib/users';
 import { sortObjectsByDate } from 'lib/datetime';
 
@@ -389,20 +389,18 @@ export async function getPaginatedPosts({ currentPage = 1, ...options } = {}) {
   const { posts } = await getAllPosts(options);
   const postsPerPage = await getPostsPerPage();
   const pagesCount = await getPagesCount(posts, postsPerPage);
-  const { categories } = await getAllCategories();
+
   let page = Number(currentPage);
 
   if (typeof page === 'undefined' || isNaN(page)) {
     page = 1;
   } else if (page > pagesCount) {
     return {
-      categories,
       posts: [],
       pagination: {
         currentPage: undefined,
         pagesCount,
       },
- 
     };
   }
 
