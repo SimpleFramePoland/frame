@@ -1,7 +1,7 @@
 import usePageMetadata from 'hooks/use-page-metadata';
 import { getAllCategories, categoryPathBySlug } from 'lib/categories';
 import { getPaginatedPosts } from 'lib/posts';
-
+import React from 'react';
 import TemplateArchive from 'templates/archive';
 
 export default function Posts({ posts, pagination,categories }) {
