@@ -24,14 +24,9 @@ export default function Category({ categories, category, posts, page }) {
       <Layout>
         <Container>
 
-    <div className='mt-[8rem]'>
-        {name}
-              {description ? (
-                <p className="prose mb-6">{description}</p>
-              ) : (
-                <p className="text-xl mb-6"></p>
-              )}
-  </div>
+
+
+
           <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
             <div className='flex-1 flex-none'>
               {categories && categories.length > 0 ? (
@@ -49,7 +44,11 @@ export default function Category({ categories, category, posts, page }) {
               )}
             </div>
             <div className='flex-2'>
-             
+              {description ? (
+                <p className="prose mb-6">{description}</p>
+              ) : (
+                <p className="text-xl mb-6"></p>
+              )}
               <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto">
                 {posts.map((post) => {
                   return (
