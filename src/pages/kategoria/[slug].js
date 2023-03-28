@@ -96,7 +96,7 @@ export async function getStaticPaths() {
 
 
   const { categories } = await getAllCategories();
-//test
+
   const paths = categories.map((category) => {
     const { slug } = category;
     return {
@@ -109,7 +109,7 @@ export async function getStaticPaths() {
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths: [],
+    paths: paths,
     fallback: 'blocking',
   };
 }
