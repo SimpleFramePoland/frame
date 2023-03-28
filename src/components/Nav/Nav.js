@@ -70,7 +70,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-14" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 ">
-            <span className="sr-only">Your Company</span>
+       
          
             <Image
       src="/logo.png"
