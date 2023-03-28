@@ -70,13 +70,13 @@ export default function Header() {
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-14" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 ">
-       
+           
          
             <Image
       src="/logo.png"
-      alt="Landscape picture"
-      width={250}
-      height={100}
+      alt="Logo Simple Frame"
+      width={315}
+      height={45}
       
     />
           </Link>
