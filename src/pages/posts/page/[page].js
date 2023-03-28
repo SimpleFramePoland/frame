@@ -2,7 +2,7 @@ import { getPaginatedPosts } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
 import { getAllPosts, getPagesCount } from 'lib/posts';
 import TemplateArchive from 'templates/archive';
-
+import React from 'react';
 export default function Posts({ posts, pagination }) {
   const title = `All Posts`;
   const slug = 'posts';
