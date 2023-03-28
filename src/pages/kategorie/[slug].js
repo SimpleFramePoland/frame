@@ -8,7 +8,7 @@ import Title from 'components/Title';
 import Container from 'components/Container';
 
 
-export default function Category({ categories, category, posts }) {
+export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
 
   const { metadata } = usePageMetadata({
@@ -35,7 +35,7 @@ export default function Category({ categories, category, posts }) {
 
 export async function getStaticProps({ params = {} } = {}) {
   const { category } = await getCategoryBySlug(params?.slug);
-  const { categories } = await getAllCategories();
+
 
   if (!category) {
     return {
@@ -43,7 +43,7 @@ export async function getStaticProps({ params = {} } = {}) {
       notFound: true,
     };
   }
- 
+  const { categories } = await getAllCategories();
   const { posts } = await getPostsByCategoryId({
     categoryId: category.databaseId,
     queryIncludes: 'archive',
@@ -52,6 +52,7 @@ export async function getStaticProps({ params = {} } = {}) {
   return {
     props: {
    
+      categories,
       category,
       posts,
     },
@@ -60,21 +61,21 @@ export async function getStaticProps({ params = {} } = {}) {
 export async function getStaticPaths() {
 
   
-   const { categories } = await getAllCategories();
+  // const { categories } = await getAllCategories();
 
-  const paths = categories.map((category) => {
-    const { slug } = category;
-   return {
-     params: {
-       slug,
-   },
-    };
-  });
+  // const paths = categories.map((category) => {
+  //   const { slug } = category;
+  //   return {
+  //     params: {
+  //       slug,
+  //     },
+  //   };
+  // });
 
- // 3. Update `paths` in the return statement below to reference the `paths` constant above
+  // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths: paths,
+    paths: [],
     fallback: 'blocking',
   };
 }
