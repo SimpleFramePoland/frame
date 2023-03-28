@@ -35,7 +35,7 @@ export default function Category({ categories, category, posts,page }) {
 
 export async function getStaticProps({ params = {} } = {}) {
   const { category } = await getCategoryBySlug(params?.slug);
-
+  const { categories } = await getAllCategories();
 
   if (!category) {
     return {
@@ -43,7 +43,7 @@ export async function getStaticProps({ params = {} } = {}) {
       notFound: true,
     };
   }
-  const { categories } = await getAllCategories();
+ 
   const { posts } = await getPostsByCategoryId({
     categoryId: category.databaseId,
     queryIncludes: 'archive',
@@ -51,7 +51,6 @@ export async function getStaticProps({ params = {} } = {}) {
 
   return {
     props: {
-   
       categories,
       category,
       posts,
@@ -76,6 +75,6 @@ export async function getStaticPaths() {
 
   return {
     paths: paths,
-    fallback: true,
+    fallback: 'blocking',
   };
 }
