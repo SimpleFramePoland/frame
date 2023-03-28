@@ -2,12 +2,12 @@ import Link from 'next/link';
 
 import config from '../../../package.json';
 import { Helmet } from 'react-helmet';
-import React  from 'react';
+
 import { GrPrevious as PreviousIcon, GrNext as NextIcon } from 'react-icons/gr';
 import { HiOutlineDotsHorizontal as Dots } from 'react-icons/hi';
 import styles from './Pagination.module.scss';
 
-const MAX_NUM_PAGES = 20;
+const MAX_NUM_PAGES = 9;
 
 const { homepage = '' } = config;
 

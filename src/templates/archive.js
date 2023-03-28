@@ -82,7 +82,7 @@ export default function TemplateArchive({
 }
 export async function getStaticProps() {
   const { posts } = await getPaginatedPosts({
-    queryIncludes: 'all',
+    queryIncludes: 'archive',
   });
   const { categories } = await getAllCategories();
   return {
