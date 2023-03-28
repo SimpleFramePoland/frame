@@ -45,7 +45,7 @@ export default function Category({ categories, category, posts, page }) {
             </div>
             <div className='flex-2'>
               {description ? (
-                <p className="prose mb-6">{description}</p>
+                <p className="text-xl mb-6">{description}</p>
               ) : (
                 <p className="text-xl mb-6"></p>
               )}
