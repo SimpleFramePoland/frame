@@ -24,7 +24,7 @@ export default function Category({ categories, category, posts,page }) {
    <Carousel/>
    <Container>
    
-       <h1 className="text-3xl font-bold mb-6 mt-[10rem] ">{name}</h1>
+       <h1 className="text-3xl font-bold mb-6 mt-[4rem] ">{name}</h1>
              {description && <p className="text-xl mb-6">{description}</p>}
          
                   

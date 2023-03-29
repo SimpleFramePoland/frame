@@ -94,7 +94,7 @@ export default function Page({ page, breadcrumbs }) {
  
    <Container>
             <div
-               className="prose  max-w-screen-lg w-full  mx-auto "
+               className="prose  max-w-screen-lg w-full  mx-auto druga "
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
             ></div>
                     </Container>

@@ -67,7 +67,7 @@ export default function Header() {
     <header className="bg-black w-full lg:px-5 left-0 z-10 fixed">
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
-        <div className="flex lg:flex-1">
+        <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none">
         
           <Link href="/" className="-m-1.5 p-1.5 ">
            
@@ -77,6 +77,7 @@ export default function Header() {
       alt="Logo Simple Frame"
       width={315}
       height={45}
+      className="sm:max-w-12"
       
     />
           </Link>
