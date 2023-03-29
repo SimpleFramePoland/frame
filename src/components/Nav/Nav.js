@@ -69,7 +69,7 @@ export default function Header() {
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
         <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none">
         
-          <Link href="/" className="-m-1.5 p-1.5 ">
+          <Link href="/" className="-m-1.5 p-1.5 " passHref> 
            
          
             <Image
@@ -287,7 +287,7 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5" passHref>
               <span className="sr-only">Simple Frame</span>
       
             </Link>

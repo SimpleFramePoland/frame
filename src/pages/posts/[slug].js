@@ -23,7 +23,7 @@ import styles from 'styles/pages/Post.module.scss';
 export default function Post({ post, socialImage, related }) {
   const {
     title,
-    metaTitle,
+  
     description,
     content,
     date,
@@ -49,7 +49,7 @@ export default function Post({ post, socialImage, related }) {
   const { metadata } = usePageMetadata({
     metadata: {
       ...post,
-      title: metaTitle,
+      title: title,
       description: description || post.og?.description || `Read more about ${title}`,
     },
   });
@@ -76,7 +76,7 @@ export default function Post({ post, socialImage, related }) {
 
       <Header >
       
-      <div className="mx-auto mt-[120px]">
+      <div className="mx-auto mt-[120px] mb-12">
         <div className="relative isolate overflow-hidden  bg-black shadow-2xl rounded-3xl sm:px-16  lg:flex lg:gap-x-20 lg:px-24 ">
         <svg
             viewBox="0 0 1024 1024"

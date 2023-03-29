@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
         <Section >
-            <footer className="text-white absolute w-full bg-black">
+            <footer className="text-white  mt-12 bg-black">
         
             
   
@@ -107,13 +107,13 @@ Regon	367060762
       </div>
     </div>
   </div>
-  <div className="">
-    <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+  
+    <div className="container mx-auto  px-5 flex flex-wrap flex-col sm:flex-row">
       <p className="text-babyblue fonttext-sm text-center sm:text-left">© 2023 SimpleFrame
         
       </p>
      
-    </div>
+    
   </div>
   
         </footer>
