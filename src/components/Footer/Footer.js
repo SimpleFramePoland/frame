@@ -23,14 +23,14 @@ const Footer = () => {
           <Image
       src="/logo.png"
       alt="Landscape picture"
-      width={250}
-      height={100}
+      width={315}
+      height={45}
       
     />
         </a>
        
       </div>
-      <p className="mt-4 ml-6 ">
+      <p className="mt-4  ">
         ul. Wiertnicza 135A<br/>
 02-952 Warszawa<br/>
 KRS	0000673577<br/>
@@ -60,7 +60,7 @@ Regon	367060762
         <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Animacje</h3>
         <nav className="list-none mb-10">
           <li>
-            <a href= '/animacja-3d/' className="text-white hover:text-babyblue">Animacja 3D</a>
+            <a href= '/animacja-3d-2/' className="text-white hover:text-babyblue">Animacja 3D</a>
           </li>
           <li>
             <a href= '/animacja-2d' className="text-white hover:text-babyblue">Animacja 2D</a>

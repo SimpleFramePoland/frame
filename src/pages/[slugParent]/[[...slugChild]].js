@@ -65,10 +65,7 @@ export default function Page({ page, breadcrumbs }) {
         slug={slug}
       />
 
-      <Header>
-
-    
-      </Header>
+     
       <Carousel/>
       <Content>
         <Section>

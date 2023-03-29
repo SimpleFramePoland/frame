@@ -8,7 +8,7 @@ import Layout from 'components/Layout';
 import Link from 'next/link';
 import { categoryPathBySlug } from 'lib/categories';
 
-
+import Carousel from 'components/komponenty/Carousel';
 import PostCard from 'components/PostCard';
 
 import Container from 'components/Container';
@@ -43,7 +43,7 @@ export default function TemplateArchive({
       <Helmet {...helmetSettings} />
 
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
-
+<Carousel/>
       <Container>
 
       <div className=' mt-24 '>

@@ -3,7 +3,7 @@ import { getAllCategories, categoryPathBySlug } from 'lib/categories';
 import { getPaginatedPosts } from 'lib/posts';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
-
+import Carousel from 'components/komponenty/Carousel';
 export default function Posts({ posts, pagination,categories }) {
   const title = 'All Posts';
   const slug = 'posts';

@@ -7,6 +7,7 @@ import PostCard from 'components/PostCard';
 import Container from 'components/Container';
 import Link from 'next/link';
 import { categoryPathBySlug } from 'lib/categories';
+import Carousel from 'components/komponenty/Carousel';
 export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
 
@@ -20,7 +21,7 @@ export default function Category({ categories, category, posts,page }) {
   return (
 
  <Layout>
-   
+   <Carousel/>
    <Container>
    
        <h1 className="text-3xl font-bold mb-6 mt-[10rem] ">{name}</h1>
