@@ -16,10 +16,7 @@ import {
   BuildingOffice2Icon,
   ArrowPathIcon,
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
   FilmIcon,
-  FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
@@ -27,6 +24,8 @@ import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faYoutube, faVimeo, faInstagram, faFacebook} from "@fortawesome/free-brands-svg-icons";
 
 const produkcje = [
   { name: 'Film Reklamowy', description: 'Skuteczna reklama wideo dla Twojego biznesu', href: '/film-reklamowy', icon: FilmIcon },
@@ -65,10 +64,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
 
-    <header className="bg-black w-full left-0 z-10 fixed">
+    <header className="bg-black w-full px-5 left-0 z-10 fixed">
 
-      <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 lg:px-14" aria-label="Global">
+      <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
         <div className="flex lg:flex-1">
+        
           <Link href="/" className="-m-1.5 p-1.5 ">
            
          
@@ -82,6 +82,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex lg:hidden">
+          
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
@@ -248,17 +249,37 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
+
           <a href="/posts" className="text-sm font-semibold leading-6 text-white">
             Blog
           </a>
 
+         
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end ">
-          <button className='btn btn-sm btn-primary align-middle  '>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end  ">
+          <div className=' mr-5 md:ml-5'>
+      <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer" />
+       </a>
+       <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
+      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer" />
+       </a>
+       <a href ="https://vimeo.com/user5695137/videos" className='align-middle  '>
+      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer" />
+       </a>
+       <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
+      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer"/>
+       </a>
+       <a href ="/porozmawiajmy" className='align-middle'>
+  
+       </a>
+       </div>
+          <button className='bg-babyblue rounded-md w-20 h-8  '>
           <a href="/porozmawiajmy"className="text-white capitalize" >
           Kontakt 
           </a>
           </button>
+          
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -369,15 +390,33 @@ export default function Header() {
                   Blog
                 </a>
               </div>
-              <button className="bg-babyblue w-1/4 rounded ">
+              <button className="bg-babyblue text-white rounded-md w-20 h-10 ">
                 <a
                   href="/porozmawiajmy"
-                  className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-bold leading-7 text-white hover:bg-black-50"
+                 className='text-white'
                 >
                  Kontakt
                 </a>
               </button>
+              
             </div>
+            <div className=' mt-16 space-x-6'>
+      <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+       </a>
+       <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
+      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+       </a>
+       <a href ="https://vimeo.com/user5695137/videos" className='align-middle  '>
+      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+       </a>
+       <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
+      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer"/>
+       </a>
+       <a href ="/porozmawiajmy" className='align-middle'>
+  
+       </a>
+       </div>
           </div>
         </Dialog.Panel>
       </Dialog>
