@@ -77,30 +77,36 @@ export default function Page({ page, breadcrumbs }) {
                 __html: content,
               }}
             />
+         
             <div
 
               className=" prose max-w-screen-lg w-full  mx-auto" 
               dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
             ></div>
- 
+            </div>
+ </Container>
 
             <div
 
-            className='mt-10 mb-10 '
+            className='mt-10 mb-10  '
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
             ></div>
-
+ 
+   <Container>
             <div
                className="prose  max-w-screen-lg w-full  mx-auto "
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
             ></div>
+                    </Container>
+
+                  
             <div
-              className='mt-10'
+              className='mt-10 w-full max-w-none'
               dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
             ></div>
 
-</div>
-          </Container>
+
+     
         </Section>
 
         {hasChildren && (

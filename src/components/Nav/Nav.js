@@ -64,7 +64,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
 
-    <header className="bg-black w-full px-5 left-0 z-10 fixed">
+    <header className="bg-black w-full lg:px-5 left-0 z-10 fixed">
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
         <div className="flex lg:flex-1">
@@ -257,18 +257,18 @@ export default function Header() {
          
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end  ">
-          <div className=' mr-5 md:ml-5'>
+          <div className=' mr-5 md:ml-5 lg:space-x-2 md:space-x-1'>
       <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer" />
+      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
        </a>
        <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
-      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer" />
+      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
        </a>
        <a href ="https://vimeo.com/user5695137/videos" className='align-middle  '>
-      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer" />
+      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
        </a>
        <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
-      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-8 w-10 " target="_blank" rel="noopener noreferrer"/>
+      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer"/>
        </a>
        <a href ="/porozmawiajmy" className='align-middle'>
   

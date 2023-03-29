@@ -28,3 +28,7 @@
   border-bottom: solid 1px $color-gray-100;
   margin-top: 0;
 }
+.shortcode-grid-container {
+  width: 100vw;
+  max-width: none !important;
+}
