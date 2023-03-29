@@ -11,7 +11,7 @@ import { categoryPathBySlug } from 'lib/categories';
 
 import PostCard from 'components/PostCard';
 
-
+import Container from 'components/Container';
 import React from 'react';
 
 const DEFAULT_POST_OPTIONS = {};
@@ -44,27 +44,26 @@ export default function TemplateArchive({
 
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 
-    
+      <Container>
 
-      
-    <div className='flex  px-2 mt-[8rem] px-12 justify-center  '>
-    <div className='flex-1 flex-none'>
+      <div className=' mt-24 '>
   {categories && categories.length > 0 ? (
-    <ul className='border-4 border-babyblue max-w-[13rem] lg:max-w-full rounded-xl'>
+  
+    <ul className='space-x-5 overflow-x-scroll inline py-2 '>
       {categories.map((category) => (
-        <li key={category.slug}>
+        <li className=" inline mx-5"key={category.slug}>
           <Link href={categoryPathBySlug(category.slug)}>
            {category.name}
           </Link>
         </li>
       ))}
     </ul>
+ 
   ) : (
     <p></p>
   )}
-</div>
-         <div className='flex-2'>
-              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto">
+  </div>
+              <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8 mx-auto mt-12">
                 {posts.map((post) => {
                   return (
                     <li key={post.slug}>
@@ -74,9 +73,9 @@ export default function TemplateArchive({
                 })}
               </ul>
              
-          </div>
-          </div>
-     
+          
+          
+              </Container>
     </Layout>
   );
 }

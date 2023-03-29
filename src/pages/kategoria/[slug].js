@@ -2,12 +2,11 @@ import { getAllCategories, getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
-import TemplateArchive from 'templates/archive';
-import Title from 'components/Title';
-
+import Layout from 'components/Layout';
+import PostCard from 'components/PostCard';
 import Container from 'components/Container';
-
-
+import Link from 'next/link';
+import { categoryPathBySlug } from 'lib/categories';
 export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
 
@@ -19,18 +18,49 @@ export default function Category({ categories, category, posts,page }) {
   });
 
   return (
-  <>
- 
+
+ <Layout>
+   
    <Container>
- 
-       <h1 className="text-3xl font-bold mb-6 ">{name}</h1>
+   
+       <h1 className="text-3xl font-bold mb-6 mt-[10rem] ">{name}</h1>
              {description && <p className="text-xl mb-6">{description}</p>}
          
-             </Container>     
-             
-  <TemplateArchive categories={categories} title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />; 
+                  
+
+
+
+<div className='max-w-screen'>
+   
+              <ul className="grid  sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+                {posts.map((post) => {
+                  return (
+                    <li key={post.slug}>
+                      <PostCard post={post} />
+                    </li>
+                  );
+                })}
+              </ul>
+              </div>         
+              <div className=' mt-24 '>
+  {categories && categories.length > 0 ? (
   
-  </>)
+    <ul className='space-x-5 overflow-x-scroll inline py-2 '>
+      {categories.map((category) => (
+        <li className=" inline mx-5"key={category.slug}>
+          <Link href={categoryPathBySlug(category.slug)}>
+           {category.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+ 
+  ) : (
+    <p></p>
+  )}
+  </div>
+          </Container>  
+          </Layout>)
 }
 
 export async function getStaticProps({ params = {} } = {}) {
