@@ -75,7 +75,7 @@ export async function getStaticPaths() {
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths: [],
+    paths: paths,
     fallback: 'blocking',
   };
 }
