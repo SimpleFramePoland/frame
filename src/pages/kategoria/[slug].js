@@ -92,19 +92,21 @@ export async function getStaticProps({ params = {} } = {}) {
 export async function getStaticPaths() {
 
   
-   const { categories } = await getAllCategories();
-const paths = categories.map((category) => {
+  const { categories } = await getAllCategories();
+
+ const paths = categories.map((category) => {
     const { slug } = category;
-  return {
-   params: {
-    },
-  };
- });
+   return {
+     params: {
+       slug,
+     },
+   };
+  });
 
-  //3. Update `paths` in the return statement below to reference the `paths` constant above
+ // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
-  return {
-    paths: paths,
-    fallback: 'blocking',
-  };
+ return {
+   paths: paths,
+   fallback: 'blocking',
+ };
 }
