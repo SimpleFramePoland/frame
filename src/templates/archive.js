@@ -10,7 +10,7 @@ import { categoryPathBySlug } from 'lib/categories';
 
 import Carousel from 'components/komponenty/Carousel';
 import PostCard from 'components/PostCard';
-
+import Pagination from 'components/Pagination';
 import Container from 'components/Container';
 import React from 'react';
 
@@ -25,6 +25,7 @@ export default function TemplateArchive({
   slug,
   metadata,
   description,
+  pagination,
 
   
 }) {
@@ -73,7 +74,13 @@ export default function TemplateArchive({
                 })}
               </ul>
              
-          
+              {pagination && (
+                <Pagination
+                  currentPage={pagination?.currentPage}
+                  pagesCount={pagination?.pagesCount}
+                  basePath={pagination?.basePath}
+                />
+              )}
           
               </Container>
     </Layout>
