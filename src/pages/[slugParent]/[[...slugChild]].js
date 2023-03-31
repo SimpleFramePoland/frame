@@ -1,4 +1,4 @@
-import Link from 'next/link';
+ import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
