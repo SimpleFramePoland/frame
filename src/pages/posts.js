@@ -5,7 +5,7 @@ import React from 'react';
 import TemplateArchive from 'templates/archive';
 import Carousel from 'components/komponenty/Carousel';
 export default function Posts({ posts, pagination,categories }) {
-  const title = 'All Posts';
+  const title = 'Blog';
   const slug = 'posts';
 
   const { metadata } = usePageMetadata({
