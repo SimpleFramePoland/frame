@@ -1,6 +1,6 @@
  import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-
+import Head from 'next/head';
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
@@ -13,6 +13,7 @@ import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import Carousel from 'components/komponenty/Carousel';
+import $ from 'jquery';
 
 
 import styles from 'styles/pages/Page.module.scss';
@@ -42,10 +43,10 @@ export default function Page({ page, breadcrumbs }) {
   const helmetSettings = helmetSettingsFromMetadata(metadata);
 
   return (
-    
     <Layout>
-      
-      <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+       
+       <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
 
       <link rel='stylesheet' id='modula-video-css-css' href='https://simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
@@ -55,6 +56,9 @@ export default function Page({ page, breadcrumbs }) {
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/modula-wf.js?ver=2.7.3' id='modula-wf-js'></script>
       <script async src='https://simpleframe.pl/wp-content/plugins/modula/assets/js/modula-pro.js?ver=2.6.1' id='modula-pro-js'></script>
+ 
+  
+     
     
 
       <Helmet {...helmetSettings} />
