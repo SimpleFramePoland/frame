@@ -2,6 +2,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { Helmet } from 'react-helmet';
 import React  from 'react';
+import Script from 'next/script';
 // Via https://github.com/vercel/next.js/blob/canary/examples/with-react-helmet/pages/_document.js
 
 export default class MyDocument extends Document {
@@ -32,7 +33,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
-        <Head>{this.helmetHeadComponents}</Head>
+        <Head>{this.helmetHeadComponents}
+        <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" strategy="beforeInteractive" />
+        </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />
           <NextScript />

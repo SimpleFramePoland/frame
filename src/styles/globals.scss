@@ -6,7 +6,11 @@
 * {
   box-sizing: border-box;
 }
-
+@media screen and (max-width: 760px) {
+  .druga h4 {
+    font-size: 2em !important; /* 50% smaller than the default size */
+  }
+}
 html,
 body {
   min-height: 100vh;

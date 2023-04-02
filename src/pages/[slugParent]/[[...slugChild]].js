@@ -1,6 +1,6 @@
  import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-import Head from 'next/head';
+
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
@@ -8,12 +8,11 @@ import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
 import Layout from 'components/Layout';
-import Header from 'components/Header';
+
 import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import Carousel from 'components/komponenty/Carousel';
-import $ from 'jquery';
 
 
 import styles from 'styles/pages/Page.module.scss';
@@ -44,9 +43,9 @@ export default function Page({ page, breadcrumbs }) {
 
   return (
     <Layout>
-  
-       
-       <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      
+      
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
 
       <link rel='stylesheet' id='modula-video-css-css' href='https://simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
@@ -97,10 +96,13 @@ export default function Page({ page, breadcrumbs }) {
             ></div>
  
    <Container>
+    <div className='druga'>
             <div
-               className="prose  max-w-screen-lg w-full  mx-auto druga "
+        
+               className="prose max-w-screen-lg w-full  mx-auto  "
+              
               dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
-            ></div>
+            ></div></div>
                     </Container>
 
                   
