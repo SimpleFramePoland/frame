@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+
 import { Dialog, Disclosure, Popover, Transition, } from '@headlessui/react'
 import {
 
@@ -276,7 +277,7 @@ export default function Header() {
   
        </a>
        
-          <button className='bg-babyblue rounded-md w-20 h-8  '>
+          <button className='bg-babyblue rounded-md w-20 h-8  transition duration-300 hover:ease-in-out'>
           <a href="/porozmawiajmy"className="text-white capitalize" >
           Kontakt 
           </a>
