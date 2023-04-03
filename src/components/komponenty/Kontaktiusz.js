@@ -1,14 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
-import Carousel from 'components/komponenty/Carousel'
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
+
+
 
 export default function Example() {
-  const [agreed, setAgreed] = useState(false)
+  
 
   return (
  
@@ -26,7 +22,7 @@ ul. Wiertnicza 135A
 </p>
       </div>
         <div>
-      <p> Test</p>
+
       
       </div>
       
