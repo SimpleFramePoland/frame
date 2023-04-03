@@ -258,7 +258,7 @@ export default function Header() {
          
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end  ">
-          <div className=' mr-5 md:ml-5 lg:space-x-2 md:space-x-1'>
+          <div className='  lg:space-x-4 md:space-x-1 mr-10'>
       <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
       <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
        </a>
@@ -271,10 +271,11 @@ export default function Header() {
        <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
       <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer"/>
        </a>
+       </div>
        <a href ="/porozmawiajmy" className='align-middle'>
   
        </a>
-       </div>
+       
           <button className='bg-babyblue rounded-md w-20 h-8  '>
           <a href="/porozmawiajmy"className="text-white capitalize" >
           Kontakt 
