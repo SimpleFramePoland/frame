@@ -61,8 +61,9 @@ const Layout = ({ children }) => {
   };
 
   return (
+
     <div className={styles.layoutContainer}>
-      
+    
       <Helmet {...helmetSettings} />
 
       <Nav />
