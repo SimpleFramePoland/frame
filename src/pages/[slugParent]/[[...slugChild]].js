@@ -73,7 +73,7 @@ export default function Page({ page, breadcrumbs }) {
       <Content>
         <Section>
           <Container>
-       <div className="text-lg mt-12 mb-5  ">
+       <div className="text-lg mt-[5rem] mb-5  ">
        <div
               className={styles.content}
               dangerouslySetInnerHTML={{
