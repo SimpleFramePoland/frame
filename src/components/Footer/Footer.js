@@ -31,11 +31,13 @@ const Footer = () => {
        
       </div>
       <p className="mt-4  ">
+        Simple Frame Sp. z o.o.<br/>
+ 
         ul. Wiertnicza 135A<br/>
 02-952 Warszawa<br/>
 <a href="tel:+48 502 061 431">+48 502 061 431</a> <br />
                   <a href="mailto:kontakt@simpleframe.pl">kontakt@simpleframe.pl</a> <br/>
-NIP :	5213776916<br/>
+
 
         </p>
     </div>
