@@ -1,4 +1,4 @@
-import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import { VideoCameraIcon, EyeIcon, AdjustmentsVerticalIcon } from '@heroicons/react/20/solid'
 import React from 'react'
 import Image from 'next/image'
 const features = [
@@ -6,17 +6,17 @@ const features = [
     name: 'Produkcja Filmowa',
     description:
       '  Dostarczamy filmy, które przyciągną uwagę i zostaną zapamiętane na długo. ',
-    icon: CloudArrowUpIcon,
+    icon: VideoCameraIcon,
   },
   {
     name: 'Reklama, która przyciąga uwagę',
     description: 'Wiemy jak zaprojektować i zrealizować reklamę, która trafi w gusta odbiorców i skłoni ich do podjęcia działania. ',
-    icon: LockClosedIcon,
+    icon: EyeIcon,
   },
   {
     name: 'Postprodukcja na najwyższym poziomie',
     description: 'Zadbamy o każdy detal, aby finalny efekt był imponujący i spełniał oczekiwania naszych klientów. ',
-    icon: ServerIcon,
+    icon: AdjustmentsVerticalIcon,
   },
 ]
 

@@ -33,9 +33,10 @@ const Footer = () => {
       <p className="mt-4  ">
         ul. Wiertnicza 135A<br/>
 02-952 Warszawa<br/>
-KRS	0000673577<br/>
-NIP	5213776916<br/>
-Regon	367060762
+<a href="tel:+48 502 061 431">+48 502 061 431</a> <br />
+                  <a href="mailto:kontakt@simpleframe.pl">kontakt@simpleframe.pl</a> <br/>
+NIP :	5213776916<br/>
+
         </p>
     </div>
     <div className="flex-grow flex flex-wrap md:pr-20 -mb-10 md:text-left text-center order-first">

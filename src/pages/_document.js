@@ -35,6 +35,19 @@ export default class MyDocument extends Document {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
         <Head>{this.helmetHeadComponents}
+        <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-FMNR987MP7"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-FMNR987MP7');
+        `}
+      </Script>
         <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
         </Head>
         <body {...this.helmetBodyAttrComponents}>

@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react'
-import Script from 'next/script'
+
 import { Dialog, Disclosure, Popover, Transition, } from '@headlessui/react'
 import {
 
@@ -67,19 +67,7 @@ export default function Header() {
 
     <header className="bg-black w-full lg:px-5 left-0 z-30 fixed">
        
-       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-FMNR987MP7"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){window.dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-FMNR987MP7');
-        `}
-      </Script>
+       
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
         <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none">
