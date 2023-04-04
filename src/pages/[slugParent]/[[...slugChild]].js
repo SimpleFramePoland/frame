@@ -13,7 +13,7 @@ import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import Carousel from 'components/komponenty/Carousel';
-
+import $ from "jquery"
 
 import styles from 'styles/pages/Page.module.scss';
 
@@ -43,8 +43,9 @@ export default function Page({ page, breadcrumbs }) {
 
   return (
     <Layout>
-
       
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+
       
       <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
 

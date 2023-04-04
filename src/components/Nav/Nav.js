@@ -36,7 +36,7 @@ const produkcje = [
   { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
 ];
 const Postprodukcja = [
-  { name: 'Postproduckja', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/postprodukcja', icon: ComputerDesktopIcon },
+  { name: 'Postprodukcja', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/postprodukcja', icon: ComputerDesktopIcon },
   { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
   { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
 ];
@@ -78,7 +78,7 @@ export default function Header() {
       alt="Logo Simple Frame"
       width={315}
       height={45}
-      className="sm:max-w-12"
+      className="sm:max-w-12 cursor-pointer"
       
     />
           </Link>

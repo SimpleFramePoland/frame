@@ -42,9 +42,8 @@ export default function Home() {
 
                 <h3 className="mt-6 text-3xl font-bold leading-8 text-black">Simple <span className='text-babyblue'> Frame</span></h3>
                 <p className="mt-6 text-lg leading-8 text-black">
-                  Adres firmy: <br/>
-                  ul. Wiertnicza 135A<br />
-                  02-952 Warszawa</p>
+                  Kontakt: <br/>
+                </p>
 
                 <p className="mt-6 text-lg leading-8 text-black">
                   <a href="tel:+48 502 061 431">+48 502 061 431</a> <br />

@@ -1,8 +1,8 @@
-import Link from 'next/link';
+
 import React from 'react';
 import Image from 'next/image';
 import Section from 'components/Section';
-import Container from 'components/Container';
+
 
 
 
@@ -77,7 +77,7 @@ Regon	367060762
         <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Postprodukcja</h3>
         <nav className="list-none mb-10">
           <li>
-            <a className="text-white hover:text-babyblue">Postproduckja</a>
+            <a href="/postprodukcja"className="text-white hover:text-babyblue">Postprodukcja</a>
           </li>
           <li>
             <a href="/montaz-filmow" className="text-white hover:text-babyblue">Montaż filmów</a>

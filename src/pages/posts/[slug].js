@@ -108,13 +108,13 @@ export default function Post({ post, socialImage, related }) {
           isSticky={isSticky}
         />
           </div>
-          <div className=' max-w-md mx-auto text-center mlg:flex-auto justify-center lg:py-12 justify-self-center align-center flex items-center  ' > 
+          <div className=' max-w-md mx-auto text-center mlg:flex-auto justify-center lg:py-12 justify-self-center align-center flex items-center   ' > 
             {featuredImage && (
-          <FeaturedImage
+          <img
             {...featuredImage}
             src={featuredImage.sourceUrl}
             dangerouslySetInnerHTML={featuredImage.caption}
-            className="  flex items-center justify-center  w-[56rem] "
+            className="  flex items-center justify-center object-cover max-w-full h-[400px] w-[400px] rounded-xl  "
           />
         )}
           </div>
