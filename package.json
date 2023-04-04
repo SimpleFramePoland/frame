@@ -3,7 +3,7 @@
   "homepage": "https://simpleframe.pl",
   "version": "0.1.0",
   "license": "MIT",
-  "author": "Colby Fayock <hello@colbyfayock.com>",
+  "author": "Marcin Stola stolamarcin@gmail.com",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
