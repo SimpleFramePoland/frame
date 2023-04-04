@@ -8,19 +8,37 @@ import Container from 'components/Container';
 import Link from 'next/link';
 import { categoryPathBySlug } from 'lib/categories';
 import Carousel from 'components/komponenty/Carousel';
+import { Helmet } from 'react-helmet';
+import { WebpageJsonLd } from 'lib/json-ld';
+import { helmetSettingsFromMetadata } from 'lib/site';
+import useSite from 'hooks/use-site';
 export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
-
+  const { metadata: siteMetadata = {} } = useSite();
   const { metadata } = usePageMetadata({
     metadata: {
       ...category,
       description: description || category.og?.description || `Read ${posts.length} posts from ${name}`,
     },
   });
+  if (process.env.WORDPRESS_PLUGIN_SEO !== true) {
+    metadata.title = `${title} - ${siteMetadata.title}`;
+    metadata.og.title = metadata.title;
+    metadata.twitter.title = metadata.title;
+  }
+  const helmetSettings = helmetSettingsFromMetadata(metadata);
 
   return (
 
  <Layout>
+     <Helmet {...helmetSettings} />
+      <WebpageJsonLd
+        title={metadata.title}
+        description={metadata.description}
+        siteTitle={siteMetadata.title}
+        slug={slug}
+      />
+
    <Carousel/>
    <Container>
    

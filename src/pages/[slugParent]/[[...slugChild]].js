@@ -13,7 +13,7 @@ import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import Carousel from 'components/komponenty/Carousel';
-import $ from "jquery"
+
 
 import styles from 'styles/pages/Page.module.scss';
 
@@ -47,15 +47,15 @@ export default function Page({ page, breadcrumbs }) {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
 
       
-      <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
+      <script async src='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
 
-      <link rel='stylesheet' id='modula-video-css-css' href='https://simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
-      <link rel='stylesheet' id='modula-css' href='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
-      <link rel='stylesheet' id='modula-pro-effects-css' href='https://simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
-      <script async src='https://simpleframe.pl/wp-content/plugins/modula-video/assets/js/fancybox-modula-video.js?ver=6.1.1' id='modula-fancybox-video-js'></script>
-      <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
-      <script async src='https://simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/js/modula-wf.js?ver=2.7.3' id='modula-wf-js'></script>
-      <script async src='https://simpleframe.pl/wp-content/plugins/modula/assets/js/modula-pro.js?ver=2.6.1' id='modula-pro-js'></script>
+      <link rel='stylesheet' id='modula-video-css-css' href='https://przykladowy.info/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='modula-css' href='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
+      <link rel='stylesheet' id='modula-pro-effects-css' href='https://przykladowy.info/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
+      <script async src='https://przykladowy.info/wp-content/plugins/modula-video/assets/js/fancybox-modula-video.js?ver=6.1.1' id='modula-fancybox-video-js'></script>
+      <script async src='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
+      <script async src='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/js/modula-wf.js?ver=2.7.3' id='modula-wf-js'></script>
+      <script async src='https://przykladowy.info/wp-content/plugins/modula/assets/js/modula-pro.js?ver=2.6.1' id='modula-pro-js'></script>
  
   
      
