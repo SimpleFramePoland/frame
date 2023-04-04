@@ -8,7 +8,7 @@ import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
 import Layout from 'components/Layout';
-
+import Script from 'next/script';
 import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
@@ -44,18 +44,18 @@ export default function Page({ page, breadcrumbs }) {
   return (
     <Layout>
       
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" beforeInteractive />
 
       
-      <script async src='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
+      <Script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js'/>
 
       <link rel='stylesheet' id='modula-video-css-css' href='https://przykladowy.info/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-pro-effects-css' href='https://przykladowy.info/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
-      <script async src='https://przykladowy.info/wp-content/plugins/modula-video/assets/js/fancybox-modula-video.js?ver=6.1.1' id='modula-fancybox-video-js'></script>
-      <script async src='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/js/front/fancybox.js?ver=2.7.3' id='modula-fancybox-js'></script>
-      <script async src='https://przykladowy.info/wp-content/plugins/modula-best-grid-gallery/assets/js/modula-wf.js?ver=2.7.3' id='modula-wf-js'></script>
-      <script async src='https://przykladowy.info/wp-content/plugins/modula/assets/js/modula-pro.js?ver=2.6.1' id='modula-pro-js'></script>
+      <Script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js'/>
+      
+      <Script async src='/js/modula-wf.js' id='modula-wf-js'/>
+      <Script async src='/js/modula-pro.js' id='modula-pro-js'/>
  
   
      

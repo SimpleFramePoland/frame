@@ -266,7 +266,7 @@ export default function Header() {
        <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
       <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
        </a>
-       <a href ="https://vimeo.com/user5695137/videos" className='align-middle  '>
+       <a href ="https://vimeo.com/simpleframe" className='align-middle  '>
       <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
        </a>
        <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
@@ -410,7 +410,7 @@ export default function Header() {
        <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
       <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
        </a>
-       <a href ="https://vimeo.com/user5695137/videos" className='align-middle  '>
+       <a href ="https://vimeo.com/simpleframe" className='align-middle  '>
       <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
        </a>
        <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
