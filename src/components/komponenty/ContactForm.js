@@ -49,7 +49,7 @@ export default function ContactUs() {
     let isValidForm = handleValidation();
 
     if (isValidForm) {
-      setButtonText("Sending");
+      setButtonText("Wysyłanie...");
       const res = await fetch("/api/sendgrid", {
         body: JSON.stringify({
           email: email,
@@ -72,7 +72,7 @@ export default function ContactUs() {
       }
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText("Send");
+      setButtonText("Wysłano");
     }
     console.log(fullname, email, message);
   };

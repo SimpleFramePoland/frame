@@ -8,7 +8,7 @@ async function sendEmail(req, res) {
   try {
     await sendgrid.send({
       to: "admin@simpleframe.pl", // Your email where you'll receive emails
-      from: `${req.body.email}`, // your website email address here
+      from: "admin@simpleframe.pl", // your website email address here
       subject: `Wiadomość od  : ${req.body.email}`,
       html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html lang="en">
@@ -28,9 +28,9 @@ async function sendEmail(req, res) {
         <div class="img-container" style="display: flex;justify-content: center;align-items: center;border-radius: 5px;overflow: hidden; font-family: 'helvetica', 'ui-sans';">
               </div>
               <div class="container" style="margin-left: 20px;margin-right: 20px;">
-              <h3>Wiadmość od ${req.body.fullname}, email: ✉️${req.body.email} </h3>
+              <h3>Wiadmość od ${req.body.fullname}, email: ${req.body.email} </h3>
               <div style="font-size: 16px;">
-              <p>Message:</p>
+              <p>Wiadomość:</p>
               <p>${req.body.message}</p>
               <br>
               </div>
