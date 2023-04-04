@@ -4,7 +4,7 @@ export default function ContactUs() {
    // States for contact form fields
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
+
   const [message, setMessage] = useState("");
 
   //   Form validation state
@@ -30,10 +30,7 @@ export default function ContactUs() {
       tempErrors["email"] = true;
       isValid = false;
     }
-    if (subject.length <= 0) {
-      tempErrors["subject"] = true;
-      isValid = false;
-    }
+  
     if (message.length <= 0) {
       tempErrors["message"] = true;
       isValid = false;
@@ -57,7 +54,6 @@ export default function ContactUs() {
         body: JSON.stringify({
           email: email,
           fullname: fullname,
-          subject: subject,
           message: message,
         }),
         headers: {
@@ -78,7 +74,7 @@ export default function ContactUs() {
       setShowFailureMessage(false);
       setButtonText("Send");
     }
-    console.log(fullname, email, subject, message);
+    console.log(fullname, email, message);
   };
   return (
     <form
