@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
       <Html {...this.helmetHtmlAttrComponents}>
         <Head>{this.helmetHeadComponents}
         <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-FMNR987MP7"
+        src="https://www.googletagmanager.com/gtag/js?id=UA-48180877-8"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-FMNR987MP7');
+          gtag('config', 'UA-48180877-8');
         `}
       </Script>
         <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>

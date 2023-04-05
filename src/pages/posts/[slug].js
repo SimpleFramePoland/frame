@@ -140,22 +140,23 @@ export default function Post({ post, socialImage, related }) {
         
       
 
-      <Section className={styles.postFooter}>
+      <Section className="text-center text-lg">
         <Container>
         
           {Array.isArray(relatedPostsList) && relatedPostsList.length > 0 && (
-            <div className={styles.relatedPosts}>
+            <div className="mt-12">
               {relatedPostsTitle.name ? (
                 <span>
                   Więcej z kategorii {' '}
                   <Link href={relatedPostsTitle.link}>
                     {relatedPostsTitle.name}
                   </Link>
+                  
                 </span>
               ) : (
                 <span>More Posts</span>
               )}
-              <ul>
+              <ul className='mt-5 text-md'>
                 {relatedPostsList.map((post) => (
                   <li key={post.title}>
                     <Link href={postPathBySlug(post.slug)}>

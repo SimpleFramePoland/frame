@@ -61,7 +61,7 @@ export default function Faqs() {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50  sm:py-32"
+      className="relative overflow-hidden bg-slate-50  py-32"
     >
       <h2 id="faq-title" className="sr-only">
         Często zadawane pytania
