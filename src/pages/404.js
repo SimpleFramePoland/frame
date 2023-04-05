@@ -16,12 +16,12 @@ export default function Custom404() {
       </Helmet>
       <Section>
         <Container className={styles.center}>
-          <h1>Page Not Found</h1>
-          <p className={styles.errorCode}>404</p>
-          <p className={styles.errorMessage}>The page you were looking for could not be found.</p>
+          <h1 className='pt-[12rem]'>Niestety nie ma takiej strony :/ </h1>
+          <p className="py-12 text-xl">404</p>
+        
           <p>
             <Link href="/">
-              Go back home
+             Wróć na stronę główną 
             </Link>
           </p>
         </Container>

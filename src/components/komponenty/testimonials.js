@@ -62,7 +62,7 @@ const testimonials = [
     },
     {
       content:
-        'Zespół Simple Frame to grupa utalentowanych i kreatywnych ludzi, którzy zawsze potrafią wyjść poza schematy i stworzyć coś wyjątkowego dla swoich klientów.',
+        'Zespół Simple Frame to grupa utalentowanych i kreatywnych ludzi, którzy zawsze potrafią wyjść poza schematy i stworzyć coś wyjątkowego dla swoich klientów!',
       author: {
         name: 'Beko',
         role: 'Director at Velocity Industries',
