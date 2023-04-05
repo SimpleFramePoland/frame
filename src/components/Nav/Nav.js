@@ -38,13 +38,15 @@ const produkcje = [
 const Postprodukcja = [
   { name: 'Postprodukcja', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/postprodukcja', icon: ComputerDesktopIcon },
   { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
-  { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
+ 
 ];
 const animacje = [
   { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-3d/', icon: CubeIcon },
   { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: ArrowPathIcon },
   { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: WrenchScrewdriverIcon },
-  { name: 'Animacja Produktowa', description: 'Przedstaw swoje produkty w nowoczesny i innowacyjny sposób', href: '/animacja-produktowa', icon: CakeIcon },
+  { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
+  { name: 'PPT', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
+
 
 ];
 const uslugi = [
@@ -52,7 +54,6 @@ const uslugi = [
   { name: 'Teledyski', description: 'Prezentuj swoje produkty lub usługi za pomocą interesującej treści wideo', href: '/teledyski', icon: MusicalNoteIcon },
   { name: 'Fotografia', description: 'Uchwyć wspaniałe obrazy, które reprezentują Twoją markę i przyciągają klientów', href: '/fotografia', icon: CameraIcon },
   { name: 'Streaming', description: 'Dostarczaj wysokiej jakości treści swojej publiczności za pomocą transmisji na żywo', href: '/streaming-video', icon: ComputerDesktopIcon },
-  { name: 'PPT', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
 
 ];
 
