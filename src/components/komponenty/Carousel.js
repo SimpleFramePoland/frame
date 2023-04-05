@@ -5,7 +5,7 @@ export default function Slider() {
     <div className=" bg-black">
     <video autoPlay loop muted playsInline className=" w-screen pt-[5rem]  ">
        <source
-         src="/edit1.mp4"
+         src="/Edit.mp4"
          type="video/mp4"
        />
      </video>
