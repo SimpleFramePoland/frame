@@ -2,8 +2,8 @@
 import React from "react";
 export default function Slider() {
   return (
-    <div className=" ">
-    <video autoPlay loop muted playsInline className=" w-screen   ">
+    <div className="bg-black">
+    <video autoPlay loop muted playsInline className=" w-screen pt-[5rem] lg:pt-0 ">
        <source
          src="/edit1.mp4"
          type="video/mp4"
