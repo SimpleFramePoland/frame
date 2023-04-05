@@ -52,9 +52,9 @@ export default function TemplateArchive({
   
     <ul className='space-x-5 overflow-x-scroll inline py-2 '>
       {categories.map((category) => (
-        <li className=" inline mx-5"key={category.slug}>
-          <Link href={categoryPathBySlug(category.slug)}>
-           {category.name}
+        <li className=" inline mx-5  "key={category.slug}>
+          <Link  href={categoryPathBySlug(category.slug)}>
+          <a className='text-black'>{category.name}</a>
           </Link>
         </li>
       ))}

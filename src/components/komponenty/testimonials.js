@@ -2,10 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import Container from 'components/Container'
 import avatarImage1 from 'public/avatars/Vastint.gif'
-import avatarImage2 from 'public/avatars/avatar-2.png'
-import avatarImage3 from 'public/avatars/avatar-3.png'
-import avatarImage4 from 'public/avatars/avatar-4.png'
-import avatarImage5 from 'public/avatars/avatar-5.png'
+import avatarImage2 from 'public/avatars/Elis.gif'
+import avatarImage3 from 'public/avatars/Mindray.gif'
+import avatarImage4 from 'public/avatars/Mpack.gif'
+import avatarImage5 from 'public/avatars/Lot.gif'
+import avatarImage6 from 'public/avatars/Beko.gif'
 
 
 const testimonials = [
@@ -14,7 +15,7 @@ const testimonials = [
       content:
         'Simple Frame to firma, na którą zawsze możesz liczyć, jeśli potrzebujesz profesjonalnych usług filmowych i animacyjnych.',
       author: {
-        name: 'Sheryl Berge',
+        name: 'Vastint',
         role: 'CEO at Lynch LLC',
         image: avatarImage1,
       },
@@ -23,9 +24,9 @@ const testimonials = [
       content:
         'Ich projekty reklamowe są nie tylko kreatywne i efektowne, ale także skuteczne w przyciąganiu uwagi klientów.',
       author: {
-        name: 'Amy Hahn',
+        name: 'Elis',
         role: 'Director at Velocity Industries',
-        image: avatarImage4,
+        image: avatarImage2,
       },
     },
   ],
@@ -34,18 +35,18 @@ const testimonials = [
       content:
         'Jestem pod wrażeniem jakości produkcji filmowych, jakie tworzy Simple Frame - każdy detal jest dopracowany i widoczna jest dbałość o detale.',
       author: {
-        name: 'Leland Kiehn',
+        name: 'Mindray',
         role: 'Founder of Kiehn and Sons',
-        image: avatarImage5,
+        image: avatarImage3,
       },
     },
     {
       content:
         'Pracowałem z wieloma firmami filmowymi, ale Simple Frame zdecydowanie wyróżnia się swoim profesjonalizmem i zaangażowaniem.',
       author: {
-        name: 'Erin Powlowski',
+        name: 'Mpack',
         role: 'COO at Armstrong Inc',
-        image: avatarImage2,
+        image: avatarImage4,
       },
     },
   ],
@@ -54,18 +55,18 @@ const testimonials = [
       content:
         'Jeśli chcesz, aby Twoja firma zyskała wizerunek nowoczesnej i innowacyjnej marki, Simple Frame z pewnością spełni Twoje oczekiwania.',
       author: {
-        name: 'Peter Renolds',
+        name: 'Lot',
         role: 'Founder of West Inc',
-        image: avatarImage3,
+        image: avatarImage5,
       },
     },
     {
       content:
         'Zespół Simple Frame to grupa utalentowanych i kreatywnych ludzi, którzy zawsze potrafią wyjść poza schematy i stworzyć coś wyjątkowego dla swoich klientów.',
       author: {
-        name: 'Amy Hahn',
+        name: 'Beko',
         role: 'Director at Velocity Industries',
-        image: avatarImage4,
+        image: avatarImage6,
       },
     },
   ],
@@ -115,9 +116,7 @@ export function Testimonials() {
                           <div className="font-display text-base text-slate-900">
                             {testimonial.author.name}
                           </div>
-                          <div className="mt-1 text-sm text-slate-500">
-                            {testimonial.author.role}
-                          </div>
+                        
                         </div>
                         <div className="h-14 w-14 overflow-hidden rounded-full border-none bg-slate-50">
                           <Image src={testimonial.author.image} alt="" />
