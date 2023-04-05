@@ -37,13 +37,15 @@ const PostCard = ({ post, options = {} }) => {
     <div >
        <div className="">
       <div className="bg-white mx-auto shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
+      <Link href={postPathBySlug(slug)} >
+      <a>
       <FeaturedImage
         {...featuredImage}
         src={featuredImage.sourceUrl}
         dangerouslySetInnerHTML={featuredImage.caption}
-    
-      /> 
-     
+  
+      /> </a>
+           </Link>
         
         <div className="p-5">
           
