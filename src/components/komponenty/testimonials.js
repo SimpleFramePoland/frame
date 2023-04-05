@@ -4,7 +4,7 @@ import Container from 'components/Container'
 import avatarImage1 from 'public/avatars/Vastint.gif'
 import avatarImage2 from 'public/avatars/Elis.gif'
 import avatarImage3 from 'public/avatars/Mindray.gif'
-import avatarImage4 from 'public/avatars/Mpack.gif'
+import avatarImage4 from 'public/avatars/MPack.gif'
 import avatarImage5 from 'public/avatars/Lot.gif'
 import avatarImage6 from 'public/avatars/Beko.gif'
 
