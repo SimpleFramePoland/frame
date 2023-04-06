@@ -3,6 +3,102 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+.herotext {
+  color: #fff;
+  z-index: 20;
+
+  text-transform: uppercase;
+  /*    position: absolute;*/
+  /*    display: inline-block;*/
+  visibility: hidden;
+  opacity: 0;
+  // vertical and horizontal centering
+  margin: 0 auto;
+  position: absolute;
+}
+#first {
+  // change duration here
+  animation: fade-first 14s linear infinite;
+}
+#second {
+  animation: fade-second 14s linear infinite;
+}
+#third {
+  animation: fade-third 14s linear infinite;
+}
+
+@keyframes fade-first {
+  0% {
+    opacity: 1;
+    visibility: hidden;
+  }
+  3% {
+    opacity: 1;
+    visibility: visible;
+  }
+  30% {
+    opacity: 0;
+    visibility: visible;
+  }
+  33% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-second {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  33% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  36% {
+    opacity: 1;
+    visibility: visible;
+  }
+  63% {
+    opacity: 1;
+    visibility: visible;
+  }
+  66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fade-third {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  69% {
+    opacity: 0;
+    visibility: visible;
+  }
+  96% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    visibility: hidden;
+  }
+}
 * {
   box-sizing: border-box;
 }
