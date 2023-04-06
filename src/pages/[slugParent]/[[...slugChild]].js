@@ -12,7 +12,6 @@ import Script from 'next/script';
 import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import Carousel from 'components/komponenty/Carousel';
 
 
 import styles from 'styles/pages/Page.module.scss';
@@ -70,7 +69,13 @@ export default function Page({ page, breadcrumbs }) {
       />
 
      
-      <Carousel/>
+<div className=" bg-black">
+<video autoPlay loop muted playsInline className="w-screen pt-[5rem]">
+  {page.podstrony?.urlVideo
+    ? <source src={page.podstrony.urlVideo} type="video/mp4" />
+    : <source src="/Edit.mp4" type="video/mp4" />}
+</video>
+    </div>
       <Content>
         <Section>
           <Container>

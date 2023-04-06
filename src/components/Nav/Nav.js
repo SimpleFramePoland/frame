@@ -264,16 +264,16 @@ export default function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end  ">
           <div className='  lg:space-x-4 md:space-x-1 mr-10  md:ml-5 whitespace-nowrap'>
       <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
+      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " />
        </a>
-       <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
-      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
+       <a href ="https://www.facebook.com/simpleframe" className='align-middle  ' target="_blank" rel="noopener noreferrer"  >
+      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-6 w-6 " />
        </a>
-       <a href ="https://vimeo.com/simpleframe" className='align-middle  '>
-      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer" />
+       <a href ="https://vimeo.com/simpleframe" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-6 w-6 "  />
        </a>
-       <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
-      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-6 w-6 " target="_blank" rel="noopener noreferrer"/>
+       <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-6 w-6 " />
        </a>
        </div>
        <a href ="/porozmawiajmy" className='align-middle'>

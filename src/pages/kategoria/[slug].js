@@ -68,7 +68,7 @@ export default function Category({ categories, category, posts,page }) {
       {categories.map((category) => (
         <li className=" inline mx-5"key={category.slug}>
           <Link href={categoryPathBySlug(category.slug)}>
-           {category.name}
+          <a className='text-black'> {category.name} </a>
           </Link>
         </li>
       ))}

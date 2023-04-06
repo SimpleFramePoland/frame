@@ -104,6 +104,7 @@ export const QUERY_PAGE_BY_URI = gql`
         shortcodeGrid
         drugaCzescTekstu
         shortcodeGridDrugi
+        urlVideo
       }
       content
       featuredImage {
