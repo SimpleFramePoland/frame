@@ -73,7 +73,7 @@ export default function Page({ page, breadcrumbs }) {
 <video autoPlay loop muted playsInline className="w-screen pt-[5rem]">
   {page.podstrony?.urlVideo
     ? <source src={page.podstrony.urlVideo} type="video/mp4" />
-    : <source src="/Edit.mp4" type="video/mp4" />}
+    : <source src="/videopodstrony.mp4" type="video/mp4" />}
 </video>
     </div>
       <Content>
