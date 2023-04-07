@@ -19,13 +19,13 @@ const Footer = () => {
     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
     <div className="flex lg:flex-1">
         <a href="/" className=" ">
-          <span className="sr-only">Your Company</span>
+          <span className="sr-only">Simple frame</span>
           <Image
-      src="/logo.png"
-      alt="Landscape picture"
+      src="/logofooter.png"
+      alt="Logo simpleframe"
       width={315}
       height={45}
-      
+      className="lg:-10"
     />
         </a>
        
@@ -35,8 +35,8 @@ const Footer = () => {
  
         ul. Wiertnicza 135A<br/>
 02-952 Warszawa<br/>
-<a href="tel:+48 502 061 431">+48 502 061 431</a> <br />
-                  <a href="mailto:kontakt@simpleframe.pl">kontakt@simpleframe.pl</a> <br/>
+<a className="text-babyblue" href="tel:+48 502 061 431">+48 502 061 431</a> <br />
+                  <a className="text-babyblue" href="mailto:kontakt@simpleframe.pl">kontakt@simpleframe.pl</a> <br/>
 
 
         </p>
@@ -92,7 +92,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Uslugi</h3>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Usługi</h3>
         <nav className="list-none mb-10">
           <li>
             <a href= '/billboard-sponsorski' className="text-white hover:text-babyblue">Billboard Sponsorski</a>
