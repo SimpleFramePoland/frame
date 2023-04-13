@@ -6,6 +6,7 @@ import {
   QUERY_ALL_PAGES,
   QUERY_PAGE_BY_URI,
   QUERY_PAGE_SEO_BY_URI,
+  QUERY_FRONT_MODULA
 } from 'data/pages';
 
 /**
@@ -19,7 +20,19 @@ export function pagePathBySlug(slug) {
 /**
  * getPageByUri
  */
-
+export async function getFrontModula() {
+  const apolloClient = getApolloClient();
+  let frontModula;
+  try {
+    frontModula = await apolloClient.query({
+      query: QUERY_FRONT_MODULA,
+    });
+  } catch (e) {
+    console.log(`[pages][getFrontModula] Failed to query page data: ${e.message}`);
+    throw e;
+  }
+  return frontModula;
+}
 export async function getPageByUri(uri) {
   const apolloClient = getApolloClient();
   const apiHost = new URL(process.env.WORDPRESS_GRAPHQL_ENDPOINT).host;

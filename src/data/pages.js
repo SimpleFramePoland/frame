@@ -32,6 +32,14 @@ export const PAGE_FIELDS = gql`
     uri
   }
 `;
+export const QUERY_FRONT_MODULA = gql`
+query getFrontModula {
+  page(id: "cG9zdDoxMw==") {
+    podstrony {
+      shortcodeGrid
+    }
+  }
+}`;
 
 export const QUERY_ALL_PAGES_INDEX = gql`
   ${PAGE_FIELDS}

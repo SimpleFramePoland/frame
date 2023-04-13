@@ -2,7 +2,7 @@ import useSite from 'hooks/use-site';
 import React from 'react';
 import Layout from 'components/Layout';
 import ContactForm from 'components/komponenty/ContactForm'
-import Container from 'components/Container';
+import { Helmet } from 'react-helmet';
 import Carousel from 'components/komponenty/Carousel'
 
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
@@ -19,11 +19,19 @@ const features = [
 ]
 
 export default function Home() {
-  const { metadata = {} } = useSite();
-  const { title, description } = metadata;
+  const  title = ' Kontakt - Simple Frame';
+  const  description  = 'Tworzymy Filmy, Animacje i reklamy';
 
   return (
     <Layout>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+      </Helmet>
       <Carousel />
 
 
