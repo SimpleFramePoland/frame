@@ -41,7 +41,7 @@ export default function Home({page}) {
       </Helmet>
 
       <Hero />
-      <div className='py-5 bg-black'>
+      <div className='pt-10 bg-black'>
       <div
 
        
