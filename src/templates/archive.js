@@ -46,7 +46,7 @@ export default function TemplateArchive({
       <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
 <Carousel/>
       <Container>
-      <h2 className='py-12'>Blog Simple Frame</h2>
+      <h1 className='py-12 text-3xl'>Blog Simple Frame</h1>
 
     <p>
  Każda animacja czy <a href="https://simpleframe.pl/produkcja-filmowa/">film</a> zarówno produktowy, wizerunkowy, korporacyjny czy reklama telewizyjna to wieloetapowy projekt, praca i zaangażowanie wielu osób, których nie widzicie, bo stoją za kamerą, siedzą za produkcyjnym biurkiem, za monitorami w montażowni czy niemal niewidocznie dbają o bezpieczeństwo planu. Nie widzicie ich, lecz dzięki każdej z tych osób możecie oglądać reklamy w telewizji, a firmy mogą promować się w mediach.
