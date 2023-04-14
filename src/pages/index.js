@@ -18,7 +18,7 @@ export default function Home({page}) {
     <Layout>
            
            
-      <Helmet>
+    
 
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -38,7 +38,7 @@ export default function Home({page}) {
 
 <script async src='/js/modula-wf.js' id='modula-wf-js'/>
 <script async src='/js/modula-pro.js' id='modula-pro-js'/>
-      </Helmet>
+     
 
       <Hero />
       <div className='pt-10 bg-black'>

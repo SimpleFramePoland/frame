@@ -48,7 +48,9 @@ export default class MyDocument extends Document {
           gtag('config', 'UA-48180877-8');
         `}
       </Script>
-      
+  
+        <script src="/js/hotjar.js"></script>
+
         <script async src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
         </Head>
         <body {...this.helmetBodyAttrComponents}>
