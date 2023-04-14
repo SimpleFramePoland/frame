@@ -20,7 +20,7 @@ const features = [
 
 export default function Home() {
   const  title = 'Kontakt - Simple Frame';
-  const  description  = 'Tworzymy Filmy, Animacje i reklamy';
+  const  description  = 'Porozmawiaj z Simple Frame';
 
   return (
     
