@@ -19,19 +19,19 @@ const features = [
 ]
 
 export default function Home() {
-  const  title = ' Kontakt - Simple Frame';
+  const  title = 'Kontakt - Simple Frame';
   const  description  = 'Tworzymy Filmy, Animacje i reklamy';
 
   return (
     <Layout>
-   
+   <head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-     
+        </head>
       <Carousel />
 
 

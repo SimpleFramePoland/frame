@@ -18,7 +18,7 @@ export default function Home({page}) {
     <Layout>
            
            
-    
+           <head>
 
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -28,7 +28,7 @@ export default function Home({page}) {
         <meta name="twitter:description" content={description} />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
 
-      
+       
 <script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js'/>
 
 <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
@@ -38,7 +38,7 @@ export default function Home({page}) {
 
 <script async src='/js/modula-wf.js' id='modula-wf-js'/>
 <script async src='/js/modula-pro.js' id='modula-pro-js'/>
-     
+</head>
 
       <Hero />
       <div className='pt-10 bg-black'>
