@@ -9,24 +9,27 @@ import Cta1 from 'components/komponenty/cta1'
 import { Helmet } from 'react-helmet';
 import { getPageByUri } from 'lib/pages';
 import Script from 'next/script'
-
+import Head from 'next/head';
 export default function Home({page}) {
-  const title = 'Simple Frame';
+  const title = 'Producent filmowy - Simple Frame';
   const description = 'Tworzymy Filmy, Animacje i reklamy';
 
   return (
+ 
+    
     <Layout>
-           
-           
-           <head>
-
-        <title>{title}</title>
+      <Head>
+               <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+        </Head>
+        
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
+    
+     
 
        
 <script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js'/>
@@ -38,7 +41,6 @@ export default function Home({page}) {
 
 <script async src='/js/modula-wf.js' id='modula-wf-js'/>
 <script async src='/js/modula-pro.js' id='modula-pro-js'/>
-</head>
 
       <Hero />
       <div className='pt-10 bg-black'>

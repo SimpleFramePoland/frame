@@ -4,7 +4,7 @@ import Layout from 'components/Layout';
 import ContactForm from 'components/komponenty/ContactForm'
 import { Helmet } from 'react-helmet';
 import Carousel from 'components/komponenty/Carousel'
-
+import Head from 'next/head';
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 
 const features = [
@@ -23,15 +23,16 @@ export default function Home() {
   const  description  = 'Tworzymy Filmy, Animacje i reklamy';
 
   return (
+    
     <Layout>
-   <head>
+    <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        </head>
+        </Head> 
       <Carousel />
 
 
