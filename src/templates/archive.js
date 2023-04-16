@@ -55,7 +55,7 @@ export default function TemplateArchive({
 
 <br/><br/>Przekonacie się, że to, co widzicie na ekranie to mała część tego, co tak naprawdę dzieje się podczas kręcenia filmu czy tworzenia animacji. Ile sprzętu, ile metrów kabli i ilu godzin pracy z odpowiednimi programami potrzebujemy żeby zrobić dobry materiał. Zarówno kino jak i każda, nawet najmniejsza <a href="https://prezentacje-multimedialne.com.pl/index.php/prezentacje-interaktywne/">produkcja</a> to magia.
 
-<br/><br/>Oko kamery widzi zupełnie inaczej niż ludzkie. A potencjał i możliwości animacji są niewyobrażalne!
+<br/><br/>Oko kamery widzi zupełnie inaczej niż ludzkie. A potencjał i możliwości animacji są niewyobrażalne.
 
 Mamy nadzieję, że zainspirujemy Was do pracy w produkcji oraz, że znajdziecie tu odpowiedzi na pytania dotyczące tajników powstawania <a href="https://simpleframe.pl/produkcja-filmowa/">filmów</a> i animacji.
 
