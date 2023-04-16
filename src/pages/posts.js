@@ -11,7 +11,7 @@ export default function Posts({ posts, pagination,categories }) {
   const { metadata } = usePageMetadata({
     metadata: {
       title,
-      description: 'Blog firmy Simple frame  - Poczytaj',
+      description: false,
     },
   });
 
