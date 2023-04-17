@@ -192,9 +192,9 @@ export async function getStaticProps({ params = {} } = {}) {
 }
 
 export async function getStaticPaths() {
-  // const { pages } = await getAllPages({
-  //   queryIncludes: 'index',
-  // });
+  const { pages } = await getAllPages({
+    queryIncludes: 'index',
+  });
 
   // Take all the pages and create path params. The slugParent will always be
   // the top level parent page, where the slugChild will be an array of the
@@ -203,21 +203,21 @@ export async function getStaticPaths() {
   // We also filter out the `/` homepage as it will conflict with index.js if
   // as they have the same path, which will fail the build
 
-  // const paths = pages
-  //   .filter(({ uri }) => typeof uri === 'string' && uri !== '/')
-  //   .map(({ uri }) => {
-  //     const segments = uri.split('/').filter((seg) => seg !== '');
+  const paths = pages
+    .filter(({ uri }) => typeof uri === 'string' && uri !== '/')
+    .map(({ uri }) => {
+      const segments = uri.split('/').filter((seg) => seg !== '');
 
-  //     return {
-  //       params: {
-  //         slugParent: segments.shift(),
-  //         slugChild: segments,
-  //       },
-  //     };
-  //   });
+      return {
+        params: {
+          slugParent: segments.shift(),
+          slugChild: segments,
+        },
+      };
+    });
 
   return {
-    paths:[],
+    paths,
     fallback: 'blocking',
   };
 }
