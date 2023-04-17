@@ -17,7 +17,7 @@ README.md
 
 # production
 /build
-/src
+
 # misc
 .DS_Store
 *.pem
