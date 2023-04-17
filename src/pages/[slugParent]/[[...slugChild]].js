@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
@@ -12,8 +11,6 @@ import Script from 'next/script';
 import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
-
-
 import styles from 'styles/pages/Page.module.scss';
 
 export default function Page({ page, breadcrumbs }) {
@@ -42,24 +39,14 @@ export default function Page({ page, breadcrumbs }) {
 
   return (
     <Layout>
-
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" beforeInteractive />
-
-
       <Script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js' />
-
       <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-pro-effects-css' href='https://old.simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
       <Script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
-
       <Script async src='/js/modula-wf.js' id='modula-wf-js' />
       <Script async src='/js/modula-pro.js' id='modula-pro-js' />
-
-
-
-
-
       <Helmet {...helmetSettings} />
       <WebpageJsonLd
         title={metadata.title}
@@ -67,9 +54,7 @@ export default function Page({ page, breadcrumbs }) {
         siteTitle={siteMetadata.title}
         slug={slug}
       />
-
-
-      <div className=" bg-black">
+     <div className=" bg-black">
         <video autoPlay loop muted playsInline className="w-screen pt-[5rem]">
           {page.podstrony?.urlVideo
             ? <source src={page.podstrony.urlVideo} type="video/mp4" />
@@ -86,42 +71,29 @@ export default function Page({ page, breadcrumbs }) {
                   __html: content,
                 }}
               />
-
               <div
-
                 className=" prose max-w-screen-lg w-full  mx-auto"
                 dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
               ></div>
             </div>
           </Container>
-
           <div
-
             className='mt-10 mb-10  '
             dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
           ></div>
-
           <Container>
             <div className='druga'>
               <div
-
                 className="prose max-w-screen-lg w-full  mx-auto  "
-
                 dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
               ></div></div>
           </Container>
-
-
           <div
             className='mt-10 w-full max-w-none'
             dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
           ></div>
-
-
-
         </Section>
-
-        {hasChildren && (
+          {hasChildren && (
           <Section className={styles.sectionChildren}>
             <Container>
               <aside>
@@ -217,7 +189,10 @@ export async function getStaticPaths() {
   //   });
 
   return {
-    paths:[],
+    paths:[
+      { params: { slugParent: 'film-reklamowy', slugChild: [] } },
+    { params: { slugParent: 'film-korporacyjny', slugChild: [] } },
+    ],
     fallback: 'blocking',
   };
 }
