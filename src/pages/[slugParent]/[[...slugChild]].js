@@ -1,4 +1,4 @@
- import Link from 'next/link';
+import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
@@ -42,23 +42,23 @@ export default function Page({ page, breadcrumbs }) {
 
   return (
     <Layout>
-      
+
       <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" beforeInteractive />
 
-      
-      <Script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js'/>
+
+      <Script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js' />
 
       <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-pro-effects-css' href='https://old.simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
-      <Script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js'/>
-      
-      <Script async src='/js/modula-wf.js' id='modula-wf-js'/>
-      <Script async src='/js/modula-pro.js' id='modula-pro-js'/>
- 
-  
-     
-    
+      <Script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
+
+      <Script async src='/js/modula-wf.js' id='modula-wf-js' />
+      <Script async src='/js/modula-pro.js' id='modula-pro-js' />
+
+
+
+
 
       <Helmet {...helmetSettings} />
       <WebpageJsonLd
@@ -68,57 +68,57 @@ export default function Page({ page, breadcrumbs }) {
         slug={slug}
       />
 
-     
-<div className=" bg-black">
-<video autoPlay loop muted playsInline className="w-screen pt-[5rem]">
-  {page.podstrony?.urlVideo
-    ? <source src={page.podstrony.urlVideo} type="video/mp4" />
-    : <source src="/videopodstrony.mp4" type="video/mp4" />}
-</video>
-    </div>
+
+      <div className=" bg-black">
+        <video autoPlay loop muted playsInline className="w-screen pt-[5rem]">
+          {page.podstrony?.urlVideo
+            ? <source src={page.podstrony.urlVideo} type="video/mp4" />
+            : <source src="/videopodstrony.mp4" type="video/mp4" />}
+        </video>
+      </div>
       <Content>
         <Section>
           <Container>
-       <div className="text-lg mt-[5rem] mb-5  ">
-       <div
-              className={styles.content}
-              dangerouslySetInnerHTML={{
-                __html: content,
-              }}
-            />
-         
-            <div
+            <div className="text-lg mt-[5rem] mb-5  ">
+              <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{
+                  __html: content,
+                }}
+              />
 
-              className=" prose max-w-screen-lg w-full  mx-auto" 
-              dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
-            ></div>
+              <div
+
+                className=" prose max-w-screen-lg w-full  mx-auto"
+                dangerouslySetInnerHTML={{ __html: page.podstrony?.pierwszaCzescTekstu }}
+              ></div>
             </div>
- </Container>
+          </Container>
 
-            <div
+          <div
 
             className='mt-10 mb-10  '
-              dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
-            ></div>
- 
-   <Container>
-    <div className='druga'>
-            <div
-        
-               className="prose max-w-screen-lg w-full  mx-auto  "
-              
-              dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
-            ></div></div>
-                    </Container>
+            dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
+          ></div>
 
-                  
-            <div
-              className='mt-10 w-full max-w-none'
-              dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
-            ></div>
+          <Container>
+            <div className='druga'>
+              <div
+
+                className="prose max-w-screen-lg w-full  mx-auto  "
+
+                dangerouslySetInnerHTML={{ __html: page.podstrony?.drugaCzescTekstu }}
+              ></div></div>
+          </Container>
 
 
-     
+          <div
+            className='mt-10 w-full max-w-none'
+            dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGridDrugi }}
+          ></div>
+
+
+
         </Section>
 
         {hasChildren && (
@@ -221,3 +221,4 @@ export async function getStaticPaths() {
     fallback: 'blocking',
   };
 }
+//
