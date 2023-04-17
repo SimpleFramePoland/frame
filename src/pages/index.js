@@ -19,6 +19,10 @@ export default function Home({page}) {
     
     <Layout>
       <Head>
+        
+        
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" beforeInteractive/>
+    
                <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
@@ -26,9 +30,6 @@ export default function Home({page}) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         </Head>
-        
-           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
-    
      
 
        
