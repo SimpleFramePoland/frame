@@ -28,7 +28,7 @@ const nextConfig = {
 
     // By default, only render this number of post pages ahead of time, otherwise
     // the rest will be rendered on-demand
-    POSTS_PRERENDER_COUNT: 250,
+    POSTS_PRERENDER_COUNT: 15,
 
     WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
     WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
