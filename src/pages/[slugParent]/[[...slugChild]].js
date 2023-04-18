@@ -12,7 +12,7 @@ import Content from 'components/Content';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import styles from 'styles/pages/Page.module.scss';
-
+import Head from 'next/head';
 export default function Page({ page, breadcrumbs }) {
   const { title, metaTitle, description, slug, content, children } = page;
 
@@ -39,7 +39,8 @@ export default function Page({ page, breadcrumbs }) {
 
   return (
     <Layout>
-      <script src='js/jquery.js' />   
+    
+      <Script src='js/jquery.js' />   
       <Script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js' />
       <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
@@ -54,6 +55,7 @@ export default function Page({ page, breadcrumbs }) {
         siteTitle={siteMetadata.title}
         slug={slug}
       />
+     
      <div className=" bg-black">
         <video autoPlay loop muted playsInline className="w-screen pt-[5rem]">
           {page.podstrony?.urlVideo

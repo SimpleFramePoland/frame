@@ -8,8 +8,8 @@ import Feature1 from 'components/komponenty/feature1';
 import Cta1 from 'components/komponenty/cta1'
 import { Helmet } from 'react-helmet';
 import { getPageByUri } from 'lib/pages';
-import Script from 'next/script'
 import Head from 'next/head';
+
 export default function Home({page}) {
   const title = 'Producent filmowy - Simple Frame';
   const description = 'Tworzymy Filmy, Animacje i reklamy';
@@ -19,7 +19,7 @@ export default function Home({page}) {
     
     <Layout>
       <Head> 
-      <script src='js/jquery.js' />       
+      <script async src='js/jquery.js' />       
                <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
@@ -32,7 +32,7 @@ export default function Home({page}) {
      
 
     
-<script async src='/js/fancybox.js' beforeInteractive id='modula-fancybox-js'/>
+<script async src='/js/fancybox.js'  id='modula-fancybox-js'/>
 
 <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
 <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />

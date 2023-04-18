@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
+import Head from 'next/head';
 export default function Category({ categories, category, posts,page }) {
   const { name, description, slug } = category;
   const { metadata: siteMetadata = {} } = useSite();
