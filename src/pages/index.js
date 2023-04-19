@@ -1,4 +1,5 @@
-
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import React from 'react';
 import Layout from 'components/Layout';
 import Hero from 'components/komponenty/hero';
@@ -13,23 +14,37 @@ import $ from 'jquery';
 export default function Home({ page }) {
   const title = 'Producent filmowy - Simple Frame';
   const description = 'Tworzymy Filmy, Animacje i reklamy';
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      // This will force a full re-render of the page
+      window.location.reload();
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
 
   return (
 
 
     <Layout>
-   
-      <Script async src='/js/fancybox.js' id='modula-fancybox-js' />
+     
+      <script async src='/js/fancybox.js' id='modula-fancybox-js' />
 
       <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-pro-effects-css' href='https://old.simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
-      <Script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
+      <script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
 
       <script async src='/js/modula-wf.js' id='modula-wf-js' />
-      <Script async src='/js/modula-pro.js' id='modula-pro-js' />
+      <script async src='/js/modula-pro.js' id='modula-pro-js' />
 
-      <Head>
+    
 
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -37,8 +52,7 @@ export default function Home({ page }) {
         <meta property="og:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-      </Head>
-
+    
 
 
 
@@ -48,7 +62,7 @@ export default function Home({ page }) {
         <div
 
 
-          dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
+          dangerouslySetInnerHTML={{ __html: page.podstrony.shortcodeGrid }}
         ></div>
       </div>
 

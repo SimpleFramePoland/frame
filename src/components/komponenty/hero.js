@@ -8,8 +8,8 @@ export default function Hero(){
   	<h1 className='text-5xl lg:text-7xl text-center font-bold drop-shadow-xl' >Wyprodukujemy Twój film</h1>
    <p className='text-center font-bold drop-shadow-xl pt-6 text-2xl'> Zrealizujemy Twój film w rozdzielczości HD lub 4K</p>
    <button className='btn mt-7 w-[7rem] h-10 mx-auto bg-babyblue rounded-lg '>
-    <Link className="text-white text-xl font"href="/porozmawiajmy">
-    <a>
+    <Link href="/porozmawiajmy">
+    <a className="text-white text-xl font" >
       Kontakt
     </a>
     </Link >
@@ -19,8 +19,8 @@ export default function Hero(){
   	<h1 className='text-5xl lg:text-7xl text-center font-bold drop-shadow-xl'>Stworzymy Twoją animację</h1>
     <p className='text-center font-bold drop-shadow-xl pt-6 text-2xl'>Potencjał animacji wciąż rośnie</p>
     <button className='btn mt-7 w-[7rem] h-10 mx-auto bg-babyblue rounded-lg '>
-    <Link className="text-white text-xl font"href="/porozmawiajmy">
-    <a>
+    <Link href="/porozmawiajmy">
+    <a className="text-white text-xl font" >
       Kontakt
     </a>
     </Link >
@@ -30,8 +30,8 @@ export default function Hero(){
   	<h1 className='text-5xl lg:text-7xl text-center font-bold drop-shadow-xl'>Zaprojektujemy Twoją reklamę</h1>
     <p className='text-center font-bold drop-shadow-xl pt-6 text-2xl'> Pomożemy Ci zaskoczyć Twoich kontrahentów</p>
     <button className='btn mt-7 w-[7rem] h-10 mx-auto bg-babyblue rounded-lg '>
-    <Link className="text-white text-xl font"href="/porozmawiajmy">
-    <a>
+    <Link  href="/porozmawiajmy">
+    <a className="text-white text-xl font" >
       Kontakt
     </a>
     </Link >

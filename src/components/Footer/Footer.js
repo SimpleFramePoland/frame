@@ -52,41 +52,42 @@ const Footer = () => {
             <Link href='/film-korporacyjny'><a className="text-white hover:text-babyblue">Film Korporacyjny</a></Link >
           </li>
           <li>
-            <Link href='/film-promocyjny' className="text-white hover:text-babyblue"><a>Film Promocyjny</a></Link >
+            <Link href='/film-promocyjny' ><a className="text-white hover:text-babyblue">Film Promocyjny</a></Link >
           </li>
           <li>
-            <Link href='/film-produktowy' className="text-white hover:text-babyblue"><a>Film Produktowy</a></Link >
-          </li>
-        </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3"><a>Animacje</a></h3>
-        <nav className="list-none mb-10">
-          <li>
-            <Link href= '/animacja-3d-2' className="text-white hover:text-babyblue"><a>Animacja 3D</a></Link >
-          </li>
-          <li>
-            <Link href='/animacja-2d' className="text-white hover:text-babyblue"><a>Animacja 2D</a></Link >
-          </li>
-          <li>
-            <Link href='/animacja-techniczna' className="text-white hover:text-babyblue"><a>Animacja Techniczna </a></Link >
-          </li>
-          <li>
-            <Link href= '/animacja-produktowa' className="text-white hover:text-babyblue"><a>Animacja Produktowa </a></Link>
+            <Link href='/film-produktowy'><a  className="text-white hover:text-babyblue" >Film Produktowy</a></Link >
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3"><a>Postprodukcja</a></h3>
+        <h3 ><a className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Animacje</a></h3>
+        <nav className="list-none mb-10">
+      
+          <li>
+            <Link href= '/animacja-3d-2'><a  className="text-white hover:text-babyblue" >Animacja 3D</a></Link >
+          </li>
+          <li>
+            <Link href='/animacja-2d' ><a className="text-white hover:text-babyblue" >Animacja 2D</a></Link >
+          </li>
+          <li>
+            <Link href='/animacja-techniczna' ><a className="text-white hover:text-babyblue">Animacja Techniczna </a></Link >
+          </li>
+          <li>
+            <Link href= '/animacja-produktowa' ><a className="text-white hover:text-babyblue" >Animacja Produktowa </a></Link>
+          </li>
+        </nav>
+      </div>
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h3 ><a className="title-font font-bold text-babyblue tracking-widest text-sm mb-3" >Postprodukcja</a></h3>
         <nav className="list-none mb-10">
           <li>
-            <Link href="/postprodukcja"className="text-white hover:text-babyblue"><a>Postprodukcja</a></Link >
+            <Link href="/postprodukcja"><a className="text-white hover:text-babyblue">Postprodukcja</a></Link >
           </li>
           <li>
-            <Link href="/montaz-filmow" className="text-white hover:text-babyblue"><a>Montaż filmów</a></Link >
+            <Link href="/montaz-filmow" ><a className="text-white hover:text-babyblue">Montaż filmów</a></Link >
           </li>
           <li>
-            <Link href='/produkcja-animacji' className="text-white hover:text-babyblue"><a>Produkcja Animacji</a></Link >
+            <Link href='/produkcja-animacji' ><a className="text-white hover:text-babyblue" >Produkcja Animacji</a></Link >
           </li>
         
         </nav>
@@ -95,16 +96,16 @@ const Footer = () => {
         <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Usługi</h3>
         <nav className="list-none mb-10">
           <li>
-            <Link href= '/billboard-sponsorski' className="text-white hover:text-babyblue"><a>Billboard Sponsorski</a></Link >
+            <Link href= '/billboard-sponsorski' ><a className="text-white hover:text-babyblue" >Billboard Sponsorski</a></Link >
           </li>
           <li>
-            <Link href= '/teledyski' className="text-white hover:text-babyblue"><a>Teledyski</a></Link >
+            <Link href= '/teledyski' ><a className="text-white hover:text-babyblue" >Teledyski</a></Link >
           </li>
           <li>
-            <Link  href= '/fotografia' className="text-white hover:text-babyblue"><a>Fotografia</a></Link >
+            <Link  href= '/fotografia' ><a className="text-white hover:text-babyblue" >Fotografia</a></Link >
           </li>
           <li>
-            <Link href='/streaming-video' className="text-white hover:text-babyblue"><a>Streaming</a></Link >
+            <Link href='/streaming-video' ><a className="text-white hover:text-babyblue" >Streaming</a></Link >
           </li>
         </nav>
       </div>
@@ -112,7 +113,7 @@ const Footer = () => {
   </div>
   
     <div className="container mx-auto  px-5 flex flex-wrap flex-col sm:flex-row">
-      <p className="text-babyblue fonttext-sm text-center sm:text-left">© 2023 SimpleFrame
+      <p className="text-white fonttext-sm text-center sm:text-left">© 2023 SimpleFrame Sp. z o.o. 
         
       </p>
      
