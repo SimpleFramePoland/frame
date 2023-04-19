@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Section from 'components/Section';
-
+import Link from 'next/link';
 
 
 
@@ -18,8 +18,8 @@ const Footer = () => {
           <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left md:mt-0 mt-10">
     <div className="flex lg:flex-1">
-        <a href="/" className=" ">
-          <span className="sr-only">Simple frame</span>
+        <Link href="/" className=" ">
+         
           <Image
       src="/logofooter.png"
       alt="Logo simpleframe"
@@ -27,7 +27,7 @@ const Footer = () => {
       height={45}
       className="lg:-10"
     />
-        </a>
+        </Link >
        
       </div>
       <p className="mt-4  ">
@@ -35,7 +35,7 @@ const Footer = () => {
  
         ul. Wiertnicza 135A<br/>
 02-952 Warszawa<br/>
-<a className="text-babyblue" href="tel:+48 502 061 431">+48 502 061 431</a> <br />
+<a className="text-babyblue" href="tel:+48 502 061 431">+48 502 061 431</a > <br />
                   <a className="text-babyblue" href="mailto:kontakt@simpleframe.pl">kontakt@simpleframe.pl</a> <br/>
 
 
@@ -46,47 +46,47 @@ const Footer = () => {
         <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Produkcja filmowa </h3>
         <nav className="list-none mb-10">
           <li>
-            <a href="/film-reklamowy" className="text-white hover:text-babyblue">Film Reklamowy</a>
+           
           </li>
           <li>
-            <a href='/film-korporacyjny' className="text-white hover:text-babyblue">Film Korporacyjny</a>
+            <Link href='/film-korporacyjny'><a className="text-white hover:text-babyblue">Film Korporacyjny</a></Link >
           </li>
           <li>
-            <a href='/film-promocyjny' className="text-white hover:text-babyblue">Film Promocyjny</a>
+            <Link href='/film-promocyjny' className="text-white hover:text-babyblue"><a>Film Promocyjny</a></Link >
           </li>
           <li>
-            <a href='/film-produktowy' className="text-white hover:text-babyblue">Film Produktowy</a>
-          </li>
-        </nav>
-      </div>
-      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Animacje</h3>
-        <nav className="list-none mb-10">
-          <li>
-            <a href= '/animacja-3d-2/' className="text-white hover:text-babyblue">Animacja 3D</a>
-          </li>
-          <li>
-            <a href= '/animacja-2d' className="text-white hover:text-babyblue">Animacja 2D</a>
-          </li>
-          <li>
-            <a href= '/animacja-techniczna' className="text-white hover:text-babyblue">Animacja Techniczna</a>
-          </li>
-          <li>
-            <a  href= '/animacja-produktowa' className="text-white hover:text-babyblue">Animacja Produktowa</a>
+            <Link href='/film-produktowy' className="text-white hover:text-babyblue"><a>Film Produktowy</a></Link >
           </li>
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Postprodukcja</h3>
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3"><a>Animacje</a></h3>
         <nav className="list-none mb-10">
           <li>
-            <a href="/postprodukcja"className="text-white hover:text-babyblue">Postprodukcja</a>
+            <Link href= '/animacja-3d-2' className="text-white hover:text-babyblue"><a>Animacja 3D</a></Link >
           </li>
           <li>
-            <a href="/montaz-filmow" className="text-white hover:text-babyblue">Montaż filmów</a>
+            <Link href='/animacja-2d' className="text-white hover:text-babyblue"><a>Animacja 2D</a></Link >
           </li>
           <li>
-            <a href='/produkcja-animacji' className="text-white hover:text-babyblue">Produkcja Animacji</a>
+            <Link href='/animacja-techniczna' className="text-white hover:text-babyblue"><a>Animacja Techniczna </a></Link >
+          </li>
+          <li>
+            <Link href= '/animacja-produktowa' className="text-white hover:text-babyblue"><a>Animacja Produktowa </a></Link>
+          </li>
+        </nav>
+      </div>
+      <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3"><a>Postprodukcja</a></h3>
+        <nav className="list-none mb-10">
+          <li>
+            <Link href="/postprodukcja"className="text-white hover:text-babyblue"><a>Postprodukcja</a></Link >
+          </li>
+          <li>
+            <Link href="/montaz-filmow" className="text-white hover:text-babyblue"><a>Montaż filmów</a></Link >
+          </li>
+          <li>
+            <Link href='/produkcja-animacji' className="text-white hover:text-babyblue"><a>Produkcja Animacji</a></Link >
           </li>
         
         </nav>
@@ -95,16 +95,16 @@ const Footer = () => {
         <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Usługi</h3>
         <nav className="list-none mb-10">
           <li>
-            <a href= '/billboard-sponsorski' className="text-white hover:text-babyblue">Billboard Sponsorski</a>
+            <Link href= '/billboard-sponsorski' className="text-white hover:text-babyblue"><a>Billboard Sponsorski</a></Link >
           </li>
           <li>
-            <a href= '/teledyski' className="text-white hover:text-babyblue">Teledyski</a>
+            <Link href= '/teledyski' className="text-white hover:text-babyblue"><a>Teledyski</a></Link >
           </li>
           <li>
-            <a  href= '/fotografia' className="text-white hover:text-babyblue">Fotografia</a>
+            <Link  href= '/fotografia' className="text-white hover:text-babyblue"><a>Fotografia</a></Link >
           </li>
           <li>
-            <a href='/streaming-video' className="text-white hover:text-babyblue">Streaming</a>
+            <Link href='/streaming-video' className="text-white hover:text-babyblue"><a>Streaming</a></Link >
           </li>
         </nav>
       </div>

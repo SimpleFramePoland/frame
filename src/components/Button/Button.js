@@ -1,5 +1,5 @@
 import styles from './Button.module.scss';
-
+import React from 'react';
 const Button = ({ children, className, ...rest }) => {
   let buttonClassName = styles.button;
 

@@ -1,5 +1,6 @@
+/* eslint-disable react/no-unknown-property */
 import Link from 'next/link';
-
+import React from 'react';
 import { categoryPathBySlug } from 'lib/categories';
 import { authorPathByName } from 'lib/users';
 import { formatDate } from 'lib/datetime';

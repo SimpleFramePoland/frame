@@ -2,7 +2,7 @@ import { getUserByNameSlug } from 'lib/users';
 import { getPostsByAuthorSlug } from 'lib/posts';
 import { AuthorJsonLd } from 'lib/json-ld';
 import usePageMetadata from 'hooks/use-page-metadata';
-
+import React from 'react';
 import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
 

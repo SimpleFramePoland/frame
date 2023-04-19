@@ -35,6 +35,7 @@ export default class MyDocument extends Document {
     return (
       <Html {...this.helmetHtmlAttrComponents}>
         <Head>{this.helmetHeadComponents}
+        <Script src='js/jquery.js' /> 
         <Script
         src="https://www.googletagmanager.com/gtag/js?id=UA-48180877-8"
         strategy="afterInteractive"

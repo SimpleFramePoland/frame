@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import usePageMetadata from 'hooks/use-page-metadata';
-
+import React from 'react';
 import useSearch from 'hooks/use-search';
 
 import TemplateArchive from 'templates/archive';
@@ -16,7 +16,8 @@ export default function Search() {
     search({
       query: params.get('q'),
     });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
+
   }, []);
 
   const { metadata } = usePageMetadata({

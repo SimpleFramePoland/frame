@@ -1,6 +1,6 @@
 import { useState, createContext, useContext, useEffect } from 'react';
 import Fuse from 'fuse.js';
-
+import React from 'react';
 import { getSearchData } from 'lib/search';
 
 const SEARCH_KEYS = ['slug', 'title'];

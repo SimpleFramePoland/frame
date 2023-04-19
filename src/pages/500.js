@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
-
+import React from 'react';
 import Layout from 'components/Layout';
 import Section from 'components/Section';
 import Container from 'components/Container';

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import React from 'react';
 import config from '../../../package.json';
 import { Helmet } from 'react-helmet';
 

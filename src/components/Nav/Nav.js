@@ -5,7 +5,7 @@ import {
 
   CameraIcon,
   MusicalNoteIcon,
-  ArrowsPointingOutIcon ,
+  ArrowsPointingOutIcon,
   CakeIcon,
   WrenchScrewdriverIcon,
   CubeIcon,
@@ -26,19 +26,19 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faYoutube, faVimeo, faInstagram, faFacebook} from "@fortawesome/free-brands-svg-icons";
+import { faYoutube, faVimeo, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const produkcje = [
   { name: 'Film Reklamowy', description: 'Skuteczna reklama wideo dla Twojego biznesu', href: '/film-reklamowy', icon: FilmIcon },
   { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: BuildingOffice2Icon },
   { name: 'Film Promocyjny', description: 'Zachęć swoich klientów do zakupów ', href: '/film-promocyjny', icon: EyeIcon },
-  { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: VideoCameraIcon},
+  { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: VideoCameraIcon },
   { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
 ];
 const Postprodukcja = [
   { name: 'Postprodukcja', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/postprodukcja', icon: ComputerDesktopIcon },
   { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
- 
+
 ];
 const animacje = [
   { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-3d/', icon: CubeIcon },
@@ -50,7 +50,7 @@ const animacje = [
 
 ];
 const uslugi = [
-  { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon  },
+  { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon },
   { name: 'Teledyski', description: 'Prezentuj swoje produkty lub usługi za pomocą interesującej treści wideo', href: '/teledyski', icon: MusicalNoteIcon },
   { name: 'Fotografia', description: 'Uchwyć wspaniałe obrazy, które reprezentują Twoją markę i przyciągają klientów', href: '/fotografia', icon: CameraIcon },
   { name: 'Streaming', description: 'Dostarczaj wysokiej jakości treści swojej publiczności za pomocą transmisji na żywo', href: '/streaming-video', icon: ComputerDesktopIcon },
@@ -67,27 +67,27 @@ export default function Header() {
   return (
 
     <header className="bg-black w-full lg:px-5 left-0 z-30 fixed">
-       
-       
+
+
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
         <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none">
-        
-          <Link href="/" className="-m-1.5 p-1.5 " passHref> 
-           
-         
+
+          <Link href="/" className="-m-1.5 p-1.5 " >
+
+
             <Image
-      src="/logo.png"
-      alt="Logo Simple Frame"
-      width={315}
-      height={45}
-      className="sm:max-w-12 cursor-pointer"
-      
-    />
+              src="/logo.png"
+              alt="Logo Simple Frame"
+              width={315}
+              height={45}
+              className="sm:max-w-12 cursor-pointer"
+
+            />
           </Link>
         </div>
         <div className="flex lg:hidden">
-          
+
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white"
@@ -136,9 +136,9 @@ export default function Header() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          
 
-           <Popover className="relative">
+
+          <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
               Postprodukcja
               <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
@@ -255,46 +255,45 @@ export default function Header() {
             </Transition>
           </Popover>
 
-          <a href="/posts" className="text-sm font-semibold leading-6 text-white">
-            Blog
-          </a>
+          <Link href="/posts" ><a className="text-sm font-semibold leading-6 text-white" >Realizacje</a></Link>
 
-         
+
+
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end  ">
           <div className='  lg:space-x-4 md:space-x-1 mr-10  md:ml-5 whitespace-nowrap'>
-      <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " />
-       </a>
-       <a href ="https://www.facebook.com/simpleframe" className='align-middle  ' target="_blank" rel="noopener noreferrer"  >
-      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-6 w-6 " />
-       </a>
-       <a href ="https://vimeo.com/simpleframe" className='align-middle  ' target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-6 w-6 "  />
-       </a>
-       <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  ' target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-6 w-6 " />
-       </a>
-       </div>
-       <a href ="/porozmawiajmy" className='align-middle'>
-  
-       </a>
-       
+            <a href="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " />
+            </a>
+            <a href="https://www.facebook.com/simpleframe" className='align-middle  ' target="_blank" rel="noopener noreferrer"  >
+              <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-6 w-6 " />
+            </a>
+            <a href="https://vimeo.com/simpleframe" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-6 w-6 " />
+            </a>
+            <a href="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-6 w-6 " />
+            </a>
+          </div>
+
+
           <button className='bg-babyblue rounded-md w-20 h-8  transition duration-300 hover:ease-in-out'>
-          <a href="/porozmawiajmy"className="text-white capitalize" >
-          Kontakt 
-          </a>
+            <Link href="/porozmawiajmy"  >
+              <a className="text-white font-semibold leading-6 capitalize" >
+                Kontakt
+              </a>
+            </Link>
           </button>
-          
+
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-30" />
         <Dialog.Panel className="fixed inset-y-0 right-0 z-30 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5" passHref>
+            <Link href="/" className="-m-1.5 p-1.5" >
               <span className="sr-only">Simple Frame</span>
-      
+
             </Link>
             <button
               type="button"
@@ -333,12 +332,14 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
+                <Link
                   href="/postprodukcja"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-black-50"
                 >
+                <a>
                   Postprodukcja
                 </a>
+                </Link>
                 <Disclosure as="div" className="-mx-3">
                   {({ open }) => (
                     <>
@@ -389,40 +390,43 @@ export default function Header() {
                     </>
                   )}
                 </Disclosure>
-                <a
+                <Link
                   href="/posts"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-black-50"
                 >
+                <a>
                   Blog
                 </a>
+                </Link>
               </div>
               <button className="bg-babyblue text-white rounded-md w-20 h-10 ">
-                <a
+                <Link
                   href="/porozmawiajmy"
-                 className='text-white'
+                  className='text-white'
                 >
-                 Kontakt
+                <a>
+                  Kontakt
                 </a>
+                </Link>
               </button>
-              
+
             </div>
             <div className=' mt-16 space-x-6'>
-      <a href ="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  'target="_blank" rel="noopener noreferrer">
-      <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
-       </a>
-       <a href ="https://www.facebook.com/simpleframe" className='align-middle  '>
-      <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
-       </a>
-       <a href ="https://vimeo.com/simpleframe" className='align-middle  '>
-      <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
-       </a>
-       <a href ="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
-      <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer"/>
-       </a>
-       <a href ="/porozmawiajmy" className='align-middle'>
-  
-       </a>
-       </div>
+              <a href="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+              </a>
+              <a href="https://www.facebook.com/simpleframe" className='align-middle  '>
+                <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+              </a>
+              <a href="https://vimeo.com/simpleframe" className='align-middle  '>
+                <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+              </a>
+              <a href="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
+                <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+              </a>
+              
+             
+            </div>
           </div>
         </Dialog.Panel>
       </Dialog>

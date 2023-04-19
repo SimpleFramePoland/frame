@@ -6,54 +6,55 @@ import Faq from 'components/komponenty/Faq'
 import { Testimonials } from 'components/komponenty/testimonials';
 import Feature1 from 'components/komponenty/feature1';
 import Cta1 from 'components/komponenty/cta1'
-import { Helmet } from 'react-helmet';
+import Script from 'next/script';
 import { getPageByUri } from 'lib/pages';
 import Head from 'next/head';
-
-export default function Home({page}) {
+import $ from 'jquery';
+export default function Home({ page }) {
   const title = 'Producent filmowy - Simple Frame';
   const description = 'Tworzymy Filmy, Animacje i reklamy';
 
   return (
- 
-    
+
+
     <Layout>
-      <Head> 
-      <script async src='js/jquery.js' />       
-               <title>{title}</title>
+   
+      <Script async src='/js/fancybox.js' id='modula-fancybox-js' />
+
+      <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
+      <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
+      <link rel='stylesheet' id='modula-pro-effects-css' href='https://old.simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
+      <Script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
+
+      <script async src='/js/modula-wf.js' id='modula-wf-js' />
+      <Script async src='/js/modula-pro.js' id='modula-pro-js' />
+
+      <Head>
+
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        </Head>
-        
-          
-     
+      </Head>
 
-    
-<script async src='/js/fancybox.js'  id='modula-fancybox-js'/>
 
-<link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
-<link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
-<link rel='stylesheet' id='modula-pro-effects-css' href='https://old.simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
-<script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js'/>
 
-<script async src='/js/modula-wf.js' id='modula-wf-js'/>
-<script async src='/js/modula-pro.js' id='modula-pro-js'/>
+
 
       <Hero />
       <div className='pt-10 bg-black'>
-      <div
+        <div
 
-       
-        dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
-      ></div>
+
+          dangerouslySetInnerHTML={{ __html: page.podstrony?.shortcodeGrid }}
+        ></div>
       </div>
-   
-   
+
+
       <Feature1 />
-    
+
       <Testimonials />
       <Faq />
       <Cta1 />
@@ -94,7 +95,7 @@ export async function getStaticProps({ params = {} } = {}) {
   return {
     props: {
       page,
-  
+
     },
   };
 }
