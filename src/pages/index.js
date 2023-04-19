@@ -32,7 +32,7 @@ export default function Home({ page }) {
 
 
     <Layout>
-     
+     <script async src="/js/jquery.js" />
         
      <script async src='/js/fancybox.js' id='modula-fancybox-js' />
       <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
