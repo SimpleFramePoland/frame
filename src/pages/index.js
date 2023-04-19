@@ -7,10 +7,9 @@ import Faq from 'components/komponenty/Faq'
 import { Testimonials } from 'components/komponenty/testimonials';
 import Feature1 from 'components/komponenty/feature1';
 import Cta1 from 'components/komponenty/cta1'
-import Script from 'next/script';
+
 import { getPageByUri } from 'lib/pages';
-import Head from 'next/head';
-import $ from 'jquery';
+
 export default function Home({ page }) {
   const title = 'Producent filmowy - Simple Frame';
   const description = 'Tworzymy Filmy, Animacje i reklamy';
