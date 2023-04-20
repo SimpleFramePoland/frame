@@ -77,7 +77,7 @@ export async function getStaticProps({ params = {} } = {}) {
       notFound: true,
     };
   }
-  const { categories } = await getAllCategories();
+  
   const { posts } = await getPostsByCategoryId({
     categoryId: category.databaseId,
     queryIncludes: 'archive',
@@ -86,7 +86,7 @@ export async function getStaticProps({ params = {} } = {}) {
   return {
     props: {
    
-      categories,
+    
       category,
       posts,
     },
