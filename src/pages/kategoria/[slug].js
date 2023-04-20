@@ -62,23 +62,7 @@ export default function Category({ categories, category, posts,page }) {
                 })}
               </ul>
               </div>         
-              <div className=' mt-24 '>
-  {categories && categories.length > 0 ? (
-  
-    <ul className='space-x-5 overflow-x-scroll inline py-2 '>
-      {categories.map((category) => (
-        <li className=" inline mx-5"key={category.slug}>
-          <Link href={categoryPathBySlug(category.slug)}>
-          <a className='text-black'> {category.name} </a>
-          </Link>
-        </li>
-      ))}
-    </ul>
- 
-  ) : (
-    <p></p>
-  )}
-  </div>
+             
           </Container>  
           </Layout>)
 }
