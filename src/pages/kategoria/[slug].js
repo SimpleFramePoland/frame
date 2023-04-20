@@ -7,7 +7,7 @@ import PostCard from 'components/PostCard';
 import Container from 'components/Container';
 import Link from 'next/link';
 import { categoryPathBySlug } from 'lib/categories';
-import Carousel from 'components/komponenty/Carousel';
+
 import { Helmet } from 'react-helmet';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
@@ -40,7 +40,7 @@ export default function Category({ categories, category, posts,page }) {
         slug={slug}
       />
 
-   <Carousel/>
+
    <Container>
    
        <h1 className="text-3xl font-bold mb-6 mt-[4rem] ">{name}</h1>
