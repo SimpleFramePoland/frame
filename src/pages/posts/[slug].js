@@ -14,11 +14,7 @@ import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import Content from 'components/Content';
 import Metadata from 'components/Metadata';
-import FeaturedImage from 'components/FeaturedImage';
-
-import styles from 'styles/pages/Post.module.scss';
 
 export default function Post({ post, socialImage, related }) {
   const {
@@ -27,10 +23,8 @@ export default function Post({ post, socialImage, related }) {
     description,
     content,
     date,
-    author,
     categories,
-    modified,
-    featuredImage,
+   featuredImage,
     isSticky = false,
   } = post;
 

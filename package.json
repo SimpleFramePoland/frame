@@ -29,6 +29,7 @@
     "@headlessui/react": "^1.7.13",
     "@heroicons/react": "^2.0.16",
     "@sendgrid/mail": "^7.7.0",
+    "@vercel/analytics": "^1.0.0",
     "autoprefixer": "^10.4.14",
     "cross-env": "^7.0.3",
     "daisyui": "^2.51.5",
