@@ -1,6 +1,7 @@
 import NextApp from 'next/app';
 import { SiteContext, useSiteContext } from 'hooks/use-site';
 import { SearchProvider } from 'hooks/use-search';
+import { Analytics } from '@vercel/analytics/react'
 
 import { getSiteMetadata } from 'lib/site';
 import { getRecentPosts } from 'lib/posts';
@@ -21,12 +22,14 @@ function App({ Component, pageProps = {}, metadata, recentPosts, categories, men
   });
 
   return (
-    <SiteContext.Provider value={site}>
-      <SearchProvider>
-        <NextNProgress height={4} color={variables.progressbarColor} />
-        <Component {...pageProps} />
-      </SearchProvider>
-    </SiteContext.Provider>
+    <>
+      <SiteContext.Provider value={site}>
+        <SearchProvider>
+          <Analytics />
+          <NextNProgress height={4} color={variables.progressbarColor} />
+          <Component {...pageProps} />
+        </SearchProvider>
+      </SiteContext.Provider></>
   );
 }
 
