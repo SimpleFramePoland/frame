@@ -47,6 +47,12 @@ const Layout = ({ children }) => {
           href: '/favicon.png',
         },
         {
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/favicon.png',
+        },
+        {
           rel: 'manifest',
           href: '/site.webmanifest',
         },

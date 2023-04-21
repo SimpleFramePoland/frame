@@ -51,7 +51,7 @@ export default class MyDocument extends Document {
       />
       
    
-
+      <Script src="/js/hotjar.js"  strategy="afterInteractive"/>
       <Script id="google-analytics" >
         {`
           window.dataLayer = window.dataLayer || [];

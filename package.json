@@ -63,6 +63,7 @@
     "sendgrid": "^5.2.3",
     "style.css": "^1.0.3",
     "tailwindcss": "^3.2.7",
+    "tailwindcss-animate": "^1.0.5",
     "tailwindcss-typography": "^3.1.0",
     "yarn": "^1.22.19"
   },

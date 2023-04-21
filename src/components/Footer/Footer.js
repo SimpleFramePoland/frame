@@ -46,9 +46,6 @@ const Footer = () => {
         <h3 className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Produkcja filmowa </h3>
         <nav className="list-none mb-10">
           <li>
-           
-          </li>
-          <li>
             <Link href='/film-korporacyjny'><a className="text-white hover:text-babyblue">Film Korporacyjny</a></Link >
           </li>
           <li>
@@ -60,7 +57,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 ><a className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Animacje</a></h3>
+        <h3 className='mb-3' ><a className="title-font font-bold text-babyblue tracking-widest text-sm mb-3">Animacje </a></h3>
         <nav className="list-none mb-10">
       
           <li>
@@ -78,7 +75,7 @@ const Footer = () => {
         </nav>
       </div>
       <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h3 ><a className="title-font font-bold text-babyblue tracking-widest text-sm mb-3" >Postprodukcja</a></h3>
+        <h3 className='mb-3'><a className="title-font font-bold text-babyblue tracking-widest text-sm mb-3" >Postprodukcja</a></h3>
         <nav className="list-none mb-10">
           <li>
             <Link href="/postprodukcja"><a className="text-white hover:text-babyblue">Postprodukcja</a></Link >

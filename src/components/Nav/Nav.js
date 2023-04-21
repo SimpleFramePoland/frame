@@ -71,7 +71,7 @@ export default function Header() {
 
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
-        <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none">
+        <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none animate-in slide-in-from-left ">
 
           <Link href="/" className="-m-1.5 p-1.5 " >
 
@@ -81,7 +81,7 @@ export default function Header() {
               alt="Logo Simple Frame"
               width={315}
               height={45}
-              className="sm:max-w-12 cursor-pointer"
+              className="sm:max-w-12 cursor-pointer animate-in slide-in-from-left duration-300 delay-100"
 
             />
           </Link>
@@ -97,7 +97,7 @@ export default function Header() {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12 animate-in slide-in-from-top duration-300 delay-200">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white focus:outline-none">
               Produkcja filmowa
@@ -261,7 +261,7 @@ export default function Header() {
 
         </Popover.Group>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end  ">
-          <div className='  lg:space-x-4 md:space-x-1 mr-10  md:ml-5 whitespace-nowrap'>
+          <div className='  lg:space-x-4 md:space-x-1 mr-10  md:ml-5 whitespace-nowrap animate-in slide-in-from-top duration-300 delay-200'>
             <a href="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  ' target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-6 w-6 " />
             </a>
@@ -277,7 +277,7 @@ export default function Header() {
           </div>
 
 
-          <button className='bg-babyblue rounded-md w-20 h-8  transition duration-300 hover:ease-in-out'>
+          <button className='bg-babyblue rounded-md w-20 h-8  transition hover:ease-in-out animate-in slide-in-from-right duration-300 delay-500'>
             <Link href="/porozmawiajmy"  >
               <a className="text-white font-semibold leading-6 capitalize" >
                 Kontakt
