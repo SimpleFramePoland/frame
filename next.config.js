@@ -35,9 +35,15 @@ const nextConfig = {
     WORDPRESS_PLUGIN_SEO: parseEnvValue(process.env.WORDPRESS_PLUGIN_SEO, true),
   },
 };
-
+module.exports = {
+  basePath: '',
+  images: {
+    domains: ['https://old.simpleframe.pl','old.simpleframe.pl'],
+  },
+  swcMinify: true,
+};
 module.exports = () => {
- 
+
   const plugins = [indexSearch, feed, sitemap];
   return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
 };

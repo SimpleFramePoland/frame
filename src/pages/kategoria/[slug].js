@@ -7,13 +7,13 @@ import PostCard from 'components/PostCard';
 import Container from 'components/Container';
 import Link from 'next/link';
 import { categoryPathBySlug } from 'lib/categories';
-
+import Pagination from 'components/Pagination/Pagination';
 import { Helmet } from 'react-helmet';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 import Head from 'next/head';
-export default function Category({ categories, category, posts,page }) {
+export default function Category({ categories, category, posts,page, pagination }) {
   const { name, description, slug } = category;
   const { metadata: siteMetadata = {} } = useSite();
   const { metadata } = usePageMetadata({
@@ -62,7 +62,13 @@ export default function Category({ categories, category, posts,page }) {
                 })}
               </ul>
               </div>         
-             
+              {pagination && (
+                <Pagination
+                  currentPage={pagination?.currentPage}
+                  pagesCount={pagination?.pagesCount}
+                  basePath={pagination?.basePath}
+                />
+              )}
           </Container>  
           </Layout>)
 }
@@ -85,8 +91,7 @@ export async function getStaticProps({ params = {} } = {}) {
 
   return {
     props: {
-   
-    
+  
       category,
       posts,
     },

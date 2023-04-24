@@ -16,7 +16,7 @@ export default function Custom500() {
       </Helmet>
       <Section>
         <Container className={styles.center}>
-          <h1>Internal Error</h1>
+          <h1 className='pt-[10rem]'>Internal Error</h1>
           <p className={styles.errorCode}>500</p>
           <p className={styles.errorMessage}>
             Uh oh, something went wrong. Please try refreshing the page or clearing site data. If the problem persists,
