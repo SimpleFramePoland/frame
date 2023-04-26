@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
       <script async src='/js/modula-wf.js' id='modula-wf-js' />
       <script async src='/js/modula-pro.js' id='modula-pro-js' />
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=UA-325065141"
+        src="https://www.googletagmanager.com/gtag/js?id=G-FMNR987MP7"
         strategy="afterInteractive"
       />
       
@@ -57,7 +57,7 @@ export default class MyDocument extends Document {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'UA-325065141');
+          gtag('config', 'G-FMNR987MP7');
         `}
       </Script>
       
