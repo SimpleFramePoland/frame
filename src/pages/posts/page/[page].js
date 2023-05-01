@@ -1,67 +1,65 @@
-import { getCategoryBySlug } from 'lib/categories';
-import { getPostsByCategoryId } from 'lib/posts';
+import { getPaginatedPosts } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
-import Title from 'components/Title';
 
-export default function Category({ category, posts, pagination }) {
-  const { name, description, slug } = category;
+export default function Posts({ posts, pagination }) {
+  const title = `All Posts`;
+  const slug = 'posts';
 
   const { metadata } = usePageMetadata({
     metadata: {
-      ...category,
-      description: description || category.og?.description || `Read ${posts.length} posts from ${name}`,
+      title,
+      description: `Page ${pagination.currentPage}`,
     },
   });
 
-  return <TemplateArchive title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} pagination={pagination} />;
+  return <TemplateArchive title={title} posts={posts} slug={slug} pagination={pagination} metadata={metadata} />;
 }
 
 export async function getStaticProps({ params = {} } = {}) {
-  const { category } = await getCategoryBySlug(params?.slug);
+  const { posts, pagination } = await getPaginatedPosts({
+    currentPage: params?.page,
+    queryIncludes: 'archive',
+  });
 
-  if (!category) {
+  if (!pagination.currentPage) {
     return {
       props: {},
       notFound: true,
     };
   }
 
-  const { posts } = await getPostsByCategoryId({
-    categoryId: category.databaseId,
-    queryIncludes: 'archive',
-  });
-
   return {
     props: {
-      category,
       posts,
+      pagination: {
+        ...pagination,
+        basePath: '/posts',
+      },
     },
   };
 }
 
 export async function getStaticPaths() {
-  // By default, we don't render any Category pages as
+  // By default, we don't render any Pagination pages as
   // we're considering them non-critical pages
 
   // To enable pre-rendering of Category pages:
 
   // 1. Add import to the top of the file
   //
-  // import { getAllCategories, getCategoryBySlug } from 'lib/categories';
+  // import { getAllPosts, getPagesCount } from 'lib/posts';
 
   // 2. Uncomment the below
   //
-  // const { categories } = await getAllCategories();
+  // const { posts } = await getAllPosts({
+  //   queryIncludes: 'index',
+  // });
+  // const pagesCount = await getPagesCount(posts);
 
-  // const paths = categories.map((category) => {
-  //   const { slug } = category;
-  //   return {
-  //     params: {
-  //       slug,
-  //     },
-  //   };
+  // const paths = [...new Array(pagesCount)].map((_, i) => {
+  //   return { params: { page: String(i + 1) } };
   // });
 
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
