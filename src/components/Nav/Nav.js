@@ -336,7 +336,7 @@ export default function Header() {
                   href="/postprodukcja"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-black-50"
                 >
-                <a>
+                <a className="text-white">
                   Postprodukcja
                 </a>
                 </Link>
@@ -394,7 +394,7 @@ export default function Header() {
                   href="/posts"
                   className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-white hover:bg-black-50"
                 >
-                <a>
+                <a className="text-white">
                   Blog
                 </a>
                 </Link>
@@ -404,7 +404,7 @@ export default function Header() {
                   href="/porozmawiajmy"
                   className='text-white'
                 >
-                <a>
+                <a className="text-white">
                   Kontakt
                 </a>
                 </Link>
