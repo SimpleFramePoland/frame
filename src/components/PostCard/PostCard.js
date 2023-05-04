@@ -37,19 +37,19 @@ const PostCard = ({ post, options = {} }) => {
     <div >
        <div className="">
       <div className="bg-white mx-auto shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-      <Link href={postPathBySlug(slug)} >
-      <a>
+     
+      <a href={postPathBySlug(slug)} >
       <FeaturedImage
         {...featuredImage}
         src={featuredImage.sourceUrl}
         dangerouslySetInnerHTML={featuredImage.caption}
   
       /> </a>
-           </Link>
+        
         
         <div className="p-5">
           
-            <div className=" font-semibold text-2xl cursor-pointer mb-2"> <Link href={postPathBySlug(slug)} >
+            <div className=" font-semibold text-2xl cursor-pointer mb-2"> <a href={postPathBySlug(slug)} >
         <div
           className=""
           dangerouslySetInnerHTML={{
@@ -57,7 +57,7 @@ const PostCard = ({ post, options = {} }) => {
           }}
         />
 
-      </Link></div>
+      </a></div>
           
        <Metadata className={styles.postCardMetadata} {...metadata} />
       {excerpt && (
