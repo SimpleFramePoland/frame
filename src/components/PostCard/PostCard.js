@@ -49,9 +49,9 @@ const PostCard = ({ post, options = {} }) => {
         
         <div className="p-5">
           
-            <div className=" font-semibold text-2xl cursor-pointer mb-2"> <a href={postPathBySlug(slug)} >
+            <div className=" font-semibold text-2xl cursor-pointer mb-2"> <a href={postPathBySlug(slug) } >
         <div
-          className=""
+          className="text-black"
           dangerouslySetInnerHTML={{
             __html: title,
           }}
