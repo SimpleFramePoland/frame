@@ -40,13 +40,13 @@ export default function Page({ page, breadcrumbs }) {
   return (
     <Layout>
       <script src="/js/jquery.js" />
-      <script async src='/js/fancybox.js' id='modula-fancybox-js' />
+      <script  src='/js/fancybox.js' id='modula-fancybox-js' />
       <link rel='stylesheet' id='modula-video-css-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-video/assets/css/modula-video-css.css?ver=6.1.1' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='https://old.simpleframe.pl/wp-content/plugins/modula-best-grid-gallery/assets/css/front.css?ver=2.7.3' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-pro-effects-css' href='https://old.simpleframe.pl/wp-content/plugins/modula/assets/css/effects.min.css' type='text/css' media='all' />
-      <script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
-      <script async src='/js/modula-wf.js' id='modula-wf-js' />
-      <script async src='/js/modula-pro.js' id='modula-pro-js' />
+      <script  src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
+      <script  src='/js/modula-wf.js' id='modula-wf-js' />
+      <script  src='/js/modula-pro.js' id='modula-pro-js' />
     
 
     
