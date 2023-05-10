@@ -194,7 +194,7 @@ export async function getStaticPaths() {
 
   return {
     paths:[
-      { params: { slugParent: '/', slugChild: [] } },
+     
       { params: { slugParent: 'film-reklamowy', slugChild: [] } },
     { params: { slugParent: 'film-korporacyjny', slugChild: [] } },
     { params: { slugParent: 'film-promocyjny', slugChild: [] } },
