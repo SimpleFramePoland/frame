@@ -7,7 +7,7 @@ import Faq from 'components/komponenty/Faq'
 import { Testimonials } from 'components/komponenty/testimonials';
 import Feature1 from 'components/komponenty/feature1';
 import Cta1 from 'components/komponenty/cta1'
-
+import Head from 'next/head';
 import { getPageByUri } from 'lib/pages';
 
 export default function Home({ page }) {
@@ -29,9 +29,17 @@ export default function Home({ page }) {
   }, [router]);
 
   return (
-
-
+    
     <Layout>
+  <Head>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+</Head>
+
      <script  src="/js/jquery.js" />
         
       <script  src='/js/fancybox.js' id='modula-fancybox-js' />
@@ -42,14 +50,14 @@ export default function Home({ page }) {
       <script  src='/js/modula-wf.js' id='modula-wf-js' />
       <script  src='/js/modula-pro.js' id='modula-pro-js' />
     
-
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-    
+  
+
 
 
 
