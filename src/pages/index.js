@@ -15,18 +15,7 @@ export default function Home({ page }) {
   const description = 'Tworzymy Filmy, Animacje i reklamy';
   const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = () => {
-      // This will force a full re-render of the page
-      window.location.reload();
-    };
 
-    router.events.on('routeChangeComplete', handleRouteChange);
-
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
-    };
-  }, [router]);
 
   return (
 
