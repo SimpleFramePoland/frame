@@ -194,6 +194,7 @@ export async function getStaticPaths() {
 
   return {
     paths:[
+      { params: { slugParent: '/', slugChild: [] } },
       { params: { slugParent: 'film-reklamowy', slugChild: [] } },
     { params: { slugParent: 'film-korporacyjny', slugChild: [] } },
     { params: { slugParent: 'film-promocyjny', slugChild: [] } },
@@ -210,7 +211,7 @@ export async function getStaticPaths() {
     { params: { slugParent: 'teledyski', slugChild: [] } },
     { params: { slugParent: 'fotografia', slugChild: [] } },
     { params: { slugParent: 'streaming-video', slugChild: [] } },
-    { params: { slugParent: '/', slugChild: [] } },
+    
     ],
     fallback: 'blocking',
   };
