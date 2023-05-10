@@ -15,7 +15,18 @@ export default function Home({ page }) {
   const description = 'Tworzymy Filmy, Animacje i reklamy';
   const router = useRouter();
 
+  useEffect(() => {
+    const handleRouteChange = () => {
+      // This will force a full re-render of the page
+      window.location.reload();
+    };
 
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router]);
 
   return (
 
@@ -23,13 +34,13 @@ export default function Home({ page }) {
     <Layout>
      <script  src="/js/jquery.js" />
         
-     <script async src='/js/fancybox.js' id='modula-fancybox-js' />
+      <script  src='/js/fancybox.js' id='modula-fancybox-js' />
       <link rel='stylesheet' id='modula-video-css-css' href='/css/modula-video.css' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-css' href='/css/modula-css.css' type='text/css' media='all' />
       <link rel='stylesheet' id='modula-pro-effects-css' href='/css/modula-pro.css' type='text/css' media='all' />
-      <script async src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
-      <script async src='/js/modula-wf.js' id='modula-wf-js' />
-      <script async src='/js/modula-pro.js' id='modula-pro-js' />
+      <script src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
+      <script  src='/js/modula-wf.js' id='modula-wf-js' />
+      <script  src='/js/modula-pro.js' id='modula-pro-js' />
     
 
         <title>{title}</title>
