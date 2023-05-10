@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
       <script  src='/js/modula-wf.js' id='modula-wf-js' />
       <script  src='/js/modula-pro.js' id='modula-pro-js' />
       <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-FMNR987MP7"
+        src="https://www.googletagmanager.com/gtag/js?id=AW-10799461749"
         strategy="afterInteractive"
       />
       
