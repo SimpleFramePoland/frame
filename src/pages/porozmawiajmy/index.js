@@ -26,6 +26,11 @@ export default function Home() {
     
     <Layout>
     <Head>
+    
+<script>
+  {`gtag('event', 'conversion', {'send_to': 'AW-10799461749/WC8KCL-fk58YEPXqyp0o'}); `}
+</script>
+
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
