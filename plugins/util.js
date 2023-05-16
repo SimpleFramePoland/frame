@@ -68,7 +68,46 @@ function createApolloClient(url) {
 /**
  * getAllPosts
  */
+async function getAllCategories(apolloClient, process, verbose = false) {
+  const query = gql`
+    {
+      categories(first: 10000) {
+        edges {
+          node {
+            name
+            slug
+          }
+        }
+      }
+    }
+  `;
 
+  let categories = [];
+
+  try {
+    const data = await apolloClient.query({ query });
+    categories = [
+      ...data.data.categories.edges.map(({ node = {} }) => {
+        return {
+          name: node.name,
+          slug: node.slug,
+        };
+      }),
+    ];
+
+    verbose &&
+      console.log(
+        `[${process}] Successfully fetched categories from ${apolloClient.link.options.uri}`
+      );
+    return {
+      categories,
+    };
+  } catch (e) {
+    throw new Error(
+      `[${process}] Failed to fetch categories from ${apolloClient.link.options.uri}: ${e.message}`
+    );
+  }
+}
 async function getAllPosts(apolloClient, process, verbose = false) {
   const query = gql`
     {
@@ -101,7 +140,7 @@ async function getAllPosts(apolloClient, process, verbose = false) {
   `;
 
   let posts = [];
-  let categories = [];
+  const categories = [];
   try {
     const data = await apolloClient.query({ query });
     const nodes = [...data.data.posts.edges.map(({ node = {} }) => node)];
@@ -236,7 +275,7 @@ async function getFeedData(apolloClient, process, verbose = false) {
 async function getSitemapData(apolloClient, process, verbose = false) {
   const posts = await getAllPosts(apolloClient, process, verbose);
   const pages = await getPages(apolloClient, process, verbose);
-  const categories = posts.categories;
+  const categories = await getAllCategories(apolloClient, process, verbose);
 
   return {
     ...posts,
