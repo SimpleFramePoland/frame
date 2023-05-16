@@ -90,6 +90,7 @@ async function getAllPosts(apolloClient, process, verbose = false) {
               edges {
                 node {
                   name
+                  slug
                 }
               }
             }
@@ -100,7 +101,7 @@ async function getAllPosts(apolloClient, process, verbose = false) {
   `;
 
   let posts = [];
-
+  let categories = [];
   try {
     const data = await apolloClient.query({ query });
     const nodes = [...data.data.posts.edges.map(({ node = {} }) => node)];
@@ -113,7 +114,10 @@ async function getAllPosts(apolloClient, process, verbose = false) {
       }
 
       if (data.categories) {
-        data.categories = data.categories.edges.map(({ node }) => node.name);
+        data.categories = data.categories.edges.map(({ node }) => {
+          categories.push({ name: node.name, slug: node.slug });
+          return { name: node.name, slug: node.slug };
+        });
       }
 
       if (data.excerpt) {
@@ -128,6 +132,7 @@ async function getAllPosts(apolloClient, process, verbose = false) {
     verbose && console.log(`[${process}] Successfully fetched posts from ${apolloClient.link.options.uri}`);
     return {
       posts,
+      categories,
     };
   } catch (e) {
     throw new Error(`[${process}] Failed to fetch posts from ${apolloClient.link.options.uri}: ${e.message}`);
@@ -231,10 +236,12 @@ async function getFeedData(apolloClient, process, verbose = false) {
 async function getSitemapData(apolloClient, process, verbose = false) {
   const posts = await getAllPosts(apolloClient, process, verbose);
   const pages = await getPages(apolloClient, process, verbose);
+  const categories = posts.categories;
 
   return {
     ...posts,
     ...pages,
+    ...categories,
   };
 }
 
@@ -301,7 +308,7 @@ function generateIndexSearch({ posts }) {
  * getSitemapData
  */
 
-function generateSitemap({ posts = [], pages = [] }, nextConfig = {}) {
+function generateSitemap({ posts = [], pages = [], categories = [] }, nextConfig = {}) {
   const { homepage = '' } = config;
   const { trailingSlash } = nextConfig;
 
@@ -326,6 +333,15 @@ function generateSitemap({ posts = [], pages = [] }, nextConfig = {}) {
               return `<url>
                         <loc>${homepage}/posts/${post.slug}${trailingSlash ? '/' : ''}</loc>
                         <lastmod>${new Date(post.modified).toISOString()}</lastmod>
+                      </url>
+                  `;
+            })
+            .join('')}
+          ${categories
+            .map((category) => {
+              return `<url>
+                        <loc>${homepage}/kategoria/${category.slug}${trailingSlash ? '/' : ''}</loc>
+                        <priority>0.3</priority>
                       </url>
                   `;
             })
