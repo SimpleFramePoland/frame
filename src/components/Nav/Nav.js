@@ -29,14 +29,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faYoutube, faVimeo, faInstagram, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const produkcje = [
-  { name: 'Film Reklamowy', description: 'Skuteczna reklama wideo dla Twojego biznesu', href: '/film-reklamowy', icon: FilmIcon },
+  { name: 'Film Reklamowy', description: 'Skuteczna reklama dla Twojego biznesu', href: '/film-reklamowy', icon: FilmIcon },
   { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: BuildingOffice2Icon },
   { name: 'Film Promocyjny', description: 'Zachęć swoich klientów do zakupów ', href: '/film-promocyjny', icon: EyeIcon },
   { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: VideoCameraIcon },
   { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
 ];
 const Postprodukcja = [
-  { name: 'Postprodukcja', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/postprodukcja', icon: ComputerDesktopIcon },
+  { name: 'Postprodukcja', description: 'Profesjonalne narzędzia do tworzenia wyjątkowych efektów i doskonalenia filmowych produkcji', href: '/postprodukcja', icon: ComputerDesktopIcon },
   { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
 
 ];
@@ -76,7 +76,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5 " >
 
 
-            <Image
+            <img
               src="/logo.png"
               alt="Logo Simple Frame"
               width={315}
