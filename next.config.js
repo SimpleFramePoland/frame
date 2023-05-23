@@ -39,13 +39,15 @@ module.exports = {
   async redirects () {
    return [ {
       source: "/blog/mpwik-kranowka",
-      destination: "/posts/mpwik-kranowka"
+      destination: "/posts/mpwik-kranowka",
+      permanent: true, 
     },
     {
-      "source": "/blog/indykpol-postprodukcja-obrazu-i-dzwieku/",
-      "destination": "/posts/indykpol-postprodukcja-obrazu-i-dzwieku/"
+      source: "/blog/indykpol-postprodukcja-obrazu-i-dzwieku/",
+      destination: "/posts/indykpol-postprodukcja-obrazu-i-dzwieku/",
+      permanent: true, 
     }
-  ]},
+  ];},
   basePath: '',
   images: {
     domains: ['https://old.simpleframe.pl','old.simpleframe.pl'],
