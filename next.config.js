@@ -36,15 +36,11 @@ const nextConfig = {
   },
 };
 module.exports = {
-  async redirects () {
-   return [ {
-      source: "/blog/mpwik-kranowka",
-      destination: "/posts/mpwik-kranowka",
-      permanent: true, 
-    },
+  async redirects() {
+   return [ 
     {
-      source: "/blog/indykpol-postprodukcja-obrazu-i-dzwieku/",
-      destination: "/posts/indykpol-postprodukcja-obrazu-i-dzwieku/",
+      source: '/blog/:slug',
+      destination: '/posts/:slug',
       permanent: true, 
     }
   ];},
