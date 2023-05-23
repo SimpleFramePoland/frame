@@ -37,13 +37,14 @@ const nextConfig = {
 };
 module.exports = {
   async redirects() {
-   return [ 
-    {
-      source: '/blog/:slug',
-      destination: '/posts/:slug',
-      permanent: true, 
-    }
-  ];},
+    return [
+      {
+        source: '/blog/:slug',
+        destination: '/posts/:slug',
+        permanent: true,
+      },
+    ];
+  },
   basePath: '',
   images: {
     domains: ['https://old.simpleframe.pl','old.simpleframe.pl'],
