@@ -131,7 +131,36 @@ module.exports = () => {
           destination: '/posts/beko/',
           permanent: true,
         },
-
+        {
+          source: '/unilogistics-2/',
+          destination: '/posts/unilogistics-2/',
+          permanent: true,
+        },
+        {
+          source: '/film-edukacyjny2/',
+          destination: '/posts/film-edukacyjny2/',
+          permanent: true,
+        },
+        {
+          source: '/zielona-budka/',
+          destination: '/posts/zielona-budka/',
+          permanent: true,
+        },
+        {
+          source: '/ice-on/',
+          destination: '/posts/ice-on/',
+          permanent: true,
+        },
+        {
+          source: '/projektowanie-aranzacje-wizualizacje/',
+          destination: '/posts/projektowanie-aranzacje-wizualizacje/',
+          permanent: true,
+        },
+        {
+          source: '/ujecia-mniej-tradycyjne/',
+          destination: '/posts/ujecia-mniej-tradycyjne/',
+          permanent: true,
+        },
       ];
     },
     basePath: '',
