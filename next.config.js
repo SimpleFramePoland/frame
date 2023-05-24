@@ -172,7 +172,7 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/indykpol-postprodukcja-obrazu-i-dzwieku//',
+          source: '/indykpol-postprodukcja-obrazu-i-dzwieku/',
           destination: '/posts/indykpol-postprodukcja-obrazu-i-dzwieku/',
           permanent: true,
         },
