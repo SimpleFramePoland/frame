@@ -161,6 +161,56 @@ module.exports = () => {
           destination: '/posts/ujecia-mniej-tradycyjne/',
           permanent: true,
         },
+        {
+          source: '/film-promocyjny-orly-gorskiego/',
+          destination: '/posts/film-promocyjny-orly-gorskiego/',
+          permanent: true,
+        },
+        {
+          source: '/lumag/',
+          destination: '/posts/lumag/',
+          permanent: true,
+        },
+        {
+          source: '/indykpol-postprodukcja-obrazu-i-dzwieku//',
+          destination: '/posts/indykpol-postprodukcja-obrazu-i-dzwieku/',
+          permanent: true,
+        },
+        {
+          source: '/lumag/',
+          destination: '/posts/lumag/',
+          permanent: true,
+        },
+        {
+          source: '/ar-check-film-promocyjny/',
+          destination: '/posts/ar-check-film-promocyjny/',
+          permanent: true,
+        },
+        {
+          source: '/badz-na-czasie-pokaz-sie-na-instagramie/',
+          destination: '/posts/badz-na-czasie-pokaz-sie-na-instagramie/',
+          permanent: true,
+        },
+        {
+          source: '/lotnisko-chopina/',
+          destination: '/posts/lotnisko-chopina/',
+          permanent: true,
+        },
+        {
+          source: '/film-animowany/',
+          destination: '/posts/film-animowany/',
+          permanent: true,
+        },
+        {
+          source: '/badz-na-czasie-pokaz-sie-na-instagramie/',
+          destination: '/posts/badz-na-czasie-pokaz-sie-na-instagramie/',
+          permanent: true,
+        },
+        {
+          source: '/badz-na-czasie-pokaz-sie-na-instagramie/',
+          destination: '/posts/badz-na-czasie-pokaz-sie-na-instagramie/',
+          permanent: true,
+        },
       ];
     },
     basePath: '',
