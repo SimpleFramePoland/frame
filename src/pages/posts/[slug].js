@@ -1,9 +1,8 @@
-import Link from 'next/link';
+
 import { Helmet } from 'react-helmet';
 
-import { getPostBySlug, getRecentPosts, getRelatedPosts, postPathBySlug } from 'lib/posts';
-import { categoryPathBySlug } from 'lib/categories';
-import { formatDate } from 'lib/datetime';
+import { getPostBySlug,  } from 'lib/posts';
+
 import { ArticleJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
@@ -12,11 +11,10 @@ import React from 'react';
 
 import Layout from 'components/Layout';
 import Header from 'components/Header';
-import Section from 'components/Section';
-import Container from 'components/Container';
+
 import Metadata from 'components/Metadata';
 
-export default function Post({ post, socialImage, related }) {
+export default function Post({ post, socialImage,  }) {
   const {
     title,
 
@@ -170,18 +168,9 @@ export async function getStaticPaths() {
   // Tip: this can be customized to use data or analytitcs to determine the
   // most popular posts and render those instead
 
-  const { posts } = await getRecentPosts({
-    count: process.env.POSTS_PRERENDER_COUNT, // Update this value in next.config.js!
-    queryIncludes: 'index',
-  });
 
-  const paths = posts
-    .filter(({ slug }) => typeof slug === 'string')
-    .map(({ slug }) => ({
-      params: {
-        slug,
-      },
-    }));
+
+ 
 
   return {
     paths: [],

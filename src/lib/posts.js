@@ -108,11 +108,7 @@ export async function getPostBySlug(slug) {
       noindex: seo.metaRobotsNoindex,
     };
 
-    post.twitter = {
-      description: seo.twitterDescription,
-      image: seo.twitterImage,
-      title: seo.twitterTitle,
-    };
+ 
   }
 
   return {
