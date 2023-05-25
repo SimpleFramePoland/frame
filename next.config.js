@@ -216,6 +216,21 @@ module.exports = () => {
           destination: '/posts/neomag/',
           permanent: true,
         },
+        {
+          source: '/posts/opi',
+          destination: '/posts/animacja-techniczna-opi/',
+          permanent: true,
+        },
+        {
+          source: '/posts/scholler-video/',
+          destination: '/posts/scholler-video/',
+          permanent: true,
+        },
+        {
+          source: '/posts/sniezka/',
+          destination: '/posts/sniezka/',
+          permanent: true,
+        },
       ];
     },
     basePath: '',
