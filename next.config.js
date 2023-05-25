@@ -211,6 +211,11 @@ module.exports = () => {
           destination: '/posts/badz-na-czasie-pokaz-sie-na-instagramie/',
           permanent: true,
         },
+        {
+          source: '/neomag/',
+          destination: '/posts/neomag/',
+          permanent: true,
+        },
       ];
     },
     basePath: '',
