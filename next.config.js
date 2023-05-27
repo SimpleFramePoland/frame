@@ -252,13 +252,13 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/portfolio/bell-billboard-sponsorski/bell-5/',
-          destination: '/posts/billboard-sponsorski-bell',
+          source: '/modelowanie-3d/',
+          destination: '/posts/modelowanie-3d/',
           permanent: true,
         },
         {
-          source: '/portfolio/bell-billboard-sponsorski/bell-5/',
-          destination: '/posts/billboard-sponsorski-bell',
+          source: '/prezentacja-multimedialna-2/',
+          destination: '/prezentacja-multimedialna/',
           permanent: true,
         },
         {
@@ -272,6 +272,21 @@ module.exports = () => {
           permanent: true,
         },
           {
+          source: '/posts/playtegra',
+          destination: '/posts/animacja-2d-playtegra',
+          permanent: true,
+        },
+        {
+          source: '/prezentacje-powerpoint-tworzenie-prezentacji-w-powerpoint/',
+          destination: '/prezentacja-powerpoint/',
+          permanent: true,
+        },
+        {
+          source: '/posts/playtegra',
+          destination: '/posts/animacja-2d-playtegra',
+          permanent: true,
+        },
+        {
           source: '/posts/playtegra',
           destination: '/posts/animacja-2d-playtegra',
           permanent: true,
