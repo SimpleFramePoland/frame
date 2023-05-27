@@ -222,13 +222,63 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/posts/scholler-video/',
+          source: '/scholler-video/',
           destination: '/posts/scholler-video/',
           permanent: true,
         },
         {
-          source: '/posts/sniezka/',
+          source: '/sniezka/',
           destination: '/posts/sniezka/',
+          permanent: true,
+        },
+           {
+          source: '/pofilm-promocyjny-dr-marchewka-wizjoner/',
+          destination: '/posts/film-promocyjny-dr-marchewka-wizjoner/',
+          permanent: true,
+        },
+           {
+          source: '/posts/corega-billboard-sponsorski/',
+          destination: '/posts/corega/',
+          permanent: true,
+        },
+           {
+          source: '/posts/vershold-2/',
+          destination: '/posts/vershold/',
+          permanent: true,
+        },
+           {
+          source: '/portfolio/bell-billboard-sponsorski/bell-5/',
+          destination: '/posts/billboard-sponsorski-bell',
+          permanent: true,
+        },
+        {
+          source: '/portfolio/bell-billboard-sponsorski/bell-5/',
+          destination: '/posts/billboard-sponsorski-bell',
+          permanent: true,
+        },
+        {
+          source: '/portfolio/bell-billboard-sponsorski/bell-5/',
+          destination: '/posts/billboard-sponsorski-bell',
+          permanent: true,
+        },
+        {
+          source: 'pagen-billboard-sponsorski',
+          destination: '/posts/billboard-sponsorski-bell',
+          permanent: true,
+        },
+          {
+          source: '/posts/ernstyoung-2',
+          destination: '/posts/ey-business-advisory',
+          permanent: true,
+        },
+          {
+          source: '/posts/playtegra',
+          destination: '/posts/animacja-2d-playtegra',
+          permanent: true,
+        },
+          {
+          source: 'pagen-billboard-sponsorski',
+          destination: '/posts/billboard-sponsorski-bell',
           permanent: true,
         },
       ];
