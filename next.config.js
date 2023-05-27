@@ -262,7 +262,7 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: 'pagen-billboard-sponsorski',
+          source: '/pagen-billboard-sponsorski',
           destination: '/posts/billboard-sponsorski-bell',
           permanent: true,
         },
@@ -276,11 +276,7 @@ module.exports = () => {
           destination: '/posts/animacja-2d-playtegra',
           permanent: true,
         },
-          {
-          source: 'pagen-billboard-sponsorski',
-          destination: '/posts/billboard-sponsorski-bell',
-          permanent: true,
-        },
+    
       ];
     },
     basePath: '',
