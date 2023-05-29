@@ -306,6 +306,49 @@ module.exports = () => {
           destination: '/posts/animacja-2d-net-dc/',
           permanent: true,
         },
+        {
+          source: '/orange-b2s/',
+          destination: '/posts/postprodukcja-orange-b2s/',
+          permanent: true,
+        },
+      
+        {
+          source: '/vastint/vastint_ik/',
+          destination: '/posts/film-korporacyjny-vastint/',
+          permanent: true,
+        },
+      
+        {
+          source: '/postprodukcja-orange-b2s/',
+          destination: '/posts/postprodukcja-orange-b2s/',
+          permanent: true,
+        },
+        {
+          source: '/prezentacja-na-ekran-led/',
+          destination: '/posts/prezentacja-na-ekran-led/',
+          permanent: true,
+        },
+        {
+          source: '/film-instruktazowy/',
+          destination: '/posts/film-instruktazowy-lotnisko-chopina/',
+          permanent: true,
+        },
+        {
+          source: '/infracert/',
+          destination: '/posts/infracert/',
+          permanent: true,
+        },
+        {
+          source: '/selena/',
+          destination: '/posts/selena/',
+          permanent: true,
+        },
+        {
+          source: '/kategoria/blog/:slug',
+          destination: '/kategoria/:slug',
+          permanent: true,
+        },
+      
       
 
       ];
