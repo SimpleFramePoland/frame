@@ -288,7 +288,7 @@ module.exports = () => {
         },
         {
           source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
+          destination: '/posts/rutinacea/',
         },
         {
           source: '/kategoria/blog/animacja-na-instagram/',
@@ -297,11 +297,11 @@ module.exports = () => {
         },
         {
           source: '/e-containers-animacja-produktowa/',
-          destination: '/posts/e-containers-animacja-produktowa/'
+          destination: '/posts/e-containers-animacja-produktowa/',
         },
         {
           source: '/animacja-2d-net-dc/',
-          destination: '/posts/animacja-2d-net-dc/'
+          destination: '/posts/animacja-2d-net-dc/',
         },
       
 
