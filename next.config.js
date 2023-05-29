@@ -98,7 +98,7 @@ module.exports = () => {
         },
         {
           source: '/klimatherm-film-produktowy/',
-          destination: 'posts/klimatherm-film-produktowy/',
+          destination: '/posts/klimatherm-film-produktowy/',
           permanent: true,
         },
         {
@@ -282,16 +282,57 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/posts/playtegra',
-          destination: '/posts/animacja-2d-playtegra',
+          source: '/mpwik-film-na-instagram/',
+          destination: '/posts/mpwik-film-na-instagram/',
           permanent: true,
         },
         {
-          source: '/posts/playtegra',
-          destination: '/posts/animacja-2d-playtegra',
+          source: '/5945-2/',
+          destination: '/posts/5945-2/',
           permanent: true,
         },
-    
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+        {
+          source: '/kategoria/blog/animacja-na-instagram/',
+          destination: '/kategoria/animacja-na-instagram/',
+          permanent: true,
+        },
+        {
+          source: '/e-containers-animacja-produktowa/',
+          destination: '/posts/e-containers-animacja-produktowa/'
+        },
+        {
+          source: '/animacja-2d-net-dc/',
+          destination: '/posts/animacja-2d-net-dc/'
+        },
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+        {
+          source: '/rutinacea/',
+          destination: '/posts/rutinacea/'
+        },
+
       ];
     },
     basePath: '',
