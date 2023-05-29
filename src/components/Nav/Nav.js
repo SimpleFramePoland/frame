@@ -33,7 +33,8 @@ const produkcje = [
   { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: BuildingOffice2Icon },
   { name: 'Film Promocyjny', description: 'Zachęć swoich klientów do zakupów ', href: '/film-promocyjny', icon: EyeIcon },
   { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: VideoCameraIcon },
-  { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
+  { name: 'Teledyski', description: 'Prezentuj swoje produkty lub usługi za pomocą interesującej treści wideo', href: '/teledyski', icon: MusicalNoteIcon },
+
 ];
 const Postprodukcja = [
   { name: 'Postprodukcja', description: 'Profesjonalne narzędzia do tworzenia wyjątkowych efektów i doskonalenia filmowych produkcji', href: '/postprodukcja', icon: ComputerDesktopIcon },
@@ -45,15 +46,15 @@ const animacje = [
   { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: ArrowPathIcon },
   { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: WrenchScrewdriverIcon },
   { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
-  { name: 'PPT', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
+  { name: 'Prezentacje multimedialne', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
 
 
 ];
 const uslugi = [
   { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon },
-  { name: 'Teledyski', description: 'Prezentuj swoje produkty lub usługi za pomocą interesującej treści wideo', href: '/teledyski', icon: MusicalNoteIcon },
   { name: 'Fotografia', description: 'Uchwyć wspaniałe obrazy, które reprezentują Twoją markę i przyciągają klientów', href: '/fotografia', icon: CameraIcon },
   { name: 'Streaming', description: 'Dostarczaj wysokiej jakości treści swojej publiczności za pomocą transmisji na żywo', href: '/streaming-video', icon: ComputerDesktopIcon },
+  { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
 
 ];
 
@@ -71,7 +72,7 @@ export default function Header() {
 
 
       <nav className="mx-auto flex max-w-8xl items-center justify-between p-6 " aria-label="Global">
-        <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none animate-in slide-in-from-left ">
+        <div className="flex lg:flex-1 max-w-[13rem] lg:max-w-none m:max-w-none ">
 
           <Link href="/" className="-m-1.5 p-1.5 " >
 

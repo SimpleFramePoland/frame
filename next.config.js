@@ -38,7 +38,7 @@ module.exports = () => {
         },
         {
           source: '/betfan-reklama-telewizyjna/',
-          destination: '/posts//betfan-reklama-telewizyjna/',
+          destination: '/posts/betfan-reklama-telewizyjna/',
           permanent: true,
         },
         {
