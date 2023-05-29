@@ -207,11 +207,6 @@ module.exports = () => {
           permanent: true,
         },
         {
-          source: '/badz-na-czasie-pokaz-sie-na-instagramie/',
-          destination: '/posts/badz-na-czasie-pokaz-sie-na-instagramie/',
-          permanent: true,
-        },
-        {
           source: '/neomag/',
           destination: '/posts/neomag/',
           permanent: true,
@@ -308,30 +303,7 @@ module.exports = () => {
           source: '/animacja-2d-net-dc/',
           destination: '/posts/animacja-2d-net-dc/'
         },
-        {
-          source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
-        },
-        {
-          source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
-        },
-        {
-          source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
-        },
-        {
-          source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
-        },
-        {
-          source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
-        },
-        {
-          source: '/rutinacea/',
-          destination: '/posts/rutinacea/'
-        },
+      
 
       ];
     },
