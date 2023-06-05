@@ -38,7 +38,6 @@ export async function getStaticProps({ params = {} } = {}) {
         basePath: '/posts',
       },
     },
-    revalidate:60,
   };
 }
 
