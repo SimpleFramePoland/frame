@@ -95,6 +95,7 @@ export async function getStaticProps({ params = {} } = {}) {
       category,
       posts,
     },
+    revalidate:60,
   };
 }
 export async function getStaticPaths() {

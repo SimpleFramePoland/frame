@@ -1,23 +1,18 @@
 
 import { Helmet } from 'react-helmet';
-
-import { getPostBySlug,  } from 'lib/posts';
-
+import { getPostBySlug, } from 'lib/posts';
 import { ArticleJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
 import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
-
 import Layout from 'components/Layout';
 import Header from 'components/Header';
-
 import Metadata from 'components/Metadata';
 
-export default function Post({ post, socialImage,  }) {
+export default function Post({ post, socialImage, }) {
   const {
     title,
-
     description,
     content,
     date,
@@ -56,18 +51,13 @@ export default function Post({ post, socialImage,  }) {
     compactCategories: false,
   };
 
-
-
   const helmetSettings = helmetSettingsFromMetadata(metadata);
 
   return (
     <Layout>
       <Helmet {...helmetSettings} />
-
       <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
-
       <Header >
-
         <div className="mx-auto mt-[120px] mb-12">
           <div className="relative isolate overflow-hidden  bg-black shadow-2xl rounded-3xl sm:px-16  lg:flex lg:gap-x-20 lg:px-24 ">
             <svg
@@ -86,10 +76,8 @@ export default function Post({ post, socialImage,  }) {
             <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-12 lg:text-left align-middle mt-10">
               <h1
                 className='text-white banerek '
-
                 dangerouslySetInnerHTML={{
                   __html: title,
-
                 }}
               />
               <Metadata
@@ -112,34 +100,18 @@ export default function Post({ post, socialImage,  }) {
             </div>
           </div>
         </div>
-
-
-
       </Header>
-
-
-
-
       <div
-
         className="prose max-w-screen-lg mx-auto px-7 sm:px-10 text-xl"
         dangerouslySetInnerHTML={{
           __html: content,
-
         }}
       />
-
-
-
-
-
     </Layout>
   );
 }
-
 export async function getStaticProps({ params = {} } = {}) {
   const { post } = await getPostBySlug(params?.slug);
-
   if (!post) {
     return {
       props: {},
@@ -147,31 +119,17 @@ export async function getStaticProps({ params = {} } = {}) {
       queryIncludes: 'all',
     };
   }
-
-
-
   const props = {
     post,
     socialImage: `${process.env.OG_IMAGE_DIRECTORY}/${params?.slug}.png`,
   };
-
-
   return {
     props,
+    revalidate:60,
   };
 }
-
 export async function getStaticPaths() {
-  // Only render the most recent posts to avoid spending unecessary time
-  // querying every single post from WordPress
-
-  // Tip: this can be customized to use data or analytitcs to determine the
-  // most popular posts and render those instead
-
-
-
  
-
   return {
     paths: [],
     fallback: 'blocking',
