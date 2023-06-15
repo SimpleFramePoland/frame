@@ -2,9 +2,10 @@ import { getPaginatedPosts } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
 import React from 'react';
 import TemplateArchive from 'templates/archive';
-import { getAllPosts, getPagesCount } from 'lib/posts';
-export default function Posts({ posts, pagination }) {
-  const title = `All Posts`;
+
+import { getAllCategories} from 'lib/categories';
+export default function Posts({ posts, pagination,categories }) {
+  const title = `Nasze wpisy`;
   const slug = 'posts';
 
   const { metadata } = usePageMetadata({
@@ -14,7 +15,11 @@ export default function Posts({ posts, pagination }) {
     },
   });
 
-  return <TemplateArchive title={title} posts={posts} slug={slug} pagination={pagination} metadata={metadata} />;
+  return (
+
+  <TemplateArchive title={title} posts={posts} slug={slug} pagination={pagination} metadata={metadata} categories={categories} />  
+ )
+
 }
 
 export async function getStaticProps({ params = {} } = {}) {
@@ -22,7 +27,7 @@ export async function getStaticProps({ params = {} } = {}) {
     currentPage: params?.page,
     queryIncludes: 'archive',
   });
-
+  const { categories } = await getAllCategories();
   if (!pagination.currentPage) {
     return {
       props: {},
@@ -33,6 +38,7 @@ export async function getStaticProps({ params = {} } = {}) {
   return {
     props: {
       posts,
+      categories,
       pagination: {
         ...pagination,
         basePath: '/posts',
@@ -42,30 +48,11 @@ export async function getStaticProps({ params = {} } = {}) {
 }
 
 export async function getStaticPaths() {
-  // By default, we don't render any Pagination pages as
-  // we're considering them non-critical pages
-
-  // To enable pre-rendering of Category pages:
-
-  // 1. Add import to the top of the file
-  //
-  // import { getAllPosts, getPagesCount } from 'lib/posts';
-
-  // 2. Uncomment the below
-  // //
-  // const { posts } = await getAllPosts({
-  //   queryIncludes: 'index',
-  // });
-  // const pagesCount = await getPagesCount(posts);
-
-  // const paths = [...new Array(pagesCount)].map((_, i) => {
-  //   return { params: { page: String(i + 1) } };
-  // });
-
-  // 3. Update `paths` in the return statement below to reference the `paths` constant above
+ 
 
   return {
     paths: [],
     fallback: 'blocking',
   };
+  
 }

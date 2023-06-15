@@ -348,8 +348,181 @@ module.exports = () => {
           destination: '/kategoria/:slug',
           permanent: true,
         },
-      
-      
+        {
+          source: '/sponsorem-programu-jest-czyli-wskazania-sponsorskie/',
+          destination: '/posts/sponsorem-programu-jest-czyli-wskazania-sponsorskie/',
+          permanent: true,
+        },
+        {
+          source: '/munja-postprodukcja/munja_ik_02/',
+          destination: '/posts/munja-postprodukcja/',
+          permanent: true,
+        },
+        {
+          source: '/film-promocyjny-dr-marchewka-wizjoner/',
+          destination: '/posts/film-promocyjny-dr-marchewka-wizjoner/',
+          permanent: true,
+        },
+        {
+          source: '/film-z-targow/',
+          destination: '/posts/film-z-targow/',
+          permanent: true,
+        },
+        {
+          source: '/eurobank-2/eurobank_ik/',
+          destination: '/posts/eurobank-2/',
+          permanent: true,
+        },
+        {
+          source: '/animacja-2d-gemius-adreal/',
+          destination: '/posts/animacja-2d-gemius-adreal/',
+          permanent: true,
+        },
+        {
+          source: '/portfolio_category/billboard-sponsorski/',
+          destination: '/kategoria/billboard-sponsorski/',
+          permanent: true,
+        },
+        {
+          source: '/animacja-2d-sage-symfonia-handel/',
+          destination: '/posts/animacja-2d-sage-symfonia-handel/',
+          permanent: true,
+        },
+        {
+          source: '/animacje-komputerowe/',
+          destination: '/posts/animacje-komputerowe/',
+          permanent: true,
+        },
+        {
+          source: '/nescafe-azera/',
+          destination: '/posts/nescafe-azera/',
+          permanent: true,
+        },
+        {
+          source: '/unilogistics/',
+          destination: '/posts/unilogistics/',
+          permanent: true,
+        },
+        {
+          source: '/stylista-jedzenia/',
+          destination: '/posts/stylista-jedzenia/',
+          permanent: true,
+        },
+        {
+          source: '/unilogistics/',
+          destination: '/posts/unilogistics/',
+          permanent: true,
+        },
+        {
+          source: '/film-animowany-elis/',
+          destination: '/posts/film-animowany-elis/',
+          permanent: true,
+        },
+        {
+          source: '/prezentacja-szkoleniowa/',
+          destination: '/posts/prezentacja-szkoleniowa/',
+          permanent: true,
+        },
+        {
+          source: '/munja-postprodukcja/',
+          destination: '/posts/munja-postprodukcja/',
+          permanent: true,
+        },
+        {
+          source: '/sezon-na-sphinxa/sphinx_ik/',
+          destination: '/posts/sezon-na-sphinxa/',
+          permanent: true,
+        },
+        {
+          source: '/portfolio/nexler/nexler-3/',
+          destination: '/posts/nexler/',
+          permanent: true,
+        },
+        {
+          source: '/facebook-2/',
+          destination: '/posts/nowoczesny-swiat-facebooka/',
+          permanent: true,
+        },
+        {
+          source: '/animacja-medyczna-2/',
+          destination: '/posts/animacja-medyczna-2/',
+          permanent: true,
+        },
+        {
+          source: '/animacja-2d-ideafactor24/',
+          destination: '/posts/animacja-2d-ideafactor24/',
+          permanent: true,
+        },
+        {
+          source: '/kostrzewa/',
+          destination: '/posts/animacja-produktowa-kostrzewa/',
+          permanent: true,
+        },
+        {
+          source: '/prezentacja-3d/zpue_s-2/',
+          destination: '/posts/film-produktowy-3d-zpue-koronea-group/',
+          permanent: true,
+        },
+        {
+          source: '/pl/film/',
+          destination: '/film-produktowy/',
+          permanent: true,
+        },
+        {
+          source: '/mpack-animacja-3d/',
+          destination: '/posts/mpack-animacja-3d/',
+          permanent: true,
+        },
+        {
+          source: '/filmy-produktowe/',
+          destination: '/film-produktowy/',
+          permanent: true,
+        },
+        {
+          source: '/animacja-produktu-niezwykla-dbalosc-o-detale/',
+          destination: '/posts/animacja-produktu-niezwykla-dbalosc-o-detale/',
+          permanent: true,
+        },
+        {
+          source: '/fryderyk-chopin/',
+          destination: '/posts/fryderyk-chopin/',
+          permanent: true,
+        },
+        {
+          source: '/kategoria/prezentacja-marketingowa/',
+          destination: '/kategoria/prezentacja-marketing/',
+          permanent: true,
+        },
+        {
+          source: '/webdesign/',
+          destination: '/streaming-videoo/',
+          permanent: true,
+        },
+        {
+          source: '/wegirls/',
+          destination: '/posts/wegirls/',
+          permanent: true,
+        },
+        {
+          source: '/pl/animacja3d/',
+          destination: '/animacja-3d/',
+          permanent: true,
+        },
+        {
+          source: '/pl/produkcja-animacji/',
+          destination: '/produkcja-animacji/',
+          permanent: true,
+        },
+        {
+          source: '/kreowanie-swiata-w-3d/mpack_blog-2/',
+          destination: '/posts/animacja-3d-mpack/',
+          permanent: true,
+        },
+        {
+          source: '/animacja-2d-smsapi/',
+          destination: '/posts/animacja-2d-smsapi/',
+          permanent: true,
+        },
 
       ];
     },
