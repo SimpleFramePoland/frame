@@ -41,8 +41,8 @@ const PostCard = ({ post, options = {} }) => {
       <a href={postPathBySlug(slug)} >
       <FeaturedImage
         {...featuredImage}
-        src={featuredImage.sourceUrl}
-        dangerouslySetInnerHTML={featuredImage.caption}
+        src={featuredImage?.sourceUrl}
+        dangerouslySetInnerHTML={featuredImage?.caption}
   
       /> </a>
         
