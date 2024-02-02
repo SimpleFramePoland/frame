@@ -42,7 +42,7 @@ export default class MyDocument extends Document {
         strategy="afterInteractive"
       />
          <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-FMNR987MP7"
+        src="https://www.googletagmanager.com/gtag/js?id=G-E9QMHQ3N7Z"
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -51,7 +51,7 @@ export default class MyDocument extends Document {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-FMNR987MP7');
+          gtag('config', 'G-E9QMHQ3N7Z');
         `}
       </Script>
    
