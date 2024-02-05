@@ -87,6 +87,15 @@ export default function Post({ post, socialImage, }) {
                 options={metadataOptions}
                 isSticky={isSticky}
               />
+                 <script src="/js/jquery.js" />
+      <script  src='/js/fancybox.js' id='modula-fancybox-js' />
+      <link rel='stylesheet' id='modula-video-css-css' href='/css/modula-video.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='modula-css' href='/css/modula-css.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='modula-pro-effects-css' href='/css/modula-pro.css' type='text/css' media='all' />
+      <script  src='/js/fancybox-modula-video.js' id='modula-fancybox-video-js' />
+      <script  src='/js/modula-wf.js' id='modula-wf-js' />
+      <script  src='/js/modula-pro.js' id='modula-pro-js' />
+    
             </div>
             <div className=' max-w-md mx-auto text-center mlg:flex-auto justify-center lg:py-12 justify-self-center align-center flex items-center   ' >
               {featuredImage && (
@@ -101,12 +110,17 @@ export default function Post({ post, socialImage, }) {
           </div>
         </div>
       </Header>
+     
       <div
         className="prose max-w-screen-lg mx-auto px-7 sm:px-10 text-xl"
         dangerouslySetInnerHTML={{
           __html: content,
         }}
       />
+       <div
+            className='mt-10 mb-10  '
+            dangerouslySetInnerHTML={{ __html: post.wpis?.modulapost}}
+          ></div>
     </Layout>
   );
 }

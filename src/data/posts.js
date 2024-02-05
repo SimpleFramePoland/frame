@@ -69,6 +69,7 @@ export const QUERY_ALL_POSTS = gql`
     posts(first: 10000, where: { hasPassword: false }) {
       edges {
         node {
+         
           categories {
             edges {
               node {
@@ -115,6 +116,9 @@ export const QUERY_POST_BY_SLUG = gql`
   query PostBySlug($slug: ID!) {
     post(id: $slug, idType: SLUG) {
       id
+      wpis {
+        modulapost
+      }
       categories {
         edges {
           node {
@@ -196,6 +200,7 @@ export const QUERY_POSTS_BY_CATEGORY_ID = gql`
     posts(where: { categoryId: $categoryId, hasPassword: false }) {
       edges {
         node {
+         
           ...PostFields
           author {
             node {
