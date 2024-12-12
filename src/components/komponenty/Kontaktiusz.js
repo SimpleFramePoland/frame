@@ -13,8 +13,8 @@ export default function Example() {
          
       <h3>Simple Frame</h3>
         <p>
-ul. Wiertnicza 135A
-02-952 Warszawa
+ul. ul. Gawędziarzy 2
+04-402 Warszawa
 <br/>
 
 <a  href="tel:+48 502 061 431">+48 502 061 431</a>
