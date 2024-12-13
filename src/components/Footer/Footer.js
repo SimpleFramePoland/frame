@@ -34,7 +34,7 @@ const Footer = () => {
       <p className="mt-4  ">
         Simple Frame Sp. z o.o.<br/>
  
-        ul. Gawędziary 2<br/>
+        ul. Gawędziarzy 2<br/>
 04-402 Warszawa<br/>
 <a className="text-babyblue" href="tel:+48 502 061 431">+48 502 061 431</a> <br />
                   <a className="text-babyblue" href="mailto:kontakt@simpleframe.pl">kontakt@simpleframe.pl</a> <br/>
