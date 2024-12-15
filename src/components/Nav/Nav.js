@@ -256,7 +256,7 @@ export default function Header() {
             </Transition>
           </Popover>
 
-          <Link href="/posts" ><a className="text-sm font-semibold leading-6 text-white" >Realizacje</a></Link>
+          <Link href="/posts" ><a className="text-sm font-semibold leading-6 text-white" >Blog</a></Link>
 
 
 
