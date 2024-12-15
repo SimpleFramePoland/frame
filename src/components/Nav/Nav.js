@@ -37,9 +37,9 @@ const produkcje = [
 
 ];
 const Postprodukcja = [
-  { name: 'Postprodukcja', description: 'Profesjonalne narzędzia do tworzenia wyjątkowych efektów i doskonalenia filmowych produkcji', href: '/postprodukcja', icon: ComputerDesktopIcon },
+  { name: 'Studio postprodukcji', description: 'Profesjonalne narzędzia do tworzenia wyjątkowych efektów i doskonalenia filmowych produkcji', href: '/postprodukcja', icon: ComputerDesktopIcon },
   { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
-
+  { name: 'Kolor korekcja', description: 'Precyzja kolorów, która podkreśla Twój przekaz', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
 ];
 const animacje = [
   { name: 'Animacja 3D', description: 'Ożyw swoje pomysły w trójwymiarowej przestrzeni', href: '/animacja-3d/', icon: CubeIcon },
