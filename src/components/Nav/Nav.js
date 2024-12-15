@@ -54,7 +54,7 @@ const animacje = [
 const uslugi = [
   { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon },
   { name: 'Fotografia', description: 'Profesjonalny wizerunek, który buduje Twoją markę', href: '/fotografia', icon: CameraIcon },
-  { name: 'Streaming', description: 'Dostarczaj wysokiej jakości treści swojej publiczności za pomocą transmisji na żywo', href: '/streaming-video', icon: ComputerDesktopIcon },
+  { name: 'Fotografia techniczna', description: 'precyzyjne kadry dla Twojej branży', href: '/fotografia-techniczna', icon: ComputerDesktopIcon },
   { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
   { name: 'Prezentacje multimedialne', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
 ];
