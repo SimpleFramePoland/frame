@@ -39,6 +39,7 @@ const produkcje = [
 const Postprodukcja = [
   { name: 'Postprodukcja', description: 'Profesjonalne narzędzia do tworzenia wyjątkowych efektów i doskonalenia filmowych produkcji', href: '/postprodukcja', icon: ComputerDesktopIcon },
   { name: 'Montaż filmów', description: 'Zaoszczędź czas i powierz montaż swojego filmu naszym profesjonalnym edytorom', href: '/montaz-filmow', icon: AdjustmentsHorizontalIcon },
+  { name: 'Kolor korekcja', description: 'Precyzja kolorów, która podkreśla Twój przekaz', href: '/korekcja_kolorow', icon: AdjustmentsHorizontalIcon },
 
 ];
 const animacje = [
