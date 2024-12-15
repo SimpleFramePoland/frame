@@ -83,12 +83,6 @@ export default function Home() {
         </div>
       </div>
 
-
-     <div className="flex flex-col items-center">
-      <h1 className="text-3xl lg:text-4xl font-semibold text-black mb-12">
-       Zapraszamy do naszego biura w Warszawie
-      </h1>
-  
     </div>
 
     </Layout>
