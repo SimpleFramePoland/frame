@@ -105,7 +105,7 @@ const Footer = () => {
             <a  href= '/fotografia' className="text-white hover:text-babyblue">Fotografia</a>
           </li>
           <li>
-            <a href='/streaming-video' className="text-white hover:text-babyblue">Streaming</a>
+            <a href='/fotografia-techniczna' className="text-white hover:text-babyblue">Fotografia techniczna</a>
           </li>
         </nav>
       </div>
