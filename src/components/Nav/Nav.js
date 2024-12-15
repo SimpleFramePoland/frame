@@ -47,7 +47,7 @@ const animacje = [
   { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: ArrowPathIcon },
   { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: WrenchScrewdriverIcon },
   { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
-
+  { name: 'Animacja medyczna', description: 'Precyzja i wiedza w każdym kadrze – animacja medyczna dla Ciebie!', href: '/animacja-medyczna', icon: SquaresPlusIcon },
 
 
 ];
