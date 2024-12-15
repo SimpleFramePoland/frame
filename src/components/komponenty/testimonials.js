@@ -33,7 +33,7 @@ const testimonials = [
   [
     {
       content:
-        'Jestem pod wrażeniem jakości produkcji filmowych, jakie tworzy Simple Frame - każdy detal jest dopracowany i widoczna jest dbałość o detale.',
+        'Jestem pod wrażeniem jakości produkcji filmowych, jakie tworzy Simple Frame - każdy detal jest dopracowany i widoczna jest dbałość o szczegóły.',
       author: {
         name: 'Mindray',
         role: 'Founder of Kiehn and Sons',
