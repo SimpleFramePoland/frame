@@ -79,10 +79,7 @@ export default function Home() {
               </div>
             </div>
             <ContactForm />
-          </div>
-        </div>
-      </div>
-
+ 
     </div>
 
     </Layout>
