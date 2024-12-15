@@ -11,7 +11,7 @@ const features = [
   {
     name: 'Zrealizujemy Twój projekt',
     description:
-      'Nasze produkcje to setki zrealizowanych filmów reklamowych, promocyjnych, filmów wizerunkowych i animacji.',
+      'Nasze produkcje to setki zrealizowanych filmów reklamowych, promocyjnych, filmów wizerunkowych i animacji komputerowych.',
     icon: CloudArrowUpIcon,
   },
 
