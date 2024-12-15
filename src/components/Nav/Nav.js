@@ -46,13 +46,14 @@ const animacje = [
   { name: 'Animacja 2D', description: 'Zaprojektuj animację dopasowaną do Twojej marki', href: '/animacja-2d', icon: ArrowPathIcon },
   { name: 'Animacja Techniczna', description: 'Wyjaśnij skomplikowane tematy w prosty sposób', href: '/animacja-techniczna', icon: WrenchScrewdriverIcon },
   { name: 'Produkcja Animacji', description: 'Stwórz wyjątkową animację od pomysłu po finalny efekt', href: '/produkcja-animacji', icon: SquaresPlusIcon },
+  { name: 'Animacja medyczna', description: 'Animacje medyczne, które edukują i inspirują', href: '/animacja-medyczna', icon: SquaresPlusIcon },
   
 
 
 ];
 const uslugi = [
   { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon },
-  { name: 'Fotografia', description: 'Uchwyć wspaniałe obrazy, które reprezentują Twoją markę i przyciągają klientów', href: '/fotografia', icon: CameraIcon },
+  { name: 'Fotografia', description: 'Profesjonalny wizerunek, który buduje Twoją markę', href: '/fotografia', icon: CameraIcon },
   { name: 'Streaming', description: 'Dostarczaj wysokiej jakości treści swojej publiczności za pomocą transmisji na żywo', href: '/streaming-video', icon: ComputerDesktopIcon },
   { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
   { name: 'Prezentacje multimedialne', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
