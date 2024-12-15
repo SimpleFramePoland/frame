@@ -55,7 +55,7 @@ const uslugi = [
   { name: 'Billboard Sponsorski', description: 'Promuj swoją markę i dotrzyj do szerszej publiczności', href: '/billboard-sponsorski', icon: ArrowsPointingOutIcon },
   { name: 'Fotografia', description: 'Uchwyć wspaniałe obrazy, które reprezentują Twoją markę i przyciągają klientów', href: '/fotografia', icon: CameraIcon },
   { name: 'Fotografia techniczna', description: 'Technologia uchwycona w perfekcyjnym kadrze', href: '/streaming-video', icon: ComputerDesktopIcon },
-  { name: 'Dron', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
+  { name: 'Filmowanie dronem', description: 'Osiągnij nowe perspektywy i zaskocz swoich odbiorców', href: '/dron-filmowanie-z-powietrza', icon: PaperAirplaneIcon },
   { name: 'Prezentacje multimedialne', description: 'Twórz wizualnie atrakcyjne prezentacje, które skutecznie komunikują Twoją wiadomość', href: '/prezentacje-multimedialne', icon: ArrowPathIcon },
 
 ];
