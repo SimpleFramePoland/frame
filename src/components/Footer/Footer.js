@@ -102,7 +102,7 @@ const Footer = () => {
             <a href= '/teledyski' className="text-white hover:text-babyblue">Teledyski</a>
           </li>
           <li>
-            <a  href= '/fotografia' className="text-white hover:text-babyblue">Fotografia</a>
+            <a  href= '/fotografia' className="text-white hover:text-babyblue">Sesje zdjęciowe</a>
           </li>
           <li>
             <a href='/fotografia-techniczna' className="text-white hover:text-babyblue">Fotografia techniczna</a>
