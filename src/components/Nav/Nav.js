@@ -35,7 +35,8 @@ const produkcje = [
   { name: 'Film Produktowy', description: 'Pokaż swoje produkty w najlepszym świetle', href: '/film-produktowy', icon: VideoCameraIcon },
   { name: 'Teledyski', description: 'Twoja muzyka, nasza wizja, teledyski, które zachwycają', href: '/teledyski', icon: MusicalNoteIcon },
 
-  const produkcje = [
+  ];
+const produkcje = [
   { name: 'Film Reklamowy', description: 'Skuteczna reklama dla Twojego biznesu', href: '/film-reklamowy', icon: FilmIcon },
   { name: 'Film Korporacyjny', description: 'Profesjonalna prezentacja Twojej firmy', href: '/film-korporacyjny', icon: BuildingOffice2Icon },
   { name: 'Film Promocyjny', description: 'Zachęć swoich klientów do zakupów ', href: '/film-promocyjny', icon: EyeIcon },
