@@ -415,14 +415,14 @@ export default function Header() {
 
             </div>
             <div className=' mt-16 space-x-6'>
-              <a href="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  ' target="_blank" rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+              <a href="https://vimeo.com/simpleframe" className='align-middle  '>
+                <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
               </a>
               <a href="https://www.facebook.com/simpleframe" className='align-middle  '>
                 <FontAwesomeIcon icon={faFacebook} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
               </a>
-              <a href="https://vimeo.com/simpleframe" className='align-middle  '>
-                <FontAwesomeIcon icon={faVimeo} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
+                <a href="https://www.youtube.com/channel/UCezq74RQJ37tiOvJjTYx8ow/videos" className='align-middle  ' target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faYoutube} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
               </a>
               <a href="https://www.instagram.com/simpleframe_warszawa/" className='align-middle  '>
                 <FontAwesomeIcon icon={faInstagram} className="text-white hover:text-babyblue h-12 w-12 " target="_blank" rel="noopener noreferrer" />
